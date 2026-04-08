@@ -9,17 +9,15 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'django-insecure-=+!ej8rpbmo&93y#61isfk%=my0%1i+d(x^d-+&_k0zsq42(on'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-# Forzamos DEBUG en True un momento para que Render nos deje pasar si hay errores de host
-DEBUG = True 
+# Volvemos a una configuración dinámica para DEBUG
+DEBUG = 'RENDER' not in os.environ
 
-# ACTUALIZADO: Solución definitiva al error de DisallowedHost
+# ACTUALIZADO: Lista de hosts autorizados
 ALLOWED_HOSTS = [
     'guia-de-remision-validacion-de-pago.onrender.com', 
-    'guia-de-remision-validacion-de-pago.render.com',
-    '.onrender.com', # Render usa onrender.com, no solo render.com
+    '.onrender.com', 
     'localhost', 
-    '127.0.0.1',
-    '*' # Esto permitirá que entre sí o sí mientras pruebas
+    '127.0.0.1'
 ]
 
 # Application definition
@@ -100,7 +98,15 @@ STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 # ==========================================
-# CONFIGURACIÓN DE JAZZMIN (NO TOCAR - ESTO LE DA EL ESTILO)
+# CONFIGURACIÓN DE RUTAS DE ACCESO (NUEVO)
+# ==========================================
+# Esto evita el error 404 de /accounts/login/
+LOGIN_URL = '/login/'
+LOGIN_REDIRECT_URL = '/'
+LOGOUT_REDIRECT_URL = '/login/'
+
+# ==========================================
+# CONFIGURACIÓN DE JAZZMIN
 # ==========================================
 JAZZMIN_SETTINGS = {
     "site_title": "JAAP Logística",
@@ -120,27 +126,10 @@ JAZZMIN_SETTINGS = {
 }
 
 JAZZMIN_UI_TWEAKS = {
-    "navbar_small_text": False,
-    "footer_small_text": False,
-    "body_small_text": False,
-    "brand_small_text": False,
-    "brand_colour": "navbar-dark",
-    "accent": "accent-primary",
-    "navbar": "navbar-dark",
-    "no_navbar_border": False,
-    "navbar_fixed": False,
-    "layout_boxed": False,
-    "footer_fixed": False,
-    "sidebar_fixed": False,
-    "sidebar": "sidebar-dark-primary",
-    "sidebar_nav_small_text": False,
-    "sidebar_disable_expand": False,
-    "sidebar_nav_child_indent": False,
-    "sidebar_nav_compact_style": False,
-    "sidebar_nav_legacy_style": False,
-    "sidebar_nav_flat_style": False,
     "theme": "darkly", 
     "dark_mode_theme": "darkly",
+    "brand_colour": "navbar-dark",
+    "sidebar": "sidebar-dark-primary",
     "button_classes": {
         "primary": "btn-primary",
         "secondary": "btn-secondary",
