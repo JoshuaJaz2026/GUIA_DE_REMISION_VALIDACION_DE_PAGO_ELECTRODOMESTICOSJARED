@@ -9,15 +9,17 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'django-insecure-=+!ej8rpbmo&93y#61isfk%=my0%1i+d(x^d-+&_k0zsq42(on'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-# Si estamos en Render, DEBUG será False automáticamente
-DEBUG = 'RENDER' not in os.environ
+# Forzamos DEBUG en True un momento para que Render nos deje pasar si hay errores de host
+DEBUG = True 
 
-# ACTUALIZADO: Solución al error de DisallowedHost
+# ACTUALIZADO: Solución definitiva al error de DisallowedHost
 ALLOWED_HOSTS = [
     'guia-de-remision-validacion-de-pago.onrender.com', 
-    '.render.com', 
+    'guia-de-remision-validacion-de-pago.render.com',
+    '.onrender.com', # Render usa onrender.com, no solo render.com
     'localhost', 
-    '127.0.0.1'
+    '127.0.0.1',
+    '*' # Esto permitirá que entre sí o sí mientras pruebas
 ]
 
 # Application definition
