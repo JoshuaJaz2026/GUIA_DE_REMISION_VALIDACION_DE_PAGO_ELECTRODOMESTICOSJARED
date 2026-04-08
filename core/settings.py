@@ -9,15 +9,21 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'django-insecure-=+!ej8rpbmo&93y#61isfk%=my0%1i+d(x^d-+&_k0zsq42(on'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-# En Render esto debería ser False, pero para programar en tu PC lo dejamos en True
-DEBUG = True
+# Si estamos en Render, DEBUG será False automáticamente
+DEBUG = 'RENDER' not in os.environ
 
-# Permitimos a Render y a tu PC local
-ALLOWED_HOSTS = ['.render.com', 'localhost', '127.0.0.1']
+# ACTUALIZADO: Solución al error de DisallowedHost
+ALLOWED_HOSTS = [
+    'guia-de-remision-validacion-de-pago.onrender.com', 
+    '.render.com', 
+    'localhost', 
+    '127.0.0.1'
+]
 
 # Application definition
 
 INSTALLED_APPS = [
+    'jazzmin',  # DEBE IR PRIMERO
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -28,7 +34,7 @@ INSTALLED_APPS = [
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
-    'whitenoise.middleware.WhiteNoiseMiddleware', # Para servir archivos estáticos en Render
+    'whitenoise.middleware.WhiteNoiseMiddleware', # Para archivos estáticos en Render
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
@@ -42,7 +48,6 @@ ROOT_URLCONF = 'core.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        # ACTUALIZADO: Django buscará los HTML en la carpeta 'templates'
         'DIRS': [BASE_DIR / 'templates'], 
         'APP_DIRS': True,
         'OPTIONS': {
@@ -59,7 +64,6 @@ WSGI_APPLICATION = 'core.wsgi.application'
 
 
 # Database
-# ACTUALIZADO: Usa SQLite en tu PC y PostgreSQL en Render automáticamente
 DATABASES = {
     'default': dj_database_url.config(
         default=f'sqlite:///{BASE_DIR / "db.sqlite3"}',
@@ -78,7 +82,6 @@ AUTH_PASSWORD_VALIDATORS = [
 
 
 # Internationalization
-# ACTUALIZADO: Idioma español y hora de Perú
 LANGUAGE_CODE = 'es-pe'
 TIME_ZONE = 'America/Lima'
 USE_I18N = True
@@ -87,15 +90,61 @@ USE_TZ = True
 
 # Static files (CSS, JavaScript, Images)
 STATIC_URL = 'static/'
-
-# ACTUALIZADO: Dónde están tus carpetas de CSS y JS
 STATICFILES_DIRS = [BASE_DIR / 'static']
-
-# Dónde se guardarán los archivos para producción (Render)
 STATIC_ROOT = BASE_DIR / 'staticfiles'
-
-# Habilitar WhiteNoise para comprimir y cachear archivos estáticos
 STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
 
 # Default primary key field type
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+# ==========================================
+# CONFIGURACIÓN DE JAZZMIN (NO TOCAR - ESTO LE DA EL ESTILO)
+# ==========================================
+JAZZMIN_SETTINGS = {
+    "site_title": "JAAP Logística",
+    "site_header": "JAAP",
+    "site_brand": "Sublimaciones JAAP",
+    "welcome_sign": "Bienvenido al Sistema Logístico JAAP",
+    "copyright": "Sublimaciones JAAP 2026",
+    "user_avatar": None,
+    "show_sidebar": True,
+    "navigation_expanded": True,
+    "icons": {
+        "auth": "fas fa-users-cog",
+        "auth.user": "fas fa-user",
+        "auth.Group": "fas fa-users",
+    },
+    "order_with_respect_to": ["auth", "core"],
+}
+
+JAZZMIN_UI_TWEAKS = {
+    "navbar_small_text": False,
+    "footer_small_text": False,
+    "body_small_text": False,
+    "brand_small_text": False,
+    "brand_colour": "navbar-dark",
+    "accent": "accent-primary",
+    "navbar": "navbar-dark",
+    "no_navbar_border": False,
+    "navbar_fixed": False,
+    "layout_boxed": False,
+    "footer_fixed": False,
+    "sidebar_fixed": False,
+    "sidebar": "sidebar-dark-primary",
+    "sidebar_nav_small_text": False,
+    "sidebar_disable_expand": False,
+    "sidebar_nav_child_indent": False,
+    "sidebar_nav_compact_style": False,
+    "sidebar_nav_legacy_style": False,
+    "sidebar_nav_flat_style": False,
+    "theme": "darkly", 
+    "dark_mode_theme": "darkly",
+    "button_classes": {
+        "primary": "btn-primary",
+        "secondary": "btn-secondary",
+        "info": "btn-info",
+        "warning": "btn-warning",
+        "danger": "btn-danger",
+        "success": "btn-success"
+    }
+}

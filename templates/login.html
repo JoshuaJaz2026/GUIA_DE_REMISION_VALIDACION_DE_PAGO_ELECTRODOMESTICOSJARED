@@ -16,16 +16,27 @@
             <div class="logo">JAAP.</div>
             <h2>Acceso al Sistema Logístico</h2>
             
-            <form id="loginForm">
-                {% csrf_token %} <div class="form-field">
+            <form id="loginForm" method="POST">
+                {% csrf_token %} 
+                
+                <div class="form-field">
                     <label for="loginUser">Usuario</label>
-                    <input type="text" id="loginUser" placeholder="Ej. joshua" required>
+                    <input type="text" id="loginUser" name="username" placeholder="Ej. joshua" required>
                 </div>
+                
                 <div class="form-field">
                     <label for="loginPass">Contraseña</label>
-                    <input type="password" id="loginPass" placeholder="••••••••" required>
+                    <input type="password" id="loginPass" name="password" placeholder="••••••••" required>
                 </div>
+                
                 <button type="submit" class="submit-btn">Ingresar al Sistema</button>
+
+                {% if messages %}
+                    {% for message in messages %}
+                        <p class="error-msg" style="display: block;">{{ message }}</p>
+                    {% endfor %}
+                {% endif %}
+                
                 <p id="loginError" class="error-msg">Usuario o contraseña incorrectos</p>
             </form>
         </div>
