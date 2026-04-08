@@ -32,12 +32,15 @@
                 <button type="submit" class="submit-btn">Ingresar al Sistema</button>
 
                 {% if messages %}
-                    {% for message in messages %}
-                        <p class="error-msg" style="display: block;">{{ message }}</p>
-                    {% endfor %}
+                    <div class="messages-container" style="margin-top: 15px;">
+                        {% for message in messages %}
+                            <p class="error-msg" style="display: block; color: #ff4d4d; font-size: 0.9rem;">
+                                {{ message }}
+                            </p>
+                        {% endfor %}
+                    </div>
                 {% endif %}
                 
-                <p id="loginError" class="error-msg">Usuario o contraseña incorrectos</p>
             </form>
         </div>
     </div>

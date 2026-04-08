@@ -3,14 +3,16 @@ from django.contrib.auth import authenticate, login, logout
 from django.contrib.auth.decorators import login_required
 from django.contrib import messages
 
-@login_required # Solo entra quien esté logueado
+@login_required 
 def home(request):
     return render(request, 'index.html')
 
 def login_view(request):
     if request.method == 'POST':
-        user_val = request.POST.get('usuario')
+        # CAMBIO AQUÍ: 'usuario' -> 'username'
+        user_val = request.POST.get('username').lower() 
         pass_val = request.POST.get('password')
+        
         user = authenticate(request, username=user_val, password=pass_val)
         
         if user is not None:
