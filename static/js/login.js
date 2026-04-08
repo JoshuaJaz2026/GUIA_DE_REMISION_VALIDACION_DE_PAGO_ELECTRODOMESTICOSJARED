@@ -1,14 +1,10 @@
-// login.js - Actualizado para Sublimaciones JAAP
+// login.js - Optimizado para Sublimaciones JAAP
+// Este código solo se encarga del fondo visual, dejando que Django maneje el login.
 
-const loginForm = document.getElementById('loginForm');
-const loginError = document.getElementById('loginError');
-
-// Eliminamos e.preventDefault() para que Django reciba los datos
-// Eliminamos dbUsuarios porque ahora usamos la base de datos real de Python
-
-// --- Fondo de Partículas (Mantenemos tu diseño) ---
+// --- Fondo de Partículas Animado ---
 const canvas = document.getElementById('bg-canvas');
-if(canvas){
+
+if (canvas) {
     const ctx = canvas.getContext('2d');
     canvas.width = window.innerWidth; 
     canvas.height = window.innerHeight;
@@ -25,6 +21,7 @@ if(canvas){
         update() { 
             this.x += this.speedX; 
             this.y += this.speedY; 
+            // Rebote en los bordes
             if (this.x > canvas.width || this.x < 0) this.speedX = -this.speedX; 
             if (this.y > canvas.height || this.y < 0) this.speedY = -this.speedY; 
         }
@@ -38,15 +35,21 @@ if(canvas){
 
     function init() { 
         particlesArray = []; 
-        for (let i = 0; i < 80; i++) particlesArray.push(new Particle()); 
+        for (let i = 0; i < 80; i++) {
+            particlesArray.push(new Particle());
+        } 
     }
 
     function animate() {
         ctx.clearRect(0, 0, canvas.width, canvas.height);
-        particlesArray.forEach(p => { p.update(); p.draw(); });
+        particlesArray.forEach(p => { 
+            p.update(); 
+            p.draw(); 
+        });
         requestAnimationFrame(animate);
     }
 
+    // Ajuste al cambiar tamaño de ventana
     window.addEventListener('resize', () => {
         canvas.width = window.innerWidth;
         canvas.height = window.innerHeight;
