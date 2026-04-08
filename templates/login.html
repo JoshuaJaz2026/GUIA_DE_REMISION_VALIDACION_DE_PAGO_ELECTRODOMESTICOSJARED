@@ -8,7 +8,6 @@
     <link rel="stylesheet" href="{% static 'css/login.css' %}">
 </head>
 <body>
-
     <canvas id="bg-canvas"></canvas>
 
     <div class="login-overlay">
@@ -16,7 +15,7 @@
             <div class="logo">JAAP.</div>
             <h2>Acceso al Sistema Logístico</h2>
             
-            <form id="loginForm" method="POST">
+            <form id="loginForm" method="POST" action="{% url 'login' %}">
                 {% csrf_token %} 
                 
                 <div class="form-field">
@@ -34,13 +33,12 @@
                 {% if messages %}
                     <div class="messages-container" style="margin-top: 15px;">
                         {% for message in messages %}
-                            <p class="error-msg" style="display: block; color: #ff4d4d; font-size: 0.9rem;">
+                            <p class="error-msg" style="display: block; color: #ff4d4d; font-size: 0.9rem; text-align: center;">
                                 {{ message }}
                             </p>
                         {% endfor %}
                     </div>
                 {% endif %}
-                
             </form>
         </div>
     </div>

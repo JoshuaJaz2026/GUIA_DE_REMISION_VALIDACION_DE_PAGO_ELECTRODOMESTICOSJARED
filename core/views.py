@@ -9,16 +9,21 @@ def home(request):
 
 def login_view(request):
     if request.method == 'POST':
-        # CAMBIO AQUÍ: 'usuario' -> 'username'
-        user_val = request.POST.get('username').lower() 
-        pass_val = request.POST.get('password')
+        # Obtenemos los datos del formulario
+        user_val = request.POST.get('username', '').lower().strip()
+        pass_val = request.POST.get('password', '').strip()
+        
+        # DEBUG: Esto lo verás en los Logs de Render
+        print(f"--- Intento de Login: {user_val} ---")
         
         user = authenticate(request, username=user_val, password=pass_val)
         
         if user is not None:
             login(request, user)
+            print(f"+++ Login Exitoso: {user_val} +++")
             return redirect('home')
         else:
+            print(f"--- Login Fallido para: {user_val} ---")
             messages.error(request, "Usuario o contraseña incorrectos")
             
     return render(request, 'login.html')
