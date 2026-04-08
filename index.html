@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sistema de Guías - Sublimaciones JAAP</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <canvas id="bg-canvas"></canvas>
+
+    <div class="main-wrapper">
+        <div class="slider-container">
+            <div class="slider-track" id="sliderTrack">
+                
+                <div class="view-panel card">
+                    <div class="left-panel">
+                        <div class="central-accent"></div>
+                        <div class="bottom-text">
+                            <h1>Gestión<br>Logística<br>JAAP</h1>
+                        </div>
+                    </div>
+
+                    <div class="right-panel">
+                        <div class="right-panel-header">
+                            <div class="logo">JAAP.</div>
+                            <div class="login-link">Hola, <span id="nombreUsuario" style="color:#00C2B3; font-weight:bold;">Usuario</span> | <a href="#" id="btnLogout" style="color: #ff4757;">Cerrar Sesión</a></div>
+                        </div>
+
+                        <div class="form-container">
+                            <h2>Nueva Guía de Remisión</h2>
+                            
+                            <form id="guiaForm">
+                                <div class="form-row">
+                                    <div class="form-field">
+                                        <label for="nombre">Nombre del Cliente</label>
+                                        <input type="text" id="nombre" placeholder="Ej. Juan Pérez" required>
+                                    </div>
+                                    <div class="form-field">
+                                        <label for="dni">DNI o RUC</label>
+                                        <input type="text" id="dni" placeholder="8 u 11 dígitos" required maxlength="11">
+                                    </div>
+                                </div>
+
+                                <div class="form-row">
+                                    <div class="form-field">
+                                        <label for="direccion">Dirección de Entrega</label>
+                                        <input type="text" id="direccion" placeholder="Distrito, Calle, Número" required>
+                                    </div>
+                                    <div class="form-field">
+                                        <label for="producto">Producto (Categoría)</label>
+                                        <input type="text" id="producto" placeholder="Ej. Arrocera Oster (Pequeños Electrodomésticos)" required>
+                                    </div>
+                                </div>
+
+                                <div class="terms-row">
+                                    <input type="checkbox" id="confirmacion" required>
+                                    <label for="confirmacion">Confirmo que los datos para la <a href="#">Guía de Remisión</a> son correctos.</label>
+                                </div>
+
+                                <button type="submit" id="btnSubmit" class="submit-btn" disabled>Generar y Guardar Guía</button>
+                            </form>
+                            <button type="button" id="btnGoHistory" class="slide-nav-btn" style="margin-top: 15px; width: fit-content;">
+                                Ver Historial de Guías <i class="fa-solid fa-arrow-right"></i>
+                            </button>
+                        </div>
+
+                        <div class="right-panel-footer">
+                            @copyright 2026. Sublimaciones JAAP.
+                        </div>
+                    </div>
+                </div>
+
+                <div class="view-panel database-section">
+                    <div class="db-header">
+                        <div class="db-title-group">
+                            <button type="button" id="btnGoForm" class="slide-nav-btn">
+                                <i class="fa-solid fa-arrow-left"></i> Nuevo Registro
+                            </button>
+                            <h2>Historial de Guías</h2>
+                        </div>
+                        <input type="text" id="buscador" placeholder="🔍 Buscar por cliente o DNI...">
+                    </div>
+                    
+                    <div class="table-wrapper">
+                        <table id="tablaGuias">
+                            <thead>
+                                <tr>
+                                    <th>Fecha</th>
+                                    <th>Cliente</th>
+                                    <th>DNI/RUC</th>
+                                    <th>Producto / Dirección</th>
+                                    <th>Acción</th>
+                                </tr>
+                            </thead>
+                            <tbody id="listaCuerpo">
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <div id="modalCopia" class="modal-overlay">
+        <div class="modal-contenido">
+            <h3>Guía Registrada con Éxito</h3>
+            <p style="color: #bbb; font-size: 13px; margin-bottom: 10px;">Texto listo para copiar y enviar:</p>
+            <textarea id="textoResumen" readonly></textarea>
+            
+            <div class="modal-botones">
+                <button id="btnCopiar" class="btn-secundario">Copiar al Portapapeles</button>
+                <button id="btnCerrarModal" class="btn-terciario">Cerrar</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/app.js"></script>
+</body>
+</html>

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Iniciar Sesión - JAAP</title>
+    <link rel="stylesheet" href="../css/login.css">
+</head>
+<body>
+
+    <canvas id="bg-canvas"></canvas>
+
+    <div class="login-overlay">
+        <div class="login-card">
+            <div class="logo">JAAP.</div>
+            <h2>Acceso al Sistema Logístico</h2>
+            
+            <form id="loginForm">
+                <div class="form-field">
+                    <label for="loginUser">Usuario</label>
+                    <input type="text" id="loginUser" placeholder="Ej. joshua" required>
+                </div>
+                <div class="form-field">
+                    <label for="loginPass">Contraseña</label>
+                    <input type="password" id="loginPass" placeholder="••••••••" required>
+                </div>
+                <button type="submit" class="submit-btn">Ingresar al Sistema</button>
+                <p id="loginError" class="error-msg">Usuario o contraseña incorrectos</p>
+            </form>
+        </div>
+    </div>
+
+    <script src="../js/login.js"></script>
+</body>
+</html>
