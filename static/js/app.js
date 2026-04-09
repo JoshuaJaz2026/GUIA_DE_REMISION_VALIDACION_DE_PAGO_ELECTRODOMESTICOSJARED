@@ -1,24 +1,23 @@
 // ==========================================
-// 0. VERIFICACIÓN DE SEGURIDAD (SESIÓN)
+// 0. INTEGRACIÓN CON DJANGO (SESIÓN)
 // ==========================================
-const usuarioActual = localStorage.getItem('sesionActiva_JAAP');
+// ¡Eliminamos el bloqueo local! Ahora Django protege la ruta.
 
-// En Django, la ruta del login es /login/
-if (!usuarioActual) {
-    window.location.href = '/login/';
-}
-
+// Obtenemos el nombre del usuario directamente del HTML que nos manda Django
 const nombreElement = document.getElementById('nombreUsuario');
-if(nombreElement && usuarioActual) {
-    nombreElement.innerText = usuarioActual.toUpperCase();
+let usuarioActual = nombreElement ? nombreElement.innerText.trim().toLowerCase() : 'usuario_jaap';
+
+// Si el nombre viene vacío por alguna razón, le ponemos un valor por defecto
+if (!usuarioActual || usuarioActual === '') {
+    usuarioActual = 'usuario_jaap';
 }
 
 const btnLogout = document.getElementById('btnLogout');
 if(btnLogout) {
     btnLogout.addEventListener('click', (e) => {
         e.preventDefault();
-        localStorage.removeItem('sesionActiva_JAAP');
-        window.location.href = '/login/';
+        // Le decimos a Django que cierre la sesión de forma segura
+        window.location.href = '/logout/';
     });
 }
 
@@ -73,7 +72,6 @@ if(checkboxConfirmacion && btnSubmit) {
 if(form) {
     form.addEventListener('submit', (e) => {
         e.preventDefault();
-        if(!usuarioActual) return;
         
         const dniVal = inputDni.value;
         if (dniVal.length !== 8 && dniVal.length !== 11) {
@@ -128,7 +126,7 @@ if(btnCerrarModal && modalCopia) {
 }
 
 function mostrarGuias() {
-    if(!tabla || !usuarioActual) return;
+    if(!tabla) return;
     const llaveBD = 'guiasJAAP_' + usuarioActual;
     let guias = JSON.parse(localStorage.getItem(llaveBD)) || [];
     tabla.innerHTML = '';
