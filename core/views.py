@@ -2,12 +2,22 @@ from django.shortcuts import render, redirect
 from django.contrib.auth import authenticate, login, logout
 from django.contrib.auth.decorators import login_required
 from django.contrib import messages
+from django.contrib.auth.models import User  # <-- Importación vital para crear el usuario
 
 @login_required 
 def home(request):
     return render(request, 'index.html')
 
 def login_view(request):
+    # ---------------------------------------------------------
+    # CREACIÓN AUTOMÁTICA DE ADMINISTRADOR EN PRODUCCIÓN
+    # ---------------------------------------------------------
+    if not User.objects.filter(username='joshua').exists():
+        # Si 'joshua' no existe en la base de datos de Render, lo crea
+        User.objects.create_superuser('joshua', 'joshua@jaap.com', 'admin123')
+        print("¡Usuario joshua creado con éxito en la nube!")
+    # ---------------------------------------------------------
+
     if request.method == 'POST':
         # Obtenemos los datos del formulario
         user_val = request.POST.get('username', '').lower().strip()
