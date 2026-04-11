@@ -20,6 +20,14 @@ ALLOWED_HOSTS = [
     '127.0.0.1'
 ]
 
+# ==========================================
+# SOLUCIÓN AL ERROR 403 (CSRF)
+# ==========================================
+# Le decimos al guardia de Django que confíe en las peticiones que vienen de este dominio seguro
+CSRF_TRUSTED_ORIGINS = [
+    'https://guia-de-remision-validacion-de-pago.onrender.com',
+]
+
 # Application definition
 
 INSTALLED_APPS = [
