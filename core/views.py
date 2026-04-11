@@ -9,18 +9,10 @@ def home(request):
     return render(request, 'index.html')
 
 def login_view(request):
-    # ---------------------------------------------------------
-    # CREACIÓN AUTOMÁTICA DE ADMINISTRADOR EN PRODUCCIÓN
-    # ---------------------------------------------------------
-    if not User.objects.filter(username='joshua').exists():
-        # Si 'joshua' no existe en la base de datos de Render, lo crea
-        User.objects.create_superuser('joshua', 'joshua@jaap.com', 'admin123')
-        print("¡Usuario joshua creado con éxito en la nube!")
-    # ---------------------------------------------------------
-
+    
     if request.method == 'POST':
-        # Obtenemos los datos del formulario
-        user_val = request.POST.get('username', '').lower().strip()
+        # ¡AQUÍ ESTÁ EL CAMBIO! Quitamos el .lower()
+        user_val = request.POST.get('username', '').strip() 
         pass_val = request.POST.get('password', '').strip()
         
         # DEBUG: Esto lo verás en los Logs de Render
