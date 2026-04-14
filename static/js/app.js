@@ -222,3 +222,28 @@ if(canvas) {
     window.addEventListener('resize', () => { canvas.width = window.innerWidth; canvas.height = window.innerHeight; init(); });
     init(); animate();
 }
+
+const inputAgencia = document.getElementById('agencia');
+const inputDireccion = document.getElementById('direccion');
+const inputReferencia = document.getElementById('referencia');
+
+if (inputAgencia) {
+    inputAgencia.addEventListener('change', function() {
+        const nombreSeleccionado = this.value;
+
+        // Llamamos a nuestra "antena" de Django
+        fetch(`/api/agencia/?nombre=${encodeURIComponent(nombreSeleccionado)}`)
+            .then(response => response.json())
+            .then(data => {
+                if (data.direccion) {
+                    inputDireccion.value = data.direccion;
+                    inputReferencia.value = data.referencia || '';
+                    
+                    // Efecto visual de que se llenó solo
+                    inputDireccion.style.borderColor = '#00c2b3';
+                    inputReferencia.style.borderColor = '#00c2b3';
+                }
+            })
+            .catch(err => console.log("Agencia no predefinida o error:", err));
+    });
+}

@@ -38,6 +38,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'core',     # <--- AGREGADO: Para que reconozca los modelos en la carpeta principal
 ]
 
 MIDDLEWARE = [
@@ -129,6 +130,8 @@ JAZZMIN_SETTINGS = {
         "auth": "fas fa-users-cog",
         "auth.user": "fas fa-user",
         "auth.Group": "fas fa-users",
+        "core.AgenciaTransporte": "fas fa-truck", # Icono de camioncito para agencias
+        "core.GuiaRemision": "fas fa-file-invoice", # Icono de documento para guías
     },
     "order_with_respect_to": ["auth", "core"],
 }

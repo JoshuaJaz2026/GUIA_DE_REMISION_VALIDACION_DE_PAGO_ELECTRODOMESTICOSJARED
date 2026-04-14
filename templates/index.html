@@ -54,7 +54,12 @@
                                     </div>
                                     <div class="form-field">
                                         <label for="agencia">Agencia / Transportista</label>
-                                        <input type="text" id="agencia" placeholder="Ej. SHALOM - Sede Centro" required>
+                                        <input type="text" id="agencia" list="agencias-list" placeholder="Escribe para buscar sede..." required autocomplete="off">
+                                        <datalist id="agencias-list">
+                                            {% for agencia in agencias %}
+                                                <option value="{{ agencia.nombre }}"></option>
+                                            {% endfor %}
+                                        </datalist>
                                     </div>
                                 </div>
 
