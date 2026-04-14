@@ -64,16 +64,16 @@
         .dato-box {
             border: 2px solid #7b1fa2;
             border-radius: 10px;
-            padding: 15px; /* Más espacio interior */
-            margin-bottom: 25px; /* Separa de la fila de abajo */
-            font-size: 18px; /* Letra más grande */
+            padding: 15px;
+            margin-bottom: 25px; 
+            font-size: 18px; 
         }
         
         .fila-doble {
             display: flex;
             justify-content: space-between;
-            gap: 20px; /* Separación horizontal */
-            margin-bottom: 25px; /* Separación vertical */
+            gap: 20px; 
+            margin-bottom: 25px; 
         }
         .fila-doble .dato-box { 
             flex: 1; 
@@ -83,8 +83,8 @@
         .dato-box-grande {
             border: 2px solid #7b1fa2;
             border-radius: 10px;
-            padding: 20px; /* Más espacio interior */
-            font-size: 18px; /* Letra más grande */
+            padding: 20px; 
+            font-size: 18px; 
             line-height: 1.8;
             margin-bottom: 10px;
         }
@@ -94,7 +94,7 @@
 
         /* --- CONTENEDOR DE LA IMAGEN DEL FOOTER --- */
         .imagen-footer-container {
-            margin-top: 40px; /* Sube la imagen un poco */
+            margin-top: 40px; 
             text-align: center;
             width: 100%;
         }
@@ -104,12 +104,12 @@
             height: auto;
         }
 
-        /* --- CONTACTO FINAL (Pegado al fondo) --- */
+        /* --- CONTACTO FINAL --- */
         .contacto-final {
             text-align: center;
-            font-size: 13px; /* Letras un poco más grandes */
+            font-size: 13px; 
             color: #7b1fa2;
-            margin-top: auto; /* Empuja esto al fondo exacto */
+            margin-top: auto; 
             line-height: 1.8;
         }
 
@@ -144,24 +144,24 @@
 
             <div class="dato-box">
                 <span class="etiqueta">Nombre:</span> 
-                <span class="valor">Juan Pérez de Prueba</span>
+                <span class="valor" id="print-nombre">Juan Pérez de Prueba</span>
             </div>
 
             <div class="fila-doble">
                 <div class="dato-box">
                     <span class="etiqueta">DNI / RUC:</span> 
-                    <span class="valor">76543210</span>
+                    <span class="valor" id="print-dni">76543210</span>
                 </div>
                 <div class="dato-box">
                     <span class="etiqueta">Celular:</span> 
-                    <span class="valor">987 654 321</span>
+                    <span class="valor" id="print-celular">987 654 321</span>
                 </div>
             </div>
 
             <div class="dato-box-grande">
-                <div><span class="etiqueta">Enviar a Agencia / Transportista:</span> <span class="valor">SHALOM - Sede Centro</span></div>
-                <div style="margin-top: 10px;"><span class="etiqueta">Dirección de Entrega:</span> <span class="valor">Av. Los Libertadores Mz. H Lote 14, Urbanización Las praderas del Sur</span></div>
-                <div style="margin-top: 10px;"><span class="etiqueta">Referencia:</span> <span class="valor">A la espalda del colegio nacional grande amarillo con portón verde y doble candado</span></div>
+                <div><span class="etiqueta">Enviar a Agencia / Transportista:</span> <span class="valor" id="print-agencia">SHALOM - Sede Centro</span></div>
+                <div style="margin-top: 10px;"><span class="etiqueta">Dirección de Entrega:</span> <span class="valor" id="print-direccion">Av. Los Libertadores Mz. H Lote 14, Urbanización Las praderas del Sur</span></div>
+                <div style="margin-top: 10px;"><span class="etiqueta">Referencia:</span> <span class="valor" id="print-referencia">A la espalda del colegio nacional grande amarillo con portón verde y doble candado</span></div>
             </div>
 
             <div class="imagen-footer-container">
@@ -177,5 +177,27 @@
         </div>
     </div>
 
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Buscamos si hay una guía enviada a la memoria
+            const guiaData = localStorage.getItem('guiaAImprimir');
+            
+            if (guiaData) {
+                // Si existe, la convertimos de texto a un objeto que podamos leer
+                const guia = JSON.parse(guiaData);
+                
+                // Reemplazamos los textos de prueba con los datos reales
+                document.getElementById('print-nombre').innerText = guia.nombre || '';
+                document.getElementById('print-dni').innerText = guia.dni || '';
+                document.getElementById('print-celular').innerText = guia.celular || '';
+                document.getElementById('print-agencia').innerText = guia.agencia || '';
+                document.getElementById('print-direccion').innerText = guia.direccion || '';
+                document.getElementById('print-referencia').innerText = guia.referencia || '';
+
+                // Borramos la guía de la memoria temporal para que no se quede pegada en futuras impresiones
+                localStorage.removeItem('guiaAImprimir');
+            }
+        });
+    </script>
 </body>
 </html>

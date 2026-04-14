@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sistema de Guías - Sublimaciones JAAP</title>
+    <title>Sistema de Guías - Electrodomésticos Jared</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
     <link rel="stylesheet" href="{% static 'css/style.css' %}">
 </head>
@@ -20,13 +20,13 @@
                     <div class="left-panel">
                         <div class="central-accent"></div>
                         <div class="bottom-text">
-                            <h1>Gestión<br>Logística<br>JAAP</h1>
+                            <h1>Gestión<br>Logística<br>Jared</h1>
                         </div>
                     </div>
 
                     <div class="right-panel">
                         <div class="right-panel-header">
-                            <div class="logo">JAAP.</div>
+                            <div class="logo">JARED.</div>
                             <div class="login-link">Hola, <span id="nombreUsuario">{{ user.username|title }}</span> | <a href="#" id="btnLogout" style="color: #ff4757;">Cerrar Sesión</a></div>
                         </div>
 
@@ -34,7 +34,9 @@
                             <h2>Nueva Guía de Remisión</h2>
                             
                             <form id="guiaForm">
-                                {% csrf_token %} <div class="form-row">
+                                {% csrf_token %} 
+                                
+                                <div class="form-row">
                                     <div class="form-field">
                                         <label for="nombre">Nombre del Cliente</label>
                                         <input type="text" id="nombre" placeholder="Ej. Juan Pérez" required>
@@ -47,12 +49,30 @@
 
                                 <div class="form-row">
                                     <div class="form-field">
+                                        <label for="celular">Celular</label>
+                                        <input type="text" id="celular" placeholder="Ej. 987 654 321" required>
+                                    </div>
+                                    <div class="form-field">
+                                        <label for="agencia">Agencia / Transportista</label>
+                                        <input type="text" id="agencia" placeholder="Ej. SHALOM - Sede Centro" required>
+                                    </div>
+                                </div>
+
+                                <div class="form-row">
+                                    <div class="form-field">
                                         <label for="direccion">Dirección de Entrega</label>
                                         <input type="text" id="direccion" placeholder="Distrito, Calle, Número" required>
                                     </div>
                                     <div class="form-field">
                                         <label for="producto">Producto (Categoría)</label>
-                                        <input type="text" id="producto" placeholder="Ej. Arrocera Oster (Pequeños Electrodomésticos)" required>
+                                        <input type="text" id="producto" placeholder="Ej. Arrocera Oster" required>
+                                    </div>
+                                </div>
+
+                                <div class="form-row" style="margin-bottom: 25px;">
+                                    <div class="form-field" style="width: 100%;">
+                                        <label for="referencia">Referencia de llegada</label>
+                                        <textarea id="referencia" rows="2" placeholder="Ej. Frente al parque grande, casa de rejas verdes..." style="width: 100%; background: rgba(255, 255, 255, 0.05); border: 1px solid rgba(255, 255, 255, 0.1); border-radius: 8px; color: white; padding: 12px; font-family: inherit; font-size: 14px;" required></textarea>
                                     </div>
                                 </div>
 
@@ -69,7 +89,7 @@
                         </div>
 
                         <div class="right-panel-footer">
-                            @copyright 2026. Sublimaciones JAAP.
+                            @copyright 2026. Electrodomésticos Jared.
                         </div>
                     </div>
                 </div>
@@ -92,7 +112,7 @@
                                     <th>Fecha</th>
                                     <th>Cliente</th>
                                     <th>DNI/RUC</th>
-                                    <th>Producto / Dirección</th>
+                                    <th>Agencia / Dirección</th>
                                     <th>Acción</th>
                                 </tr>
                             </thead>

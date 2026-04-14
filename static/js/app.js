@@ -1,22 +1,18 @@
 // ==========================================
 // 0. INTEGRACIÓN CON DJANGO (SESIÓN)
 // ==========================================
-// ¡Eliminamos el bloqueo local! Ahora Django protege la ruta.
 
-// Obtenemos el nombre del usuario directamente del HTML que nos manda Django
 const nombreElement = document.getElementById('nombreUsuario');
-let usuarioActual = nombreElement ? nombreElement.innerText.trim().toLowerCase() : 'usuario_jaap';
+let usuarioActual = nombreElement ? nombreElement.innerText.trim().toLowerCase() : 'usuario_jared';
 
-// Si el nombre viene vacío por alguna razón, le ponemos un valor por defecto
 if (!usuarioActual || usuarioActual === '') {
-    usuarioActual = 'usuario_jaap';
+    usuarioActual = 'usuario_jared';
 }
 
 const btnLogout = document.getElementById('btnLogout');
 if(btnLogout) {
     btnLogout.addEventListener('click', (e) => {
         e.preventDefault();
-        // Le decimos a Django que cierre la sesión de forma segura
         window.location.href = '/logout/';
     });
 }
@@ -80,8 +76,12 @@ if(form) {
             return; 
         }
 
+        // CAPTURA DE DATOS (Nuevos y antiguos)
         const nombreVal = document.getElementById('nombre').value;
+        const celularVal = document.getElementById('celular').value;
+        const agenciaVal = document.getElementById('agencia').value;
         const direccionVal = document.getElementById('direccion').value;
+        const referenciaVal = document.getElementById('referencia').value;
         const productoVal = document.getElementById('producto').value;
         const fechaActual = new Date().toLocaleDateString('es-PE');
 
@@ -90,16 +90,20 @@ if(form) {
             fecha: fechaActual,
             nombre: nombreVal,
             dni: dniVal,
+            celular: celularVal,
+            agencia: agenciaVal,
             direccion: direccionVal,
+            referencia: referenciaVal,
             producto: productoVal
         };
 
-        const llaveBD = 'guiasJAAP_' + usuarioActual;
+        const llaveBD = 'guiasJAAP_' + usuarioActual; // Mantenemos la llave para no borrar tu historial anterior
         let guias = JSON.parse(localStorage.getItem(llaveBD)) || [];
         guias.push(guia);
         localStorage.setItem(llaveBD, JSON.stringify(guias));
         
-        textoResumen.value = `📦 SUBLIMACIONES JAAP\n👤 Atendido por: ${usuarioActual.toUpperCase()}\n------------------------\n👤 Cliente: ${nombreVal}\n📄 DNI/RUC: ${dniVal}\n📍 Dirección: ${direccionVal}\n🛒 Producto: ${productoVal}\n📅 Fecha: ${fechaActual}`;
+        // RESUMEN ACTUALIZADO PARA WHATSAPP
+        textoResumen.value = `📦 ELECTRODOMÉSTICOS JARED\n👤 Atendido por: ${usuarioActual.toUpperCase()}\n------------------------\n👤 Cliente: ${nombreVal}\n📄 DNI/RUC: ${dniVal}\n📱 Celular: ${celularVal}\n🚚 Agencia: ${agenciaVal}\n📍 Dirección: ${direccionVal}\n📌 Referencia: ${referenciaVal}\n🛒 Producto: ${productoVal}\n📅 Fecha: ${fechaActual}`;
         modalCopia.classList.add('activo');
 
         form.reset();
@@ -132,15 +136,33 @@ function mostrarGuias() {
     tabla.innerHTML = '';
     
     guias.reverse().forEach(g => {
+        // Agregamos la Agencia y el botón de imprimir a la tabla
         tabla.innerHTML += `
             <tr>
                 <td><strong>${g.fecha}</strong></td>
                 <td>${g.nombre}</td>
                 <td>${g.dni}</td>
-                <td><strong>${g.producto}</strong><br><small>${g.direccion}</small></td>
-                <td><button onclick="eliminarGuia(${g.id})" class="btn-eliminar">Eliminar</button></td>
+                <td><strong>${g.agencia}</strong><br><small>${g.direccion}</small></td>
+                <td>
+                    <button onclick="imprimirGuia(${g.id})" style="background:#7b1fa2; color:white; border:none; padding:8px 12px; border-radius:5px; cursor:pointer; margin-right:5px; font-weight:bold;">🖨️</button>
+                    <button onclick="eliminarGuia(${g.id})" class="btn-eliminar" style="padding:8px 12px;">🗑️</button>
+                </td>
             </tr>`;
     });
+}
+
+// NUEVA FUNCIÓN: Envía los datos a la pestaña de impresión
+window.imprimirGuia = function(id) {
+    const llaveBD = 'guiasJAAP_' + usuarioActual;
+    let guias = JSON.parse(localStorage.getItem(llaveBD)) || [];
+    const guiaAImprimir = guias.find(g => g.id === id);
+    
+    if(guiaAImprimir) {
+        // Guardamos la guía exacta que queremos imprimir en una memoria temporal
+        localStorage.setItem('guiaAImprimir', JSON.stringify(guiaAImprimir));
+        // Abrimos la ruta de tu hoja morada en una pestaña nueva
+        window.open('/imprimir-prueba/', '_blank');
+    }
 }
 
 window.eliminarGuia = function(id) {
@@ -162,7 +184,9 @@ if(buscador) {
     });
 }
 
-// Fondo Partículas
+// ==========================================
+// 2. FONDO DE PARTÍCULAS
+// ==========================================
 const canvas = document.getElementById('bg-canvas');
 if(canvas) {
     const ctx = canvas.getContext('2d');
