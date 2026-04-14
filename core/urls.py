@@ -1,19 +1,10 @@
 from django.contrib import admin
 from django.urls import path
-# --- ACTUALIZADO: Añadimos obtener_datos_agencia a la importación ---
 from .views import home, login_view, logout_view, vista_impresion_prueba, obtener_datos_agencia
-from core.models import GuiaRemision, AgenciaTransporte
-
-# --- FORZAR REGISTRO DE MODELOS EN EL ADMIN ---
-try:
-    admin.site.register(GuiaRemision)
-    admin.site.register(AgenciaTransporte)
-except admin.sites.AlreadyRegistered:
-    pass
-# ----------------------------------------------
 
 urlpatterns = [
     # 1. Panel de Administración (Jazzmin)
+    # Al quitar el registro forzado de aquí, Django usará la configuración de admin.py
     path('admin/', admin.site.urls), 
     
     # 2. Página Principal (Index)
@@ -28,6 +19,6 @@ urlpatterns = [
     # 5. Ruta para la impresión
     path('imprimir-prueba/', vista_impresion_prueba, name='imprimir_prueba'),
 
-    # 6. API para autocompletar agencias
+    # 6. API para autocompletar agencias (Mantenemos esta ruta vital)
     path('api/agencia/', obtener_datos_agencia, name='obtener_datos_agencia'),
 ]
