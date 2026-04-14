@@ -1,6 +1,7 @@
 from django.contrib import admin
 from django.urls import path
-from .views import home, login_view, logout_view # Añadimos logout_view
+# ¡AQUÍ ESTÁ LA MAGIA! Añadimos vista_impresion_prueba a la lista
+from .views import home, login_view, logout_view, vista_impresion_prueba
 
 urlpatterns = [
     # 1. Panel de Administración (Jazzmin)
@@ -12,6 +13,9 @@ urlpatterns = [
     # 3. Autenticación
     path('login/', login_view, name='login'),
     
-    # 4. AÑADIDO: Ruta para cerrar sesión
+    # 4. Ruta para cerrar sesión
     path('logout/', logout_view, name='logout'),
+
+    # 5. Ruta para la prueba de impresión
+    path('imprimir-prueba/', vista_impresion_prueba, name='imprimir_prueba'),
 ]

@@ -1,0 +1,181 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Imprimir Guía - Jared</title>
+    <style>
+        /* Configuraciones estrictas para impresora A4 */
+        @page {
+            size: A4 portrait;
+            margin: 0;
+        }
+        
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Arial', sans-serif;
+            background-color: #5a5a5a;
+            display: flex;
+            justify-content: center;
+        }
+
+        /* Nuestro "lienzo" A4 (Fondo Morado) */
+        .a4-container {
+            width: 210mm;
+            height: 297mm;
+            background-color: #7b1fa2; 
+            position: relative;
+            -webkit-print-color-adjust: exact !important;
+            print-color-adjust: exact !important;
+            box-shadow: 0 0 15px rgba(0,0,0,0.5);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 20px;
+            box-sizing: border-box;
+        }
+
+        /* El recuadro blanco gigante donde va todo el contenido */
+        .white-card {
+            background-color: #ffffff;
+            width: 95%;
+            height: 97%;
+            border-radius: 15px;
+            padding: 40px; 
+            box-sizing: border-box;
+            display: flex;
+            flex-direction: column; 
+        }
+
+        /* --- CABECERA --- */
+        .header {
+            text-align: center;
+            color: #7b1fa2;
+            margin-bottom: 30px; 
+            border-bottom: 3px solid #7b1fa2;
+            padding-bottom: 10px;
+        }
+        .header h3 { margin: 0; font-size: 18px; font-weight: normal; letter-spacing: 2px;}
+        .header h1 { margin: 0; font-size: 45px; font-style: italic; }
+
+        /* --- CAMPOS DE DATOS --- */
+        .dato-box {
+            border: 2px solid #7b1fa2;
+            border-radius: 10px;
+            padding: 15px; /* Más espacio interior */
+            margin-bottom: 25px; /* Separa de la fila de abajo */
+            font-size: 18px; /* Letra más grande */
+        }
+        
+        .fila-doble {
+            display: flex;
+            justify-content: space-between;
+            gap: 20px; /* Separación horizontal */
+            margin-bottom: 25px; /* Separación vertical */
+        }
+        .fila-doble .dato-box { 
+            flex: 1; 
+            margin-bottom: 0; 
+        }
+
+        .dato-box-grande {
+            border: 2px solid #7b1fa2;
+            border-radius: 10px;
+            padding: 20px; /* Más espacio interior */
+            font-size: 18px; /* Letra más grande */
+            line-height: 1.8;
+            margin-bottom: 10px;
+        }
+
+        .etiqueta { font-weight: bold; color: #000; }
+        .valor { font-weight: normal; color: #000; }
+
+        /* --- CONTENEDOR DE LA IMAGEN DEL FOOTER --- */
+        .imagen-footer-container {
+            margin-top: 40px; /* Sube la imagen un poco */
+            text-align: center;
+            width: 100%;
+        }
+        
+        .imagen-footer-container img {
+            max-width: 95%; 
+            height: auto;
+        }
+
+        /* --- CONTACTO FINAL (Pegado al fondo) --- */
+        .contacto-final {
+            text-align: center;
+            font-size: 13px; /* Letras un poco más grandes */
+            color: #7b1fa2;
+            margin-top: auto; /* Empuja esto al fondo exacto */
+            line-height: 1.8;
+        }
+
+        /* Ocultar botón al imprimir */
+        @media print {
+            body { background-color: white; }
+            .a4-container { box-shadow: none; }
+            .btn-flotante { display: none; }
+        }
+
+        .btn-flotante {
+            position: fixed; bottom: 30px; right: 30px;
+            background-color: #00c2b3; color: white; border: none;
+            padding: 15px 25px; font-size: 18px; font-weight: bold;
+            border-radius: 50px; cursor: pointer;
+            box-shadow: 0 5px 15px rgba(0, 194, 179, 0.4);
+        }
+        .btn-flotante:hover { background-color: #009c90; }
+    </style>
+</head>
+<body>
+
+    <button class="btn-flotante" onclick="window.print()">🖨️ Imprimir Guía</button>
+
+    <div class="a4-container">
+        <div class="white-card">
+            
+            <div class="header">
+                <h3>LLEGÓ TU</h3>
+                <h1>Pedido</h1>
+            </div>
+
+            <div class="dato-box">
+                <span class="etiqueta">Nombre:</span> 
+                <span class="valor">Juan Pérez de Prueba</span>
+            </div>
+
+            <div class="fila-doble">
+                <div class="dato-box">
+                    <span class="etiqueta">DNI / RUC:</span> 
+                    <span class="valor">76543210</span>
+                </div>
+                <div class="dato-box">
+                    <span class="etiqueta">Celular:</span> 
+                    <span class="valor">987 654 321</span>
+                </div>
+            </div>
+
+            <div class="dato-box-grande">
+                <div><span class="etiqueta">Enviar a Agencia / Transportista:</span> <span class="valor">SHALOM - Sede Centro</span></div>
+                <div style="margin-top: 10px;"><span class="etiqueta">Dirección de Entrega:</span> <span class="valor">Av. Los Libertadores Mz. H Lote 14, Urbanización Las praderas del Sur</span></div>
+                <div style="margin-top: 10px;"><span class="etiqueta">Referencia:</span> <span class="valor">A la espalda del colegio nacional grande amarillo con portón verde y doble candado</span></div>
+            </div>
+
+            <div class="imagen-footer-container">
+                <img src="{% static 'img/electrodomesticos_jared_imagen.png' %}" alt="Gracias por tu compra - Jared Electrodomésticos">
+            </div>
+
+            <div class="contacto-final">
+                <strong>📧 ELECTRODOMESTICOSJARED@GMAIL.COM &nbsp; | &nbsp; 🌐 WWW.ELECTRODOMESTICOSJARED.PE</strong><br>
+                💬 PARA DUDAS O COMENTARIOS ACERCA DE TU COMPRA <strong>📞 986 305 990</strong><br>
+                <span style="font-size: 13px; font-weight: bold;">¡ESTAMOS AQUÍ PARA AYUDARTE!</span>
+            </div>
+
+        </div>
+    </div>
+
+</body>
+</html>
