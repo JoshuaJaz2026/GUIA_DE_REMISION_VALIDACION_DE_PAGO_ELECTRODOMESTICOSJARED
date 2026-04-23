@@ -1,6 +1,8 @@
 // ==========================================
 // 0. INTEGRACIÓN CON DJANGO (SESIÓN)
 // ==========================================
+// Variable para controlar si estamos creando o editando
+let idGuiaEditando = null;
 
 const nombreElement = document.getElementById('nombreUsuario');
 let usuarioActual = nombreElement ? nombreElement.innerText.trim().toLowerCase() : 'usuario_jared';
@@ -27,6 +29,7 @@ const sliderTrack = document.getElementById('sliderTrack');
 const btnGoHistory = document.getElementById('btnGoHistory');
 const btnGoForm = document.getElementById('btnGoForm');
 const inputDni = document.getElementById('dni');
+const errorDoc = document.getElementById('error-doc'); 
 const checkboxConfirmacion = document.getElementById('confirmacion');
 const btnSubmit = document.getElementById('btnSubmit');
 const modalCopia = document.getElementById('modalCopia');
@@ -46,38 +49,124 @@ if(btnGoForm && sliderTrack) {
     });
 }
 
-if(btnSubmit && checkboxConfirmacion) {
-    btnSubmit.disabled = !checkboxConfirmacion.checked;
-}
-
 document.addEventListener('DOMContentLoaded', mostrarGuias);
 
+// --- LÓGICA DE VALIDACIÓN EN TIEMPO REAL CON API ---
 if(inputDni) {
-    inputDni.addEventListener('input', function() {
-        this.value = this.value.replace(/[^0-9]/g, '');
-        if(this.value.length > 11) this.value = this.value.slice(0, 11);
+    inputDni.addEventListener('input', function(e) {
+        let val = this.value.replace(/[^0-9]/g, '');
+        if(val.length > 11) val = val.slice(0, 11);
+        this.value = val;
+
+        let mensaje = "";
+        let esValido = true;
+
+        if (val.length > 0) {
+            if (val.length !== 8 && val.length !== 11) {
+                mensaje = `Faltan dígitos (${val.length}/8 o 11).`;
+                esValido = false;
+            } else if (val.length === 11) {
+                const inicio = val.substring(0, 2);
+                if (!['10', '15', '17', '20'].includes(inicio)) {
+                    mensaje = "RUC inválido.";
+                    esValido = false;
+                }
+            }
+        }
+
+        if (errorDoc) {
+            if (!esValido && val.length > 0) {
+                this.style.borderColor = '#ff4757'; 
+                errorDoc.innerText = mensaje;
+                errorDoc.style.display = 'block';
+                btnSubmit.disabled = true;
+                document.getElementById('nombre').value = ""; 
+            } else if (esValido && val.length > 0) {
+                this.style.borderColor = '#00c2b3'; 
+                errorDoc.style.display = 'none';
+                btnSubmit.disabled = !checkboxConfirmacion.checked;
+
+                // --- LLAMADA A LA API ---
+                if (val.length === 8 || val.length === 11) {
+                    buscarDatosDocumento(val);
+                }
+            } else {
+                this.style.borderColor = ''; 
+                errorDoc.style.display = 'none';
+            }
+        }
     });
+}
+
+// --- FUNCIÓN MEJORADA: CONSULTA DECOLECTA VÍA DJANGO ---
+function buscarDatosDocumento(numero) {
+    const inputNombre = document.getElementById('nombre');
+    
+    inputNombre.value = "";
+    inputNombre.placeholder = "Consultando base de datos...";
+    inputNombre.disabled = true;
+    inputNombre.style.borderColor = '';
+
+    fetch(`/api/documento/?numero=${numero}`)
+        .then(response => {
+            if (!response.ok) throw new Error('No encontrado');
+            return response.json();
+        })
+        .then(data => {
+            inputNombre.disabled = false;
+            if (data.nombre) {
+                inputNombre.value = data.nombre;
+                inputNombre.style.borderColor = '#00c2b3'; // Verde éxito
+            } else {
+                lanzarFallback(inputNombre, "No encontrado. Ingrese manual.");
+            }
+        })
+        .catch(error => {
+            console.error("Error API:", error);
+            inputNombre.disabled = false;
+            lanzarFallback(inputNombre, "No encontrado o límite excedido.");
+        });
+}
+
+function lanzarFallback(input, mensaje) {
+    input.value = "";
+    input.placeholder = mensaje;
+    input.style.borderColor = '#ffa502'; // Naranja advertencia
 }
 
 if(checkboxConfirmacion && btnSubmit) {
     checkboxConfirmacion.addEventListener('change', function() {
-        btnSubmit.disabled = !this.checked;
+        const tieneError = inputDni && inputDni.style.borderColor === 'rgb(255, 71, 87)';
+        if (tieneError) {
+            this.checked = false;
+            alert("Corrija el DNI/RUC antes de continuar.");
+            btnSubmit.disabled = true;
+        } else {
+            btnSubmit.disabled = !this.checked;
+        }
     });
 }
 
+// ==========================================
+// REGISTRO Y LOCALSTORAGE (NUEVO O EDICIÓN)
+// ==========================================
 if(form) {
     form.addEventListener('submit', (e) => {
         e.preventDefault();
         
         const dniVal = inputDni.value;
-        if (dniVal.length !== 8 && dniVal.length !== 11) {
-            alert('⚠️ Error: DNI (8 dígitos) o RUC (11 dígitos).');
-            inputDni.focus();
-            return; 
+        const nombreVal = document.getElementById('nombre').value;
+
+        if (!nombreVal) {
+            alert("Por favor, ingrese el nombre del cliente.");
+            document.getElementById('nombre').focus();
+            return;
         }
 
-        // CAPTURA DE DATOS (Nuevos y antiguos)
-        const nombreVal = document.getElementById('nombre').value;
+        const llaveBD = 'guiasJAAP_' + usuarioActual; 
+        let guias = JSON.parse(localStorage.getItem(llaveBD)) || [];
+
+        // CAPTURA DE DATOS ACTUALES DEL FORMULARIO
         const celularVal = document.getElementById('celular').value;
         const agenciaVal = document.getElementById('agencia').value;
         const direccionVal = document.getElementById('direccion').value;
@@ -85,29 +174,62 @@ if(form) {
         const productoVal = document.getElementById('producto').value;
         const fechaActual = new Date().toLocaleDateString('es-PE');
 
-        const guia = {
-            id: Date.now(),
-            fecha: fechaActual,
-            nombre: nombreVal,
-            dni: dniVal,
-            celular: celularVal,
-            agencia: agenciaVal,
-            direccion: direccionVal,
-            referencia: referenciaVal,
-            producto: productoVal
-        };
+        let guiaResumen = {}; // Para el mensaje de WhatsApp
 
-        const llaveBD = 'guiasJAAP_' + usuarioActual; // Mantenemos la llave para no borrar tu historial anterior
-        let guias = JSON.parse(localStorage.getItem(llaveBD)) || [];
-        guias.push(guia);
+        // ¿ESTAMOS EDITANDO O CREANDO?
+        if (idGuiaEditando !== null) {
+            // MODO EDICIÓN: Buscamos la guía y actualizamos sus datos
+            const index = guias.findIndex(g => g.id === idGuiaEditando);
+            if (index !== -1) {
+                guias[index].dni = dniVal;
+                guias[index].nombre = nombreVal;
+                guias[index].celular = celularVal;
+                guias[index].agencia = agenciaVal;
+                guias[index].direccion = direccionVal;
+                guias[index].referencia = referenciaVal;
+                guias[index].producto = productoVal;
+                guiaResumen = guias[index];
+            }
+            
+            // Limpiamos el estado de edición
+            idGuiaEditando = null;
+            btnSubmit.innerText = "Generar Guía de Remisión"; 
+            btnSubmit.style.backgroundColor = ""; 
+
+        } else {
+            // MODO NUEVO REGISTRO: Creamos uno desde cero
+            const nuevaGuia = {
+                id: Date.now(),
+                fecha: fechaActual,
+                nombre: nombreVal,
+                dni: dniVal,
+                celular: celularVal,
+                agencia: agenciaVal,
+                direccion: direccionVal,
+                referencia: referenciaVal,
+                producto: productoVal
+            };
+            guias.push(nuevaGuia);
+            guiaResumen = nuevaGuia;
+        }
+
+        // GUARDAR EN MEMORIA
         localStorage.setItem(llaveBD, JSON.stringify(guias));
         
         // RESUMEN ACTUALIZADO PARA WHATSAPP
-        textoResumen.value = `📦 ELECTRODOMÉSTICOS JARED\n👤 Atendido por: ${usuarioActual.toUpperCase()}\n------------------------\n👤 Cliente: ${nombreVal}\n📄 DNI/RUC: ${dniVal}\n📱 Celular: ${celularVal}\n🚚 Agencia: ${agenciaVal}\n📍 Dirección: ${direccionVal}\n📌 Referencia: ${referenciaVal}\n🛒 Producto: ${productoVal}\n📅 Fecha: ${fechaActual}`;
+        textoResumen.value = `📦 ELECTRODOMÉSTICOS JARED\n👤 Atendido por: ${usuarioActual.toUpperCase()}\n------------------------\n👤 Cliente: ${guiaResumen.nombre}\n📄 DNI/RUC: ${guiaResumen.dni}\n📱 Celular: ${guiaResumen.celular}\n🚚 Agencia: ${guiaResumen.agencia}\n📍 Dirección: ${guiaResumen.direccion}\n📌 Referencia: ${guiaResumen.referencia}\n🛒 Producto: ${guiaResumen.producto}\n📅 Fecha: ${guiaResumen.fecha}`;
         modalCopia.classList.add('activo');
 
+        // LIMPIEZA DEL FORMULARIO
         form.reset();
+        inputDni.style.borderColor = ''; 
+        document.getElementById('direccion').style.borderColor = '';
+        document.getElementById('referencia').style.borderColor = '';
+        document.getElementById('nombre').style.borderColor = ''; 
+        if(checkboxConfirmacion) checkboxConfirmacion.checked = false;
         btnSubmit.disabled = true;
+        
+        // Refrescar la tabla
         mostrarGuias();
     });
 }
@@ -136,7 +258,6 @@ function mostrarGuias() {
     tabla.innerHTML = '';
     
     guias.reverse().forEach(g => {
-        // Agregamos la Agencia y el botón de imprimir a la tabla
         tabla.innerHTML += `
             <tr>
                 <td><strong>${g.fecha}</strong></td>
@@ -144,6 +265,7 @@ function mostrarGuias() {
                 <td>${g.dni}</td>
                 <td><strong>${g.agencia}</strong><br><small>${g.direccion}</small></td>
                 <td>
+                    <button onclick="editarGuia(${g.id})" style="background:#0097e6; color:white; border:none; padding:8px 12px; border-radius:5px; cursor:pointer; margin-right:5px; font-weight:bold;">✏️</button>
                     <button onclick="imprimirGuia(${g.id})" style="background:#7b1fa2; color:white; border:none; padding:8px 12px; border-radius:5px; cursor:pointer; margin-right:5px; font-weight:bold;">🖨️</button>
                     <button onclick="eliminarGuia(${g.id})" class="btn-eliminar" style="padding:8px 12px;">🗑️</button>
                 </td>
@@ -151,16 +273,50 @@ function mostrarGuias() {
     });
 }
 
-// NUEVA FUNCIÓN: Envía los datos a la pestaña de impresión
+// --- NUEVA FUNCIÓN PARA EDITAR GUÍA ---
+window.editarGuia = function(id) {
+    const llaveBD = 'guiasJAAP_' + usuarioActual;
+    let guias = JSON.parse(localStorage.getItem(llaveBD)) || [];
+    const guia = guias.find(g => g.id === id);
+    
+    if(guia) {
+        // Llenar el formulario con los datos guardados
+        document.getElementById('dni').value = guia.dni;
+        document.getElementById('nombre').value = guia.nombre;
+        document.getElementById('celular').value = guia.celular || '';
+        document.getElementById('agencia').value = guia.agencia || '';
+        document.getElementById('direccion').value = guia.direccion || '';
+        document.getElementById('referencia').value = guia.referencia || '';
+        document.getElementById('producto').value = guia.producto || '';
+
+        // Asegurarnos de que el campo nombre no esté bloqueado
+        document.getElementById('nombre').disabled = false;
+        document.getElementById('dni').style.borderColor = '#00c2b3';
+        document.getElementById('nombre').style.borderColor = '#00c2b3';
+
+        // Marcar que estamos en MODO EDICIÓN
+        idGuiaEditando = id;
+
+        // Cambiar el texto del botón
+        if (btnSubmit) {
+            btnSubmit.innerText = "Guardar Cambios";
+            btnSubmit.style.backgroundColor = "#0097e6";
+        }
+
+        // Mover la pantalla al formulario
+        if (sliderTrack) {
+            sliderTrack.style.transform = 'translateX(0)';
+        }
+    }
+}
+
 window.imprimirGuia = function(id) {
     const llaveBD = 'guiasJAAP_' + usuarioActual;
     let guias = JSON.parse(localStorage.getItem(llaveBD)) || [];
     const guiaAImprimir = guias.find(g => g.id === id);
     
     if(guiaAImprimir) {
-        // Guardamos la guía exacta que queremos imprimir en una memoria temporal
         localStorage.setItem('guiaAImprimir', JSON.stringify(guiaAImprimir));
-        // Abrimos la ruta de tu hoja morada en una pestaña nueva
         window.open('/imprimir-prueba/', '_blank');
     }
 }
@@ -223,6 +379,7 @@ if(canvas) {
     init(); animate();
 }
 
+// --- LÓGICA DE AGENCIA ---
 const inputAgencia = document.getElementById('agencia');
 const inputDireccion = document.getElementById('direccion');
 const inputReferencia = document.getElementById('referencia');
@@ -230,20 +387,16 @@ const inputReferencia = document.getElementById('referencia');
 if (inputAgencia) {
     inputAgencia.addEventListener('change', function() {
         const nombreSeleccionado = this.value;
-
-        // Llamamos a nuestra "antena" de Django
         fetch(`/api/agencia/?nombre=${encodeURIComponent(nombreSeleccionado)}`)
             .then(response => response.json())
             .then(data => {
                 if (data.direccion) {
                     inputDireccion.value = data.direccion;
                     inputReferencia.value = data.referencia || '';
-                    
-                    // Efecto visual de que se llenó solo
                     inputDireccion.style.borderColor = '#00c2b3';
                     inputReferencia.style.borderColor = '#00c2b3';
                 }
             })
-            .catch(err => console.log("Agencia no predefinida o error:", err));
+            .catch(err => console.log("Agencia no encontrada:", err));
     });
 }
