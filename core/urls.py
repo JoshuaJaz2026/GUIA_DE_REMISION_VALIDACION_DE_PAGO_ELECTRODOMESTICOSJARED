@@ -1,8 +1,7 @@
 from django.contrib import admin
 from django.urls import path
 # --- IMPORTANTE: Agregamos guardar_guia al final de esta lista ---
-from .views import home, login_view, logout_view, vista_impresion_prueba, obtener_datos_agencia, consultar_documento, guardar_guia
-
+from .views import home, login_view, logout_view, vista_impresion_prueba, obtener_datos_agencia, consultar_documento, guardar_guia, generar_pdf_guia
 urlpatterns = [
     # 1. Panel de Administración (Jazzmin)
     path('admin/', admin.site.urls), 
