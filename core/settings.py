@@ -150,3 +150,15 @@ JAZZMIN_UI_TWEAKS = {
         "success": "btn-success"
     }
 }
+
+# ==========================================
+# SEGURIDAD DE SESIONES (INACTIVIDAD)
+# ==========================================
+# 1. Tiempo de vida de la sesión: 30 minutos (30 * 60 segundos = 1800)
+SESSION_COOKIE_AGE = 1800 
+
+# 2. Renovar los 30 minutos cada vez que el usuario hace algo en el sistema
+SESSION_SAVE_EVERY_REQUEST = True 
+
+# 3. Cerrar sesión automáticamente si el usuario cierra el navegador por completo
+SESSION_EXPIRE_AT_BROWSER_CLOSE = True

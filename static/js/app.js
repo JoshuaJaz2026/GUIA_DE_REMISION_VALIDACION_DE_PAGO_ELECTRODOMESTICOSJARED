@@ -18,7 +18,29 @@ if(btnLogout) {
         window.location.href = '/logout/';
     });
 }
+// ==========================================
+// 0.5 SEGURIDAD: CIERRE DE SESIÓN POR INACTIVIDAD
+// ==========================================
+let tiempoInactividad;
+const TIEMPO_LIMITE = 30 * 60 * 1000; // 30 minutos en milisegundos
 
+function reiniciarTemporizador() {
+    clearTimeout(tiempoInactividad);
+    // Si pasan 30 minutos sin hacer nada, redirigir al logout
+    tiempoInactividad = setTimeout(() => {
+        alert("Tu sesión ha expirado por inactividad. Serás redirigido al inicio.");
+        window.location.href = '/logout/';
+    }, TIEMPO_LIMITE);
+}
+
+// Escuchar cualquier interacción del usuario para saber que sigue "vivo"
+window.addEventListener('mousemove', reiniciarTemporizador);
+window.addEventListener('keypress', reiniciarTemporizador);
+window.addEventListener('click', reiniciarTemporizador);
+window.addEventListener('scroll', reiniciarTemporizador);
+
+// Iniciar el temporizador apenas carga la página
+reiniciarTemporizador();
 // ==========================================
 // 1. LÓGICA DE NAVEGACIÓN Y FORMULARIO
 // ==========================================
@@ -400,3 +422,4 @@ if (inputAgencia) {
             .catch(err => console.log("Agencia no encontrada:", err));
     });
 }
+
