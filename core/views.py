@@ -164,3 +164,22 @@ def generar_pdf_guia(request, guia_id):
         return HttpResponse('Hubo un error al generar el PDF', status=500)
     
     return response
+
+# Agregar esto al final de views.py
+@login_required
+def historial_guias(request):
+    # Traemos todas las guías de la base de datos, de la más nueva a la más antigua
+    guias = GuiaRemision.objects.all().order_by('-fecha_creacion')
+    
+    data = []
+    for g in guias:
+        data.append({
+            'id': g.id,
+            'fecha': g.fecha_creacion.strftime('%d/%m/%Y'),
+            'nombre': g.cliente,
+            'dni': g.dni_ruc,
+            'agencia': g.agencia if g.agencia else '-',
+            'direccion': g.direccion
+        })
+        
+    return JsonResponse(data, safe=False)

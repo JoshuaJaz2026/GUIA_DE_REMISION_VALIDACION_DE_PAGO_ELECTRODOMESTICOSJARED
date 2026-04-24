@@ -270,25 +270,40 @@ if(btnCerrarModal && modalCopia) {
 
 function mostrarGuias() {
     if(!tabla) return;
-    const llaveBD = 'guiasJAAP_' + usuarioActual;
-    let guias = JSON.parse(localStorage.getItem(llaveBD)) || [];
-    tabla.innerHTML = '';
     
-    guias.reverse().forEach(g => {
-        tabla.innerHTML += `
-            <tr>
-                <td><strong>${g.fecha}</strong></td>
-                <td>${g.nombre}</td>
-                <td>${g.dni}</td>
-                <td><strong>${g.agencia}</strong><br><small>${g.direccion}</small></td>
-                <td>
-                    <button onclick="editarGuia(${g.id})" style="background:#0097e6; color:white; border:none; padding:8px 12px; border-radius:5px; cursor:pointer; margin-right:5px; font-weight:bold;">✏️</button>
-                    <button onclick="imprimirGuia(${g.id})" style="background:#7b1fa2; color:white; border:none; padding:8px 12px; border-radius:5px; cursor:pointer; margin-right:5px; font-weight:bold;">🖨️</button>
-                    <button onclick="eliminarGuia(${g.id})" class="btn-eliminar" style="padding:8px 12px;">🗑️</button>
-                </td>
-            </tr>`;
-    });
+    // Muestra un mensaje de carga mientras espera al servidor
+    tabla.innerHTML = '<tr><td colspan="5" style="text-align: center;">Consultando Base de Datos...</td></tr>';
+    
+    // Pide los datos reales al backend de Django
+    fetch('/api/historial/')
+        .then(response => response.json())
+        .then(guias => {
+            tabla.innerHTML = ''; // Limpiamos la tabla
+            
+            guias.forEach(g => {
+                tabla.innerHTML += `
+                    <tr>
+                        <td><strong>${g.fecha}</strong></td>
+                        <td>${g.nombre}</td>
+                        <td>${g.dni}</td>
+                        <td><strong>${g.agencia}</strong><br><small>${g.direccion}</small></td>
+                        <td>
+                            <button onclick="window.open('/api/guia/${g.id}/pdf/', '_blank')" style="background:#7b1fa2; color:white; border:none; padding:8px 12px; border-radius:5px; cursor:pointer; margin-right:5px; font-weight:bold;" title="Imprimir PDF">🖨️</button>
+                            
+                            <button onclick="alert('Por seguridad contable, la edición/eliminación solo se puede hacer desde el Panel de Administrador de Django.')" class="btn-eliminar" style="padding:8px 12px; background: #ff4757; color: white; border: none; border-radius: 5px; cursor: pointer;">🗑️</button>
+                        </td>
+                    </tr>`;
+            });
+        })
+        .catch(error => {
+            console.error("Error cargando historial:", error);
+            tabla.innerHTML = '<tr><td colspan="5" style="text-align: center; color: red;">Error de conexión con la base de datos</td></tr>';
+        });
 }
+
+// Asegúrate de que la función se llame también justo después de guardar una guía nueva
+// Busca tu `fetch('/api/guardar-guia/')`, y en la sección `.then(data => { ... })`, agrega:
+// mostrarGuias();
 
 // --- NUEVA FUNCIÓN PARA EDITAR GUÍA ---
 window.editarGuia = function(id) {
