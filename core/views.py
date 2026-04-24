@@ -168,8 +168,8 @@ def generar_pdf_guia(request, guia_id):
 # Agregar esto al final de views.py
 @login_required
 def historial_guias(request):
-    # Traemos todas las guías de la base de datos, de la más nueva a la más antigua
-    guias = GuiaRemision.objects.all().order_by('-fecha_creacion')
+    # FILTRO DE SEGURIDAD: Solo traemos las guías donde 'usuario' sea el que está logueado
+    guias = GuiaRemision.objects.filter(usuario=request.user).order_by('-fecha_creacion')
     
     data = []
     for g in guias:
@@ -183,3 +183,34 @@ def historial_guias(request):
         })
         
     return JsonResponse(data, safe=False)
+
+# Agrega estas funciones al final de views.py
+
+@login_required
+def obtener_guia(request, guia_id):
+    try:
+        # Solo permitimos obtener guías que pertenezcan al usuario logueado
+        guia = GuiaRemision.objects.get(id=guia_id, usuario=request.user)
+        return JsonResponse({
+            'id': guia.id,
+            'dni': guia.dni_ruc,
+            'nombre': guia.cliente,
+            'celular': guia.celular,
+            'agencia': guia.agencia,
+            'direccion': guia.direccion,
+            'referencia': guia.referencia,
+            'producto': guia.producto
+        })
+    except GuiaRemision.DoesNotExist:
+        return JsonResponse({'error': 'Guía no encontrada'}, status=404)
+
+@login_required
+def eliminar_guia(request, guia_id):
+    if request.method == 'DELETE':
+        try:
+            guia = GuiaRemision.objects.get(id=guia_id, usuario=request.user)
+            guia.delete()
+            return JsonResponse({'mensaje': 'Eliminado correctamente'})
+        except GuiaRemision.DoesNotExist:
+            return JsonResponse({'error': 'No se pudo eliminar'}, status=404)
+    return JsonResponse({'error': 'Método no permitido'}, status=405)

@@ -18,6 +18,7 @@ if(btnLogout) {
         window.location.href = '/logout/';
     });
 }
+
 // ==========================================
 // 0.5 SEGURIDAD: CIERRE DE SESIÓN POR INACTIVIDAD
 // ==========================================
@@ -33,14 +34,12 @@ function reiniciarTemporizador() {
     }, TIEMPO_LIMITE);
 }
 
-// Escuchar cualquier interacción del usuario para saber que sigue "vivo"
 window.addEventListener('mousemove', reiniciarTemporizador);
 window.addEventListener('keypress', reiniciarTemporizador);
 window.addEventListener('click', reiniciarTemporizador);
 window.addEventListener('scroll', reiniciarTemporizador);
-
-// Iniciar el temporizador apenas carga la página
 reiniciarTemporizador();
+
 // ==========================================
 // 1. LÓGICA DE NAVEGACIÓN Y FORMULARIO
 // ==========================================
@@ -68,6 +67,11 @@ if(btnGoHistory && sliderTrack) {
 if(btnGoForm && sliderTrack) {
     btnGoForm.addEventListener('click', () => {
         sliderTrack.style.transform = 'translateX(0)';
+        // Resetear el estado de edición al ir a "Nuevo Registro"
+        idGuiaEditando = null;
+        form.reset();
+        btnSubmit.innerText = "Generar y Guardar Guía";
+        btnSubmit.style.backgroundColor = ""; 
     });
 }
 
@@ -108,7 +112,6 @@ if(inputDni) {
                 errorDoc.style.display = 'none';
                 btnSubmit.disabled = !checkboxConfirmacion.checked;
 
-                // --- LLAMADA A LA API ---
                 if (val.length === 8 || val.length === 11) {
                     buscarDatosDocumento(val);
                 }
@@ -120,7 +123,7 @@ if(inputDni) {
     });
 }
 
-// --- FUNCIÓN MEJORADA: CONSULTA DECOLECTA VÍA DJANGO ---
+// --- CONSULTA DECOLECTA VÍA DJANGO ---
 function buscarDatosDocumento(numero) {
     const inputNombre = document.getElementById('nombre');
     
@@ -138,7 +141,7 @@ function buscarDatosDocumento(numero) {
             inputNombre.disabled = false;
             if (data.nombre) {
                 inputNombre.value = data.nombre;
-                inputNombre.style.borderColor = '#00c2b3'; // Verde éxito
+                inputNombre.style.borderColor = '#00c2b3'; 
             } else {
                 lanzarFallback(inputNombre, "No encontrado. Ingrese manual.");
             }
@@ -153,7 +156,7 @@ function buscarDatosDocumento(numero) {
 function lanzarFallback(input, mensaje) {
     input.value = "";
     input.placeholder = mensaje;
-    input.style.borderColor = '#ffa502'; // Naranja advertencia
+    input.style.borderColor = '#ffa502'; 
 }
 
 if(checkboxConfirmacion && btnSubmit) {
@@ -185,10 +188,8 @@ if(form) {
             return;
         }
 
-        // 1. Capturamos el Token de Seguridad de Django que pusiste en el HTML
         const csrfToken = document.querySelector('[name=csrfmiddlewaretoken]').value;
 
-        // 2. Preparamos los datos
         const datosGuia = {
             dni: dniVal,
             nombre: nombreVal,
@@ -199,17 +200,18 @@ if(form) {
             producto: document.getElementById('producto').value
         };
 
-        // Cambiamos el texto del botón para que el usuario sepa que está cargando
         const textoOriginalBtn = btnSubmit.innerText;
-        btnSubmit.innerText = "Guardando y Generando PDF...";
+        btnSubmit.innerText = idGuiaEditando ? "Actualizando Guía..." : "Guardando y Generando PDF...";
         btnSubmit.disabled = true;
 
-        // 3. Enviamos los datos al Backend (views.py -> guardar_guia)
-        fetch('/api/guardar-guia/', {
+        // Si estamos editando, agregamos el ID a la URL para que Django sepa que debe actualizar
+        const urlApi = idGuiaEditando ? `/api/guardar-guia/?id=${idGuiaEditando}` : '/api/guardar-guia/';
+
+        fetch(urlApi, {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',
-                'X-CSRFToken': csrfToken // Sello de seguridad
+                'X-CSRFToken': csrfToken
             },
             body: JSON.stringify(datosGuia)
         })
@@ -218,18 +220,22 @@ if(form) {
             return response.json();
         })
         .then(data => {
-            // ¡ÉXITO! La guía se guardó en la base de datos
             
-            // 4. Abrimos el PDF en una nueva pestaña usando el ID que nos devolvió Django
-            if (data.id_guia) {
+            // Si es un registro nuevo y genera PDF, lo abrimos
+            if (data.id_guia && !idGuiaEditando) {
                 window.open(`/api/guia/${data.id_guia}/pdf/`, '_blank');
+            } else if (idGuiaEditando) {
+                alert("¡Guía actualizada correctamente!");
             }
 
-            // 5. Preparamos el resumen para WhatsApp
+            // Refrescar el historial de guías automáticamente
+            mostrarGuias();
+
+            // Resumen de WhatsApp
             textoResumen.value = `📦 ELECTRODOMÉSTICOS JARED\n👤 Atendido por: ${usuarioActual.toUpperCase()}\n------------------------\n👤 Cliente: ${datosGuia.nombre}\n📄 DNI/RUC: ${datosGuia.dni}\n📱 Celular: ${datosGuia.celular}\n🚚 Agencia: ${datosGuia.agencia}\n📍 Dirección: ${datosGuia.direccion}\n🛒 Producto: ${datosGuia.producto}`;
             modalCopia.classList.add('activo');
 
-            // 6. Limpiamos el formulario
+            // Limpiamos todo
             form.reset();
             inputDni.style.borderColor = ''; 
             document.getElementById('direccion').style.borderColor = '';
@@ -237,10 +243,10 @@ if(form) {
             document.getElementById('nombre').style.borderColor = ''; 
             if(checkboxConfirmacion) checkboxConfirmacion.checked = false;
             
+            idGuiaEditando = null;
             btnSubmit.innerText = "Generar y Guardar Guía";
+            btnSubmit.style.backgroundColor = ""; // Restaurar color original
             
-            // (Opcional) Si quieres que recargue la página para limpiar todo:
-            // setTimeout(() => window.location.reload(), 2000);
         })
         .catch(error => {
             console.error("Error al guardar:", error);
@@ -268,17 +274,18 @@ if(btnCerrarModal && modalCopia) {
     btnCerrarModal.addEventListener('click', () => modalCopia.classList.remove('activo'));
 }
 
+// ==========================================
+// 3. LECTURA Y MANEJO DE HISTORIAL (CRUD API)
+// ==========================================
 function mostrarGuias() {
     if(!tabla) return;
     
-    // Muestra un mensaje de carga mientras espera al servidor
     tabla.innerHTML = '<tr><td colspan="5" style="text-align: center;">Consultando Base de Datos...</td></tr>';
     
-    // Pide los datos reales al backend de Django
     fetch('/api/historial/')
         .then(response => response.json())
         .then(guias => {
-            tabla.innerHTML = ''; // Limpiamos la tabla
+            tabla.innerHTML = ''; 
             
             guias.forEach(g => {
                 tabla.innerHTML += `
@@ -288,9 +295,11 @@ function mostrarGuias() {
                         <td>${g.dni}</td>
                         <td><strong>${g.agencia}</strong><br><small>${g.direccion}</small></td>
                         <td>
+                            <button onclick="editarGuia(${g.id})" style="background:#0097e6; color:white; border:none; padding:8px 12px; border-radius:5px; cursor:pointer; margin-right:5px;" title="Editar">✏️</button>
+
                             <button onclick="window.open('/api/guia/${g.id}/pdf/', '_blank')" style="background:#7b1fa2; color:white; border:none; padding:8px 12px; border-radius:5px; cursor:pointer; margin-right:5px; font-weight:bold;" title="Imprimir PDF">🖨️</button>
                             
-                            <button onclick="alert('Por seguridad contable, la edición/eliminación solo se puede hacer desde el Panel de Administrador de Django.')" class="btn-eliminar" style="padding:8px 12px; background: #ff4757; color: white; border: none; border-radius: 5px; cursor: pointer;">🗑️</button>
+                            <button onclick="eliminarGuia(${g.id})" class="btn-eliminar" style="padding:8px 12px; background: #ff4757; color: white; border: none; border-radius: 5px; cursor: pointer;" title="Eliminar">🗑️</button>
                         </td>
                     </tr>`;
             });
@@ -301,65 +310,58 @@ function mostrarGuias() {
         });
 }
 
-// Asegúrate de que la función se llame también justo después de guardar una guía nueva
-// Busca tu `fetch('/api/guardar-guia/')`, y en la sección `.then(data => { ... })`, agrega:
-// mostrarGuias();
-
-// --- NUEVA FUNCIÓN PARA EDITAR GUÍA ---
 window.editarGuia = function(id) {
-    const llaveBD = 'guiasJAAP_' + usuarioActual;
-    let guias = JSON.parse(localStorage.getItem(llaveBD)) || [];
-    const guia = guias.find(g => g.id === id);
-    
-    if(guia) {
-        // Llenar el formulario con los datos guardados
-        document.getElementById('dni').value = guia.dni;
-        document.getElementById('nombre').value = guia.nombre;
-        document.getElementById('celular').value = guia.celular || '';
-        document.getElementById('agencia').value = guia.agencia || '';
-        document.getElementById('direccion').value = guia.direccion || '';
-        document.getElementById('referencia').value = guia.referencia || '';
-        document.getElementById('producto').value = guia.producto || '';
+    fetch(`/api/guia/${id}/`)
+        .then(response => response.json())
+        .then(g => {
+            if (g.error) return alert(g.error);
 
-        // Asegurarnos de que el campo nombre no esté bloqueado
-        document.getElementById('nombre').disabled = false;
-        document.getElementById('dni').style.borderColor = '#00c2b3';
-        document.getElementById('nombre').style.borderColor = '#00c2b3';
+            // Llenamos el formulario
+            document.getElementById('dni').value = g.dni;
+            document.getElementById('nombre').value = g.nombre;
+            document.getElementById('celular').value = g.celular || '';
+            document.getElementById('agencia').value = g.agencia || '';
+            document.getElementById('direccion').value = g.direccion || '';
+            document.getElementById('referencia').value = g.referencia || '';
+            document.getElementById('producto').value = g.producto || '';
 
-        // Marcar que estamos en MODO EDICIÓN
-        idGuiaEditando = id;
+            document.getElementById('nombre').disabled = false;
+            document.getElementById('dni').style.borderColor = '#00c2b3';
+            document.getElementById('nombre').style.borderColor = '#00c2b3';
 
-        // Cambiar el texto del botón
-        if (btnSubmit) {
-            btnSubmit.innerText = "Guardar Cambios";
-            btnSubmit.style.backgroundColor = "#0097e6";
-        }
+            // Cambiamos el estado visual
+            idGuiaEditando = id;
+            if(btnSubmit) {
+                btnSubmit.innerText = "Guardar Cambios Actualizados";
+                btnSubmit.style.backgroundColor = "#0097e6";
+                btnSubmit.disabled = false;
+            }
+            if(checkboxConfirmacion) checkboxConfirmacion.checked = true;
 
-        // Mover la pantalla al formulario
-        if (sliderTrack) {
-            sliderTrack.style.transform = 'translateX(0)';
-        }
-    }
-}
-
-window.imprimirGuia = function(id) {
-    const llaveBD = 'guiasJAAP_' + usuarioActual;
-    let guias = JSON.parse(localStorage.getItem(llaveBD)) || [];
-    const guiaAImprimir = guias.find(g => g.id === id);
-    
-    if(guiaAImprimir) {
-        localStorage.setItem('guiaAImprimir', JSON.stringify(guiaAImprimir));
-        window.open('/imprimir-prueba/', '_blank');
-    }
+            // Regresamos al panel del formulario
+            if(sliderTrack) {
+                sliderTrack.style.transform = 'translateX(0)';
+            }
+        })
+        .catch(error => console.error("Error al cargar la guía:", error));
 }
 
 window.eliminarGuia = function(id) {
-    if(confirm('¿Eliminar esta guía?')) {
-        const llaveBD = 'guiasJAAP_' + usuarioActual;
-        let guias = JSON.parse(localStorage.getItem(llaveBD)) || [];
-        guias = guias.filter(g => g.id !== id);
-        localStorage.setItem(llaveBD, JSON.stringify(guias));
-        mostrarGuias();
+    if (confirm('¿Estás seguro de eliminar esta guía de la base de datos? Esta acción no se puede deshacer.')) {
+        const csrfToken = document.querySelector('[name=csrfmiddlewaretoken]') ? document.querySelector('[name=csrfmiddlewaretoken]').value : '';
+        
+        fetch(`/api/guia/${id}/eliminar/`, {
+            method: 'DELETE',
+            headers: { 'X-CSRFToken': csrfToken }
+        })
+        .then(response => {
+            if (response.ok) {
+                mostrarGuias(); 
+            } else {
+                alert("No tienes permisos para eliminar este registro.");
+            }
+        })
+        .catch(error => console.error("Error al eliminar:", error));
     }
 }
 
@@ -373,7 +375,7 @@ if(buscador) {
 }
 
 // ==========================================
-// 2. FONDO DE PARTÍCULAS
+// 4. ANIMACIÓN DE FONDO DE PARTÍCULAS
 // ==========================================
 const canvas = document.getElementById('bg-canvas');
 if(canvas) {
@@ -432,4 +434,3 @@ if (inputAgencia) {
             .catch(err => console.log("Agencia no encontrada:", err));
     });
 }
-
