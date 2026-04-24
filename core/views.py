@@ -1,3 +1,6 @@
+from django.http import HttpResponse
+from django.template.loader import get_template
+from xhtml2pdf import pisa
 import json
 import urllib.request
 from django.shortcuts import render, redirect
@@ -128,3 +131,36 @@ def guardar_guia(request):
             return JsonResponse({'error': str(e)}, status=400)
             
     return JsonResponse({'error': 'Método no permitido'}, status=405)
+
+# ==========================================
+# GENERADOR DE PDF OFICIAL
+# ==========================================
+@login_required
+def generar_pdf_guia(request, guia_id):
+    try:
+        # Buscamos la guía exacta en la base de datos
+        guia = GuiaRemision.objects.get(id=guia_id)
+    except GuiaRemision.DoesNotExist:
+        return HttpResponse("Error: La guía no existe", status=404)
+
+    # Le pasamos los datos a una plantilla HTML especial para el PDF
+    template = get_template('guia_pdf.html')
+    context = {
+        'guia': guia,
+        'empresa': 'ELECTRODOMÉSTICOS JARED S.A.C.'
+    }
+    html = template.render(context)
+
+    # Preparamos la respuesta como un archivo PDF descargable
+    response = HttpResponse(content_type='application/pdf')
+    # "attachment" hace que se descargue. Si pones "inline", se abre en el navegador.
+    nombre_archivo = f"Guia_Remision_{guia.id:04d}_{guia.cliente.replace(' ', '_')}.pdf"
+    response['Content-Disposition'] = f'inline; filename="{nombre_archivo}"'
+
+    # Convertimos el HTML a PDF
+    pisa_status = pisa.CreatePDF(html, dest=response)
+
+    if pisa_status.err:
+        return HttpResponse('Hubo un error al generar el PDF', status=500)
+    
+    return response

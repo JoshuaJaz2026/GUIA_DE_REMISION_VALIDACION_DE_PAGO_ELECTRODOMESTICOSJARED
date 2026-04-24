@@ -170,7 +170,7 @@ if(checkboxConfirmacion && btnSubmit) {
 }
 
 // ==========================================
-// REGISTRO Y LOCALSTORAGE (NUEVO O EDICIÓN)
+// REGISTRO OFICIAL EN BASE DE DATOS Y PDF
 // ==========================================
 if(form) {
     form.addEventListener('submit', (e) => {
@@ -185,74 +185,69 @@ if(form) {
             return;
         }
 
-        const llaveBD = 'guiasJAAP_' + usuarioActual; 
-        let guias = JSON.parse(localStorage.getItem(llaveBD)) || [];
+        // 1. Capturamos el Token de Seguridad de Django que pusiste en el HTML
+        const csrfToken = document.querySelector('[name=csrfmiddlewaretoken]').value;
 
-        // CAPTURA DE DATOS ACTUALES DEL FORMULARIO
-        const celularVal = document.getElementById('celular').value;
-        const agenciaVal = document.getElementById('agencia').value;
-        const direccionVal = document.getElementById('direccion').value;
-        const referenciaVal = document.getElementById('referencia').value;
-        const productoVal = document.getElementById('producto').value;
-        const fechaActual = new Date().toLocaleDateString('es-PE');
+        // 2. Preparamos los datos
+        const datosGuia = {
+            dni: dniVal,
+            nombre: nombreVal,
+            celular: document.getElementById('celular').value,
+            agencia: document.getElementById('agencia').value,
+            direccion: document.getElementById('direccion').value,
+            referencia: document.getElementById('referencia').value,
+            producto: document.getElementById('producto').value
+        };
 
-        let guiaResumen = {}; // Para el mensaje de WhatsApp
-
-        // ¿ESTAMOS EDITANDO O CREANDO?
-        if (idGuiaEditando !== null) {
-            // MODO EDICIÓN: Buscamos la guía y actualizamos sus datos
-            const index = guias.findIndex(g => g.id === idGuiaEditando);
-            if (index !== -1) {
-                guias[index].dni = dniVal;
-                guias[index].nombre = nombreVal;
-                guias[index].celular = celularVal;
-                guias[index].agencia = agenciaVal;
-                guias[index].direccion = direccionVal;
-                guias[index].referencia = referenciaVal;
-                guias[index].producto = productoVal;
-                guiaResumen = guias[index];
-            }
-            
-            // Limpiamos el estado de edición
-            idGuiaEditando = null;
-            btnSubmit.innerText = "Generar Guía de Remisión"; 
-            btnSubmit.style.backgroundColor = ""; 
-
-        } else {
-            // MODO NUEVO REGISTRO: Creamos uno desde cero
-            const nuevaGuia = {
-                id: Date.now(),
-                fecha: fechaActual,
-                nombre: nombreVal,
-                dni: dniVal,
-                celular: celularVal,
-                agencia: agenciaVal,
-                direccion: direccionVal,
-                referencia: referenciaVal,
-                producto: productoVal
-            };
-            guias.push(nuevaGuia);
-            guiaResumen = nuevaGuia;
-        }
-
-        // GUARDAR EN MEMORIA
-        localStorage.setItem(llaveBD, JSON.stringify(guias));
-        
-        // RESUMEN ACTUALIZADO PARA WHATSAPP
-        textoResumen.value = `📦 ELECTRODOMÉSTICOS JARED\n👤 Atendido por: ${usuarioActual.toUpperCase()}\n------------------------\n👤 Cliente: ${guiaResumen.nombre}\n📄 DNI/RUC: ${guiaResumen.dni}\n📱 Celular: ${guiaResumen.celular}\n🚚 Agencia: ${guiaResumen.agencia}\n📍 Dirección: ${guiaResumen.direccion}\n📌 Referencia: ${guiaResumen.referencia}\n🛒 Producto: ${guiaResumen.producto}\n📅 Fecha: ${guiaResumen.fecha}`;
-        modalCopia.classList.add('activo');
-
-        // LIMPIEZA DEL FORMULARIO
-        form.reset();
-        inputDni.style.borderColor = ''; 
-        document.getElementById('direccion').style.borderColor = '';
-        document.getElementById('referencia').style.borderColor = '';
-        document.getElementById('nombre').style.borderColor = ''; 
-        if(checkboxConfirmacion) checkboxConfirmacion.checked = false;
+        // Cambiamos el texto del botón para que el usuario sepa que está cargando
+        const textoOriginalBtn = btnSubmit.innerText;
+        btnSubmit.innerText = "Guardando y Generando PDF...";
         btnSubmit.disabled = true;
-        
-        // Refrescar la tabla
-        mostrarGuias();
+
+        // 3. Enviamos los datos al Backend (views.py -> guardar_guia)
+        fetch('/api/guardar-guia/', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+                'X-CSRFToken': csrfToken // Sello de seguridad
+            },
+            body: JSON.stringify(datosGuia)
+        })
+        .then(response => {
+            if (!response.ok) throw new Error("Error en el servidor");
+            return response.json();
+        })
+        .then(data => {
+            // ¡ÉXITO! La guía se guardó en la base de datos
+            
+            // 4. Abrimos el PDF en una nueva pestaña usando el ID que nos devolvió Django
+            if (data.id_guia) {
+                window.open(`/api/guia/${data.id_guia}/pdf/`, '_blank');
+            }
+
+            // 5. Preparamos el resumen para WhatsApp
+            textoResumen.value = `📦 ELECTRODOMÉSTICOS JARED\n👤 Atendido por: ${usuarioActual.toUpperCase()}\n------------------------\n👤 Cliente: ${datosGuia.nombre}\n📄 DNI/RUC: ${datosGuia.dni}\n📱 Celular: ${datosGuia.celular}\n🚚 Agencia: ${datosGuia.agencia}\n📍 Dirección: ${datosGuia.direccion}\n🛒 Producto: ${datosGuia.producto}`;
+            modalCopia.classList.add('activo');
+
+            // 6. Limpiamos el formulario
+            form.reset();
+            inputDni.style.borderColor = ''; 
+            document.getElementById('direccion').style.borderColor = '';
+            document.getElementById('referencia').style.borderColor = '';
+            document.getElementById('nombre').style.borderColor = ''; 
+            if(checkboxConfirmacion) checkboxConfirmacion.checked = false;
+            
+            btnSubmit.innerText = "Generar y Guardar Guía";
+            
+            // (Opcional) Si quieres que recargue la página para limpiar todo:
+            // setTimeout(() => window.location.reload(), 2000);
+        })
+        .catch(error => {
+            console.error("Error al guardar:", error);
+            alert("Hubo un problema al guardar la guía. Revisa la consola.");
+            btnSubmit.innerText = textoOriginalBtn;
+            btnSubmit.disabled = false;
+        });
     });
 }
 

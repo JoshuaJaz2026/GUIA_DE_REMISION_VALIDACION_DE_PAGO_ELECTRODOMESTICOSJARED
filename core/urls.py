@@ -27,4 +27,7 @@ urlpatterns = [
 
     # 8. NUEVA API para guardar la guía directo en la Base de Datos
     path('api/guardar-guia/', guardar_guia, name='guardar_guia'),
+
+    # 9. Descargar PDF oficial
+    path('api/guia/<int:guia_id>/pdf/', generar_pdf_guia, name='generar_pdf_guia'),
 ]
