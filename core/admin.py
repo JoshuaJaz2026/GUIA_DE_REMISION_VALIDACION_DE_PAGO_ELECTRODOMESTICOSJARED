@@ -4,11 +4,11 @@ from .models import GuiaRemision, AgenciaTransporte
 # --- CONFIGURACIÓN PARA EL MODELO AGENCIA ---
 @admin.register(AgenciaTransporte)
 class AgenciaTransporteAdmin(admin.ModelAdmin):
-    # Activa el buscador en la parte superior
-    search_fields = ('nombre', 'direccion', 'referencia')
+    # Activa el buscador en la parte superior (AQUÍ AGREGAMOS 'ubicacion')
+    search_fields = ('nombre', 'ubicacion', 'direccion', 'referencia')
     
-    # Muestra las columnas en la lista principal
-    list_display = ('nombre', 'direccion', 'referencia')
+    # Muestra las columnas en la lista principal (AQUÍ AGREGAMOS 'ubicacion')
+    list_display = ('nombre', 'ubicacion', 'direccion', 'referencia')
     
     # Permite filtrar por nombre en el lateral derecho
     list_filter = ('nombre',)
