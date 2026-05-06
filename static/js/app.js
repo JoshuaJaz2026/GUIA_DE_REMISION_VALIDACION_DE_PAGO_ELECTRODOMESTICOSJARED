@@ -221,9 +221,9 @@ if(form) {
         })
         .then(data => {
             
-            // Si es un registro nuevo y genera PDF, lo abrimos
+            // Si es un registro nuevo, abrimos TU DISEÑO ORIGINAL
             if (data.id_guia && !idGuiaEditando) {
-                window.open(`/api/guia/${data.id_guia}/pdf/`, '_blank');
+                imprimirGuia(data.id_guia);
             } else if (idGuiaEditando) {
                 alert("¡Guía actualizada correctamente!");
             }
@@ -297,7 +297,7 @@ function mostrarGuias() {
                         <td>
                             <button onclick="editarGuia(${g.id})" style="background:#0097e6; color:white; border:none; padding:8px 12px; border-radius:5px; cursor:pointer; margin-right:5px;" title="Editar">✏️</button>
 
-                            <button onclick="window.open('/api/guia/${g.id}/pdf/', '_blank')" style="background:#7b1fa2; color:white; border:none; padding:8px 12px; border-radius:5px; cursor:pointer; margin-right:5px; font-weight:bold;" title="Imprimir PDF">🖨️</button>
+                            <button onclick="imprimirGuia(${g.id})" style="background:#7b1fa2; color:white; border:none; padding:8px 12px; border-radius:5px; cursor:pointer; margin-right:5px; font-weight:bold;" title="Imprimir Guía Original">🖨️</button>
                             
                             <button onclick="eliminarGuia(${g.id})" class="btn-eliminar" style="padding:8px 12px; background: #ff4757; color: white; border: none; border-radius: 5px; cursor: pointer;" title="Eliminar">🗑️</button>
                         </td>
@@ -308,6 +308,23 @@ function mostrarGuias() {
             console.error("Error cargando historial:", error);
             tabla.innerHTML = '<tr><td colspan="5" style="text-align: center; color: red;">Error de conexión con la base de datos</td></tr>';
         });
+}
+
+// --- NUEVA FUNCIÓN PARA IMPRIMIR CON TU DISEÑO ORIGINAL ---
+window.imprimirGuia = function(id) {
+    // 1. Le pedimos los datos reales a la Base de Datos de Django
+    fetch(`/api/guia/${id}/`)
+        .then(response => response.json())
+        .then(guia => {
+            if (guia.error) return alert(guia.error);
+            
+            // 2. Los guardamos temporalmente en la memoria para que tu hoja morada los pueda leer
+            localStorage.setItem('guiaAImprimir', JSON.stringify(guia));
+            
+            // 3. Abrimos tu diseño clásico
+            window.open('/imprimir-prueba/', '_blank');
+        })
+        .catch(error => console.error("Error al preparar impresión:", error));
 }
 
 window.editarGuia = function(id) {
