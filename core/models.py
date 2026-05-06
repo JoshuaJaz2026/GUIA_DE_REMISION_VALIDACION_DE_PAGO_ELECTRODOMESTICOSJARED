@@ -5,6 +5,10 @@ from django.core.exceptions import ValidationError
 # --- MODELO: AgenciaTransporte ---
 class AgenciaTransporte(models.Model):
     nombre = models.CharField(max_length=200, unique=True, help_text="Ej. SHALOM - Sede Centro")
+    
+    # --- ESTE ES EL CAMPO NUEVO PARA LA RUTA GEOGRÁFICA ---
+    ubicacion = models.CharField("Ubicación (Dep/Prov/Dist)", max_length=255, blank=True, null=True, help_text="Ej. Lima / Lima / San Juan De Lurigancho / Av Santa Rosa")
+    
     direccion = models.TextField(help_text="Dirección exacta de la agencia")
     referencia = models.TextField(blank=True, null=True, help_text="Ej. Frente al parque, rejas verdes")
 

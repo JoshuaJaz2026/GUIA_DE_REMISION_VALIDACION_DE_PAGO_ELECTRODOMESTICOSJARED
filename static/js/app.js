@@ -443,6 +443,7 @@ if(canvas) {
 }
 
 // --- LÓGICA DE AGENCIA ---
+// --- LÓGICA DE AGENCIA ---
 const inputAgencia = document.getElementById('agencia');
 const inputDireccion = document.getElementById('direccion');
 const inputReferencia = document.getElementById('referencia');
@@ -454,7 +455,13 @@ if (inputAgencia) {
             .then(response => response.json())
             .then(data => {
                 if (data.direccion) {
-                    inputDireccion.value = data.direccion;
+                    // Si la agencia tiene ubicación, la juntamos con la dirección
+                    let direccionCompleta = data.direccion;
+                    if (data.ubicacion) {
+                        direccionCompleta = data.ubicacion + " \n" + data.direccion;
+                    }
+                    
+                    inputDireccion.value = direccionCompleta;
                     inputReferencia.value = data.referencia || '';
                     inputDireccion.style.borderColor = '#00c2b3';
                     inputReferencia.style.borderColor = '#00c2b3';

@@ -50,6 +50,7 @@ def obtener_datos_agencia(request):
         try:
             agencia = AgenciaTransporte.objects.get(nombre=nombre_agencia)
             return JsonResponse({
+                'ubicacion': agencia.ubicacion, # <-- Enviamos el nuevo dato
                 'direccion': agencia.direccion,
                 'referencia': agencia.referencia
             })
