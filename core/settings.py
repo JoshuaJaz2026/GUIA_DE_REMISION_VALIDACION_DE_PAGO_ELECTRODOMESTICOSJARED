@@ -72,11 +72,14 @@ TEMPLATES = [
 WSGI_APPLICATION = 'core.wsgi.application'
 
 
-# Database
+# ==========================================
+# CONFIGURACIÓN DE BASE DE DATOS (ESTABILIZADA)
+# ==========================================
 DATABASES = {
     'default': dj_database_url.config(
         default=f'sqlite:///{BASE_DIR / "db.sqlite3"}',
-        conn_max_age=600
+        conn_max_age=300,           # Mantiene las conexiones activas por 5 minutos
+        conn_health_checks=True,    # Verifica la salud de la conexión antes de usarla
     )
 }
 
