@@ -1,7 +1,14 @@
 from django.contrib import admin
 from django.urls import path
-# --- IMPORTANTE: Agregamos guardar_guia al final de esta lista ---
-from .views import home, login_view, logout_view, vista_impresion_prueba, obtener_datos_agencia, consultar_documento, guardar_guia, generar_pdf_guia, historial_guias
+
+# --- IMPORTANTE: Agregamos TODAS las vistas, incluyendo obtener_guia y eliminar_guia ---
+from .views import (
+    home, login_view, logout_view, vista_impresion_prueba, 
+    obtener_datos_agencia, consultar_documento, guardar_guia, 
+    generar_pdf_guia, historial_guias,
+    obtener_guia, eliminar_guia  # <--- ESTAS DOS FALTABAN AQUÍ Arriba
+)
+
 urlpatterns = [
     # 1. Panel de Administración (Jazzmin)
     path('admin/', admin.site.urls), 
@@ -32,4 +39,10 @@ urlpatterns = [
 
     # 10. API para leer el historial de la base de datos
     path('api/historial/', historial_guias, name='historial_guias'),
+
+    # ==========================================================
+    # --- AQUÍ ESTÁ LA SOLUCIÓN AL ERROR 404 (FALTABAN ESTAS 2) ---
+    # ==========================================================
+    path('api/guia/<int:guia_id>/', obtener_guia, name='obtener_guia'),
+    path('api/guia/<int:guia_id>/eliminar/', eliminar_guia, name='eliminar_guia'),
 ]
