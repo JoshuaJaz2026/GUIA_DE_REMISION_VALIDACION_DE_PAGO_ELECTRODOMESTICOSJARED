@@ -311,20 +311,32 @@ function mostrarGuias() {
 }
 
 // --- NUEVA FUNCIÓN PARA IMPRIMIR CON TU DISEÑO ORIGINAL ---
+// --- NUEVA FUNCIÓN A PRUEBA DE BLOQUEADORES (POP-UPS) ---
 window.imprimirGuia = function(id) {
-    // 1. Le pedimos los datos reales a la Base de Datos de Django
+    // 1. Abrimos la pestaña INMEDIATAMENTE al hacer clic (para que Chrome no se moleste)
+    const nuevaPestana = window.open('', '_blank');
+    nuevaPestana.document.write('<h3 style="font-family:sans-serif; padding: 20px; color:#7b1fa2;">Preparando diseño de impresión...</h3>');
+
+    // 2. Le pedimos los datos reales a la Base de Datos de Django
     fetch(`/api/guia/${id}/`)
         .then(response => response.json())
         .then(guia => {
-            if (guia.error) return alert(guia.error);
+            if (guia.error) {
+                nuevaPestana.close();
+                return alert(guia.error);
+            }
             
-            // 2. Los guardamos temporalmente en la memoria para que tu hoja morada los pueda leer
+            // 3. Los guardamos temporalmente para tu hoja morada
             localStorage.setItem('guiaAImprimir', JSON.stringify(guia));
             
-            // 3. Abrimos tu diseño clásico
-            window.open('/imprimir-prueba/', '_blank');
+            // 4. Redirigimos la pestaña que ya abrimos hacia tu diseño clásico
+            nuevaPestana.location.href = '/imprimir-prueba/';
         })
-        .catch(error => console.error("Error al preparar impresión:", error));
+        .catch(error => {
+            nuevaPestana.close();
+            console.error("Error al preparar impresión:", error);
+            alert("Error de conexión con la base de datos.");
+        });
 }
 
 window.editarGuia = function(id) {
