@@ -75,13 +75,18 @@ WSGI_APPLICATION = 'core.wsgi.application'
 # ==========================================
 # CONFIGURACIÓN DE BASE DE DATOS (ESTABILIZADA)
 # ==========================================
+# Configuración base (SQLite para tu computadora local)
 DATABASES = {
-    'default': dj_database_url.config(
-        default=f'sqlite:///{BASE_DIR / "db.sqlite3"}',
-        conn_max_age=300,           # Mantiene las conexiones activas por 5 minutos
-        conn_health_checks=True,    # Verifica la salud de la conexión antes de usarla
-    )
+    'default': {
+        'ENGINE': 'django.db.backends.sqlite3',
+        'NAME': BASE_DIR / 'db.sqlite3',
+    }
 }
+
+# Si estamos en Render, usamos la Base de Datos PostgreSQL
+database_url = os.environ.get("DATABASE_URL")
+if database_url:
+    DATABASES['default'] = dj_database_url.config(default=database_url, conn_max_age=600)
 
 
 # Password validation
