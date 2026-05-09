@@ -11,6 +11,7 @@ from django.contrib.auth.models import User
 from django.http import JsonResponse
 # --- AQUÍ AGREGAMOS LA IMPORTACIÓN DE GuiaRemision ---
 from .models import AgenciaTransporte, GuiaRemision 
+from django.utils.timezone import localtime
 
 @login_required 
 def home(request):
@@ -183,14 +184,16 @@ def generar_pdf_guia(request, guia_id):
 # Agregar esto al final de views.py
 @login_required
 def historial_guias(request):
-    # FILTRO DE SEGURIDAD: Solo traemos las guías donde 'usuario' sea el que está logueado
     guias = GuiaRemision.objects.filter(usuario=request.user).order_by('-fecha_creacion')
     
     data = []
     for g in guias:
+        # AQUÍ ESTÁ LA MAGIA: Convertimos la hora UTC a la hora de Perú antes de mostrarla
+        fecha_peru = localtime(g.fecha_creacion)
+        
         data.append({
             'id': g.id,
-            'fecha': g.fecha_creacion.strftime('%d/%m/%Y'),
+            'fecha': fecha_peru.strftime('%d/%m/%Y'), # <--- Ahora usará la fecha convertida
             'nombre': g.cliente,
             'dni': g.dni_ruc,
             'agencia': g.agencia if g.agencia else '-',
