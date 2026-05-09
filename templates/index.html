@@ -28,12 +28,7 @@
                         
                         <div class="right-panel-header">
                             <div class="logo">JARED.</div>
-                            <div style="display: flex; flex-direction: column; align-items: flex-end; gap: 12px;">
-                                <div class="login-link">Hola, <span id="nombreUsuario">{{ user.username|title }}</span> | <a href="#" id="btnLogout" style="color: #ff4757;">Cerrar Sesión</a></div>
-                                <button type="button" id="btnGoHistory" class="slide-nav-btn">
-                                    Ver Historial de Guías <i class="fa-solid fa-arrow-right"></i>
-                                </button>
-                            </div>
+                            <div class="login-link">Hola, <span id="nombreUsuario">{{ user.username|title }}</span> | <a href="#" id="btnLogout" style="color: #ff4757;">Cerrar Sesión</a></div>
                         </div>
 
                         <div class="form-container">
@@ -90,14 +85,17 @@
                                     </div>
                                 </div>
 
-                                <div class="form-row" style="margin-bottom: 20px;">
+                                <div class="form-row" style="margin-bottom: 25px;">
                                     <div class="form-field" style="width: 100%;">
                                         <label for="referencia">Referencia de llegada</label>
                                         <textarea id="referencia" rows="2" placeholder="Ej. Frente al parque grande, casa de rejas verdes..." style="width: 100%; background: rgba(255, 255, 255, 0.05); border: 1px solid rgba(255, 255, 255, 0.1); border-radius: 8px; color: white; padding: 12px; font-family: inherit; font-size: 14px;" required></textarea>
                                     </div>
                                 </div>
 
-                                <button type="submit" id="btnSubmit" class="submit-btn">Generar y Guardar Guía</button>
+                                <div style="display: flex; gap: 15px; width: 100%;">
+                                    <button type="submit" id="btnSubmit" class="submit-btn" style="flex: 1; width: 100%;">Generar y Guardar Guía</button>
+                                    <button type="button" id="btnGoHistory" class="submit-btn" style="flex: 1; width: 100%; background-color: #1A2F49; border: 1px solid #00C2B3; color: #00C2B3;">Ver Historial <i class="fa-solid fa-arrow-right" style="margin-left: 5px;"></i></button>
+                                </div>
                             </form>
                         </div>
 
