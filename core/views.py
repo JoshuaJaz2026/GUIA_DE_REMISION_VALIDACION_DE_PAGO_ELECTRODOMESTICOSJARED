@@ -50,7 +50,7 @@ def obtener_datos_agencia(request):
         try:
             agencia = AgenciaTransporte.objects.get(nombre=nombre_agencia)
             return JsonResponse({
-                'ubicacion': agencia.ubicacion, # <-- Enviamos el nuevo dato
+                'ubicacion': agencia.ubicacion, 
                 'direccion': agencia.direccion,
                 'referencia': agencia.referencia
             })
@@ -109,22 +109,36 @@ def guardar_guia(request):
             # 1. Leemos los datos en formato JSON que enviará JS
             data = json.loads(request.body)
             
-            # 2. Creamos y guardamos el registro en la Base de Datos
-            nueva_guia = GuiaRemision.objects.create(
-                usuario=request.user, # Asigna automáticamente el usuario logueado
-                cliente=data.get('nombre', ''),
-                dni_ruc=data.get('dni', ''),
-                celular=data.get('celular', ''),
-                agencia=data.get('agencia', ''),
-                direccion=data.get('direccion', ''),
-                referencia=data.get('referencia', ''),
-                producto=data.get('producto', '')
-            )
+            # Buscamos si existe un id para actualizar, si no, creamos uno nuevo
+            id_guia = request.GET.get('id', None)
             
-            # 3. Respondemos que todo salió perfecto
+            if id_guia:
+                guia = GuiaRemision.objects.get(id=id_guia, usuario=request.user)
+                guia.cliente = data.get('nombre', '')
+                guia.dni_ruc = data.get('dni', '')
+                guia.celular = data.get('celular', '')
+                guia.agencia = data.get('agencia', '')
+                guia.ubigeo = data.get('ubigeo', '') # <--- AÑADIDO: Actualiza ubigeo
+                guia.direccion = data.get('direccion', '')
+                guia.referencia = data.get('referencia', '')
+                guia.producto = data.get('producto', '')
+                guia.save()
+            else:
+                guia = GuiaRemision.objects.create(
+                    usuario=request.user,
+                    cliente=data.get('nombre', ''),
+                    dni_ruc=data.get('dni', ''),
+                    celular=data.get('celular', ''),
+                    agencia=data.get('agencia', ''),
+                    ubigeo=data.get('ubigeo', ''), # <--- AÑADIDO: Guarda nuevo ubigeo
+                    direccion=data.get('direccion', ''),
+                    referencia=data.get('referencia', ''),
+                    producto=data.get('producto', '')
+                )
+            
             return JsonResponse({
-                'mensaje': 'Guía guardada correctamente en la base de datos',
-                'id_guia': nueva_guia.id
+                'mensaje': 'Guía procesada correctamente en la base de datos',
+                'id_guia': guia.id
             })
             
         except Exception as e:
@@ -185,8 +199,6 @@ def historial_guias(request):
         
     return JsonResponse(data, safe=False)
 
-# Agrega estas funciones al final de views.py
-
 @login_required
 def obtener_guia(request, guia_id):
     try:
@@ -198,6 +210,7 @@ def obtener_guia(request, guia_id):
             'nombre': guia.cliente,
             'celular': guia.celular,
             'agencia': guia.agencia,
+            'ubigeo': guia.ubigeo, # <--- AÑADIDO: Envía el ubigeo para imprimir/editar
             'direccion': guia.direccion,
             'referencia': guia.referencia,
             'producto': guia.producto
