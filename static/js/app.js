@@ -295,12 +295,14 @@ function mostrarGuias() {
                         <td>${g.dni}</td>
                         <td><strong>${g.agencia}</strong><br><small>${g.direccion}</small></td>
                         <td>
-                            <button onclick="editarGuia(${g.id})" style="background:#0097e6; color:white; border:none; padding:8px 12px; border-radius:5px; cursor:pointer; margin-right:5px;" title="Editar">✏️</button>
+    <div style="display: flex; gap: 8px; flex-wrap: nowrap; justify-content: flex-start;">
+        <button onclick="editarGuia(${g.id})" style="background:#0097e6; color:white; border:none; padding:8px 12px; border-radius:5px; cursor:pointer;" title="Editar">✏️</button>
 
-                            <button onclick="imprimirGuia(${g.id})" style="background:#7b1fa2; color:white; border:none; padding:8px 12px; border-radius:5px; cursor:pointer; margin-right:5px; font-weight:bold;" title="Imprimir Guía Original">🖨️</button>
-                            
-                            <button onclick="eliminarGuia(${g.id})" class="btn-eliminar" style="padding:8px 12px; background: #ff4757; color: white; border: none; border-radius: 5px; cursor: pointer;" title="Eliminar">🗑️</button>
-                        </td>
+        <button onclick="imprimirGuia(${g.id})" style="background:#7b1fa2; color:white; border:none; padding:8px 12px; border-radius:5px; cursor:pointer; font-weight:bold;" title="Imprimir Guía">🖨️</button>
+        
+        <button onclick="eliminarGuia(${g.id})" style="background: #ff4757; color: white; border: none; padding:8px 12px; border-radius: 5px; cursor: pointer;" title="Eliminar">🗑️</button>
+    </div>
+</td>
                     </tr>`;
             });
         })
