@@ -190,11 +190,13 @@ if(form) {
 
         const csrfToken = document.querySelector('[name=csrfmiddlewaretoken]').value;
 
+        // SE AGREGÓ UBIGEO A LOS DATOS QUE SE ENVÍAN AL SERVIDOR
         const datosGuia = {
             dni: dniVal,
             nombre: nombreVal,
             celular: document.getElementById('celular').value,
             agencia: document.getElementById('agencia').value,
+            ubigeo: document.getElementById('ubigeo').value,
             direccion: document.getElementById('direccion').value,
             referencia: document.getElementById('referencia').value,
             producto: document.getElementById('producto').value
@@ -204,7 +206,6 @@ if(form) {
         btnSubmit.innerText = idGuiaEditando ? "Actualizando Guía..." : "Guardando y Generando PDF...";
         btnSubmit.disabled = true;
 
-        // Si estamos editando, agregamos el ID a la URL para que Django sepa que debe actualizar
         const urlApi = idGuiaEditando ? `/api/guardar-guia/?id=${idGuiaEditando}` : '/api/guardar-guia/';
 
         fetch(urlApi, {
@@ -221,23 +222,22 @@ if(form) {
         })
         .then(data => {
             
-            // Si es un registro nuevo, abrimos TU DISEÑO ORIGINAL
             if (data.id_guia && !idGuiaEditando) {
                 imprimirGuia(data.id_guia);
             } else if (idGuiaEditando) {
                 alert("¡Guía actualizada correctamente!");
             }
 
-            // Refrescar el historial de guías automáticamente
             mostrarGuias();
 
-            // Resumen de WhatsApp
-            textoResumen.value = `📦 ELECTRODOMÉSTICOS JARED\n👤 Atendido por: ${usuarioActual.toUpperCase()}\n------------------------\n👤 Cliente: ${datosGuia.nombre}\n📄 DNI/RUC: ${datosGuia.dni}\n📱 Celular: ${datosGuia.celular}\n🚚 Agencia: ${datosGuia.agencia}\n📍 Dirección: ${datosGuia.direccion}\n🛒 Producto: ${datosGuia.producto}`;
+            // Resumen de WhatsApp actualizado con Ubigeo
+            textoResumen.value = `📦 ELECTRODOMÉSTICOS JARED\n👤 Atendido por: ${usuarioActual.toUpperCase()}\n------------------------\n👤 Cliente: ${datosGuia.nombre}\n📄 DNI/RUC: ${datosGuia.dni}\n📱 Celular: ${datosGuia.celular}\n🚚 Agencia: ${datosGuia.agencia}\n📍 Ubigeo: ${datosGuia.ubigeo}\n📍 Dirección: ${datosGuia.direccion}\n🛒 Producto: ${datosGuia.producto}`;
             modalCopia.classList.add('activo');
 
             // Limpiamos todo
             form.reset();
             inputDni.style.borderColor = ''; 
+            document.getElementById('ubigeo').style.borderColor = '';
             document.getElementById('direccion').style.borderColor = '';
             document.getElementById('referencia').style.borderColor = '';
             document.getElementById('nombre').style.borderColor = ''; 
@@ -245,7 +245,7 @@ if(form) {
             
             idGuiaEditando = null;
             btnSubmit.innerText = "Generar y Guardar Guía";
-            btnSubmit.style.backgroundColor = ""; // Restaurar color original
+            btnSubmit.style.backgroundColor = ""; 
             
         })
         .catch(error => {
@@ -310,14 +310,10 @@ function mostrarGuias() {
         });
 }
 
-// --- NUEVA FUNCIÓN PARA IMPRIMIR CON TU DISEÑO ORIGINAL ---
-// --- NUEVA FUNCIÓN A PRUEBA DE BLOQUEADORES (POP-UPS) ---
 window.imprimirGuia = function(id) {
-    // 1. Abrimos la pestaña INMEDIATAMENTE al hacer clic (para que Chrome no se moleste)
     const nuevaPestana = window.open('', '_blank');
     nuevaPestana.document.write('<h3 style="font-family:sans-serif; padding: 20px; color:#7b1fa2;">Preparando diseño de impresión...</h3>');
 
-    // 2. Le pedimos los datos reales a la Base de Datos de Django
     fetch(`/api/guia/${id}/`)
         .then(response => response.json())
         .then(guia => {
@@ -326,10 +322,7 @@ window.imprimirGuia = function(id) {
                 return alert(guia.error);
             }
             
-            // 3. Los guardamos temporalmente para tu hoja morada
             localStorage.setItem('guiaAImprimir', JSON.stringify(guia));
-            
-            // 4. Redirigimos la pestaña que ya abrimos hacia tu diseño clásico
             nuevaPestana.location.href = '/imprimir-prueba/';
         })
         .catch(error => {
@@ -345,11 +338,12 @@ window.editarGuia = function(id) {
         .then(g => {
             if (g.error) return alert(g.error);
 
-            // Llenamos el formulario
+            // Llenamos el formulario (incluyendo ubigeo)
             document.getElementById('dni').value = g.dni;
             document.getElementById('nombre').value = g.nombre;
             document.getElementById('celular').value = g.celular || '';
             document.getElementById('agencia').value = g.agencia || '';
+            document.getElementById('ubigeo').value = g.ubigeo || ''; 
             document.getElementById('direccion').value = g.direccion || '';
             document.getElementById('referencia').value = g.referencia || '';
             document.getElementById('producto').value = g.producto || '';
@@ -358,7 +352,6 @@ window.editarGuia = function(id) {
             document.getElementById('dni').style.borderColor = '#00c2b3';
             document.getElementById('nombre').style.borderColor = '#00c2b3';
 
-            // Cambiamos el estado visual
             idGuiaEditando = id;
             if(btnSubmit) {
                 btnSubmit.innerText = "Guardar Cambios Actualizados";
@@ -367,7 +360,6 @@ window.editarGuia = function(id) {
             }
             if(checkboxConfirmacion) checkboxConfirmacion.checked = true;
 
-            // Regresamos al panel del formulario
             if(sliderTrack) {
                 sliderTrack.style.transform = 'translateX(0)';
             }
@@ -442,56 +434,25 @@ if(canvas) {
     init(); animate();
 }
 
-// --- LÓGICA DE AGENCIA ---
-// --- LÓGICA DE AGENCIA ---
-const inputAgencia = document.getElementById('agencia');
-const inputDireccion = document.getElementById('direccion');
-const inputReferencia = document.getElementById('referencia');
-
-if (inputAgencia) {
-    inputAgencia.addEventListener('change', function() {
-        const nombreSeleccionado = this.value;
-        fetch(`/api/agencia/?nombre=${encodeURIComponent(nombreSeleccionado)}`)
-            .then(response => response.json())
-            .then(data => {
-                if (data.direccion) {
-                    // Si la agencia tiene ubicación, la juntamos con la dirección
-                    let direccionCompleta = data.direccion;
-                    if (data.ubicacion) {
-                        direccionCompleta = data.ubicacion + " \n" + data.direccion;
-                    }
-                    
-                    inputDireccion.value = direccionCompleta;
-                    inputReferencia.value = data.referencia || '';
-                    inputDireccion.style.borderColor = '#00c2b3';
-                    inputReferencia.style.borderColor = '#00c2b3';
-                }
-            })
-            .catch(err => console.log("Agencia no encontrada:", err));
-    });
-}
-
-// MAGIA DE AUTOCOMPLETADO DE AGENCIA SHALOM
+// ==========================================
+// 5. AUTOCOMPLETADO DE AGENCIA SHALOM
+// ==========================================
 document.getElementById('agencia').addEventListener('input', function(e) {
     const inputAgencia = e.target.value;
     const opcionesList = document.getElementById('agencias-list').options;
     
-    // Recorremos todas las opciones ocultas de la base de datos
     for (let i = 0; i < opcionesList.length; i++) {
-        // Si el texto que escribió el usuario coincide con una agencia...
         if (opcionesList[i].value === inputAgencia) {
             
-            // 1. Obtenemos los datos ocultos
             const ubigeo = opcionesList[i].getAttribute('data-ubigeo');
             const direccion = opcionesList[i].getAttribute('data-direccion');
             const referencia = opcionesList[i].getAttribute('data-referencia');
             
-            // 2. Llenamos los campos automáticamente
             document.getElementById('ubigeo').value = (ubigeo !== '-' && ubigeo !== 'None') ? ubigeo : '';
             document.getElementById('direccion').value = (direccion !== 'None') ? direccion : '';
             document.getElementById('referencia').value = (referencia !== 'Sin referencia' && referencia !== 'None') ? referencia : '';
             
-            break; // Detenemos la búsqueda
+            break; 
         }
     }
 });

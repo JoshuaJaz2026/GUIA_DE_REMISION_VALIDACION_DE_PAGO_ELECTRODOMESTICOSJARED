@@ -160,6 +160,9 @@
 
             <div class="dato-box-grande">
                 <div><span class="etiqueta">Enviar a Agencia / Transportista:</span> <span class="valor" id="print-agencia">SHALOM - Sede Centro</span></div>
+                
+                <div style="margin-top: 10px;"><span class="etiqueta">Ubigeo:</span> <span class="valor" id="print-ubigeo">Ej: Lima / Lima / Comas</span></div>
+                
                 <div style="margin-top: 10px;"><span class="etiqueta">Dirección de Entrega:</span> <span class="valor" id="print-direccion">Av. Los Libertadores Mz. H Lote 14, Urbanización Las praderas del Sur</span></div>
                 <div style="margin-top: 10px;"><span class="etiqueta">Referencia:</span> <span class="valor" id="print-referencia">A la espalda del colegio nacional grande amarillo con portón verde y doble candado</span></div>
             </div>
@@ -191,6 +194,10 @@
                 document.getElementById('print-dni').innerText = guia.dni || '';
                 document.getElementById('print-celular').innerText = guia.celular || '';
                 document.getElementById('print-agencia').innerText = guia.agencia || '';
+                
+                // NUEVA LÍNEA PARA LLENAR EL UBIGEO
+                document.getElementById('print-ubigeo').innerText = guia.ubigeo || '';
+                
                 document.getElementById('print-direccion').innerText = guia.direccion || '';
                 document.getElementById('print-referencia').innerText = guia.referencia || '';
 
