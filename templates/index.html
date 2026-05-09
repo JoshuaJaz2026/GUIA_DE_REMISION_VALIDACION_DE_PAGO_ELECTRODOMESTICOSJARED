@@ -58,7 +58,11 @@
                                         <input type="text" id="agencia" list="agencias-list" placeholder="Escribe para buscar sede..." required autocomplete="off">
                                         <datalist id="agencias-list">
                                             {% for agencia in agencias %}
-                                                <option value="{{ agencia.nombre }}"></option>
+                                                <option value="{{ agencia.nombre }}" 
+                                                        data-ubigeo="{{ agencia.ubicacion }}" 
+                                                        data-direccion="{{ agencia.direccion }}" 
+                                                        data-referencia="{{ agencia.referencia }}">
+                                                </option>
                                             {% endfor %}
                                         </datalist>
                                     </div>
@@ -66,10 +70,17 @@
 
                                 <div class="form-row">
                                     <div class="form-field">
+                                        <label for="ubigeo">Ubigeo</label>
+                                        <input type="text" id="ubigeo" placeholder="Ej. Lima / Lima / Comas" required>
+                                    </div>
+                                    <div class="form-field">
                                         <label for="direccion">Dirección de Entrega</label>
                                         <input type="text" id="direccion" placeholder="Distrito, Calle, Número" required>
                                     </div>
-                                    <div class="form-field">
+                                </div>
+
+                                <div class="form-row">
+                                    <div class="form-field" style="width: 100%;">
                                         <label for="producto">Producto (Categoría)</label>
                                         <input type="text" id="producto" placeholder="Ej. Arrocera Oster" required>
                                     </div>

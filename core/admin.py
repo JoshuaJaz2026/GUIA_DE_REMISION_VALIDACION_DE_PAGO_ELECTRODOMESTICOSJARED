@@ -23,19 +23,13 @@ class AgenciaTransporteAdmin(admin.ModelAdmin):
 # --- CONFIGURACIÓN PARA EL MODELO GUÍA DE REMISIÓN ---
 @admin.register(GuiaRemision)
 class GuiaRemisionAdmin(admin.ModelAdmin):
-    # Columnas que se verán en la tabla principal de Django/Jazzmin
-    list_display = ('id', 'cliente', 'dni_ruc', 'agencia', 'producto', 'fecha_creacion', 'usuario')
+    # Agrega 'ubigeo' en list_display para verlo en la tabla
+    list_display = ('id', 'cliente', 'dni_ruc', 'agencia', 'ubigeo', 'producto', 'fecha_creacion', 'usuario')
     
-    # Barra de búsqueda (esencial si tienes miles de guías)
     search_fields = ('cliente', 'dni_ruc', 'producto', 'agencia')
-    
-    # Filtros laterales (para buscar por fechas específicas o qué empleado hizo qué guía)
     list_filter = ('fecha_creacion', 'agencia', 'usuario')
-    
-    # Protegemos la fecha de creación para que nadie pueda falsearla modificándola a mano
     readonly_fields = ('fecha_creacion',)
     
-    # Orden de los campos al abrir una guía para editarla
     fieldsets = (
         ('Información del Documento', {
             'fields': ('usuario', 'fecha_creacion')
@@ -44,6 +38,7 @@ class GuiaRemisionAdmin(admin.ModelAdmin):
             'fields': ('cliente', 'dni_ruc', 'celular')
         }),
         ('Datos de Envío', {
-            'fields': ('agencia', 'direccion', 'referencia', 'producto')
+            # Agrega 'ubigeo' aquí
+            'fields': ('agencia', 'ubigeo', 'direccion', 'referencia', 'producto')
         }),
     )

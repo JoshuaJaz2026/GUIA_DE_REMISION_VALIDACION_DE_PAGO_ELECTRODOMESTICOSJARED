@@ -35,6 +35,8 @@ class GuiaRemision(models.Model):
     celular = models.CharField("Celular", max_length=20, blank=True, null=True)
     agencia = models.CharField("Agencia", max_length=200, blank=True, null=True)
     direccion = models.TextField("Dirección")
+    # NUEVO CAMPO UBIGEO
+    ubigeo = models.CharField(max_length=255, blank=True, null=True, verbose_name="Ubigeo")
     referencia = models.TextField("Referencia", blank=True, null=True)
     producto = models.CharField("Producto (Categoría)", max_length=255) 
     

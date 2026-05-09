@@ -470,3 +470,28 @@ if (inputAgencia) {
             .catch(err => console.log("Agencia no encontrada:", err));
     });
 }
+
+// MAGIA DE AUTOCOMPLETADO DE AGENCIA SHALOM
+document.getElementById('agencia').addEventListener('input', function(e) {
+    const inputAgencia = e.target.value;
+    const opcionesList = document.getElementById('agencias-list').options;
+    
+    // Recorremos todas las opciones ocultas de la base de datos
+    for (let i = 0; i < opcionesList.length; i++) {
+        // Si el texto que escribió el usuario coincide con una agencia...
+        if (opcionesList[i].value === inputAgencia) {
+            
+            // 1. Obtenemos los datos ocultos
+            const ubigeo = opcionesList[i].getAttribute('data-ubigeo');
+            const direccion = opcionesList[i].getAttribute('data-direccion');
+            const referencia = opcionesList[i].getAttribute('data-referencia');
+            
+            // 2. Llenamos los campos automáticamente
+            document.getElementById('ubigeo').value = (ubigeo !== '-' && ubigeo !== 'None') ? ubigeo : '';
+            document.getElementById('direccion').value = (direccion !== 'None') ? direccion : '';
+            document.getElementById('referencia').value = (referencia !== 'Sin referencia' && referencia !== 'None') ? referencia : '';
+            
+            break; // Detenemos la búsqueda
+        }
+    }
+});
