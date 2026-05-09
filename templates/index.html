@@ -28,7 +28,10 @@
                         
                         <div class="right-panel-header">
                             <div class="logo">JARED.</div>
-                            <div class="login-link">Hola, <span id="nombreUsuario">{{ user.username|title }}</span> | <a href="#" id="btnLogout" style="color: #ff4757;">Cerrar Sesión</a></div>
+                            <div class="login-link">
+                                Hola, <span id="nombreUsuario">{{ user.username|title }}</span> | 
+                                <a href="#" id="btnLogout" style="color: #ff4757; text-decoration: none; font-weight: bold;">Cerrar Sesión</a>
+                            </div>
                         </div>
 
                         <div class="form-container">
@@ -54,16 +57,17 @@
                                     </div>
                                     <div class="form-field">
                                         <label for="agencia">Agencia / Transportista</label>
-                                        <input type="text" id="agencia" list="agencias-list" placeholder="Escribe para buscar sede..." required autocomplete="off">
-                                        <datalist id="agencias-list">
-                                            {% for agencia in agencias %}
-                                                <option value="{{ agencia.nombre }}" 
-                                                        data-ubigeo="{{ agencia.ubicacion }}" 
-                                                        data-direccion="{{ agencia.direccion }}" 
-                                                        data-referencia="{{ agencia.referencia }}">
-                                                </option>
-                                            {% endfor %}
-                                        </datalist>
+                                        <div class="agencia-container">
+                                            <input type="text" id="agencia" list="agencias-list" placeholder="Escribe para buscar sede..." required autocomplete="off">
+                                            <datalist id="agencias-list">
+                                                {% for agencia in agencias %}
+                                                    <option value="{{ agencia.nombre }}" 
+                                                            data-ubigeo="{{ agencia.ubicacion }}" 
+                                                            data-direccion="{{ agencia.direccion }}" 
+                                                            data-referencia="{{ agencia.referencia }}">
+                                                {% endfor %}
+                                            </datalist>
+                                        </div>
                                     </div>
                                 </div>
 
@@ -88,13 +92,15 @@
                                 <div class="form-row" style="margin-bottom: 25px;">
                                     <div class="form-field" style="width: 100%;">
                                         <label for="referencia">Referencia de llegada</label>
-                                        <textarea id="referencia" rows="2" placeholder="Ej. Frente al parque grande, casa de rejas verdes..." style="width: 100%; background: rgba(255, 255, 255, 0.05); border: 1px solid rgba(255, 255, 255, 0.1); border-radius: 8px; color: white; padding: 12px; font-family: inherit; font-size: 14px;" required></textarea>
+                                        <textarea id="referencia" rows="2" placeholder="Ej. Frente al parque grande, casa de rejas verdes..." required></textarea>
                                     </div>
                                 </div>
 
                                 <div style="display: flex; gap: 15px; width: 100%;">
-                                    <button type="submit" id="btnSubmit" class="submit-btn" style="flex: 1; width: 100%;">Generar y Guardar Guía</button>
-                                    <button type="button" id="btnGoHistory" class="submit-btn" style="flex: 1; width: 100%; background-color: #1A2F49; border: 1px solid #00C2B3; color: #00C2B3;">Ver Historial <i class="fa-solid fa-arrow-right" style="margin-left: 5px;"></i></button>
+                                    <button type="submit" id="btnSubmit" class="submit-btn" style="flex: 1;">Generar y Guardar Guía</button>
+                                    <button type="button" id="btnGoHistory" class="submit-btn" style="flex: 1; background-color: #1A2F49; border: 1px solid #00C2B3; color: #00C2B3;">
+                                        Ver Historial <i class="fa-solid fa-arrow-right" style="margin-left: 8px;"></i>
+                                    </button>
                                 </div>
                             </form>
                         </div>
