@@ -25,14 +25,18 @@
                     </div>
 
                     <div class="right-panel">
+                        
                         <div class="right-panel-header">
                             <div class="logo">JARED.</div>
-                            <div class="login-link">Hola, <span id="nombreUsuario">{{ user.username|title }}</span> | <a href="#" id="btnLogout" style="color: #ff4757;">Cerrar Sesión</a></div>
+                            <div style="display: flex; flex-direction: column; align-items: flex-end; gap: 12px;">
+                                <div class="login-link">Hola, <span id="nombreUsuario">{{ user.username|title }}</span> | <a href="#" id="btnLogout" style="color: #ff4757;">Cerrar Sesión</a></div>
+                                <button type="button" id="btnGoHistory" class="slide-nav-btn">
+                                    Ver Historial de Guías <i class="fa-solid fa-arrow-right"></i>
+                                </button>
+                            </div>
                         </div>
 
                         <div class="form-container">
-                            <h2>Nueva Guía de Remisión</h2>
-                            
                             <form id="guiaForm">
                                 {% csrf_token %} 
                                 
@@ -86,23 +90,15 @@
                                     </div>
                                 </div>
 
-                                <div class="form-row" style="margin-bottom: 25px;">
+                                <div class="form-row" style="margin-bottom: 20px;">
                                     <div class="form-field" style="width: 100%;">
                                         <label for="referencia">Referencia de llegada</label>
                                         <textarea id="referencia" rows="2" placeholder="Ej. Frente al parque grande, casa de rejas verdes..." style="width: 100%; background: rgba(255, 255, 255, 0.05); border: 1px solid rgba(255, 255, 255, 0.1); border-radius: 8px; color: white; padding: 12px; font-family: inherit; font-size: 14px;" required></textarea>
                                     </div>
                                 </div>
 
-                                <div class="terms-row">
-                                    <input type="checkbox" id="confirmacion" required>
-                                    <label for="confirmacion">Confirmo que los datos para la <a href="#">Guía de Remisión</a> son correctos.</label>
-                                </div>
-
-                                <button type="submit" id="btnSubmit" class="submit-btn" disabled>Generar y Guardar Guía</button>
+                                <button type="submit" id="btnSubmit" class="submit-btn">Generar y Guardar Guía</button>
                             </form>
-                            <button type="button" id="btnGoHistory" class="slide-nav-btn" style="margin-top: 15px; width: fit-content;">
-                                Ver Historial de Guías <i class="fa-solid fa-arrow-right"></i>
-                            </button>
                         </div>
 
                         <div class="right-panel-footer">
