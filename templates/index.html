@@ -55,19 +55,23 @@
                                         <label for="celular">Celular</label>
                                         <input type="text" id="celular" placeholder="Ej. 987 654 321" required>
                                     </div>
-                                    <div class="form-field">
+                                    <div class="form-field" style="position: relative;">
                                         <label for="agencia">Agencia / Transportista</label>
-                                        <div class="agencia-container">
-                                            <input type="text" id="agencia" list="agencias-list" placeholder="Escribe para buscar sede..." required autocomplete="off">
-                                            <datalist id="agencias-list">
+                                        <input type="text" id="agencia" placeholder="Escribe para buscar sede..." required autocomplete="off">
+                                        <div id="agencia-results" class="custom-autocomplete-results"></div>
+                                        
+                                        <script id="agencias-data" type="application/json">
+                                            [
                                                 {% for agencia in agencias %}
-                                                    <option value="{{ agencia.nombre }}" 
-                                                            data-ubigeo="{{ agencia.ubicacion }}" 
-                                                            data-direccion="{{ agencia.direccion }}" 
-                                                            data-referencia="{{ agencia.referencia }}">
+                                                    {
+                                                        "nombre": "{{ agencia.nombre|escapejs }}",
+                                                        "ubigeo": "{{ agencia.ubicacion|escapejs }}",
+                                                        "direccion": "{{ agencia.direccion|escapejs }}",
+                                                        "referencia": "{{ agencia.referencia|escapejs }}"
+                                                    }{% if not forloop.last %},{% endif %}
                                                 {% endfor %}
-                                            </datalist>
-                                        </div>
+                                            ]
+                                        </script>
                                     </div>
                                 </div>
 

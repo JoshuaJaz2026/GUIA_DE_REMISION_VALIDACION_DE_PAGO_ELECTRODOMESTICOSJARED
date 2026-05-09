@@ -51,7 +51,6 @@ const btnGoHistory = document.getElementById('btnGoHistory');
 const btnGoForm = document.getElementById('btnGoForm');
 const inputDni = document.getElementById('dni');
 const errorDoc = document.getElementById('error-doc'); 
-const checkboxConfirmacion = document.getElementById('confirmacion');
 const btnSubmit = document.getElementById('btnSubmit');
 const modalCopia = document.getElementById('modalCopia');
 const textoResumen = document.getElementById('textoResumen');
@@ -110,7 +109,7 @@ if(inputDni) {
             } else if (esValido && val.length > 0) {
                 this.style.borderColor = '#00c2b3'; 
                 errorDoc.style.display = 'none';
-                btnSubmit.disabled = !checkboxConfirmacion.checked;
+                btnSubmit.disabled = false;
 
                 if (val.length === 8 || val.length === 11) {
                     buscarDatosDocumento(val);
@@ -118,6 +117,7 @@ if(inputDni) {
             } else {
                 this.style.borderColor = ''; 
                 errorDoc.style.display = 'none';
+                btnSubmit.disabled = false;
             }
         }
     });
@@ -159,19 +159,6 @@ function lanzarFallback(input, mensaje) {
     input.style.borderColor = '#ffa502'; 
 }
 
-if(checkboxConfirmacion && btnSubmit) {
-    checkboxConfirmacion.addEventListener('change', function() {
-        const tieneError = inputDni && inputDni.style.borderColor === 'rgb(255, 71, 87)';
-        if (tieneError) {
-            this.checked = false;
-            alert("Corrija el DNI/RUC antes de continuar.");
-            btnSubmit.disabled = true;
-        } else {
-            btnSubmit.disabled = !this.checked;
-        }
-    });
-}
-
 // ==========================================
 // REGISTRO OFICIAL EN BASE DE DATOS Y PDF
 // ==========================================
@@ -190,7 +177,6 @@ if(form) {
 
         const csrfToken = document.querySelector('[name=csrfmiddlewaretoken]').value;
 
-        // SE AGREGÓ UBIGEO A LOS DATOS QUE SE ENVÍAN AL SERVIDOR
         const datosGuia = {
             dni: dniVal,
             nombre: nombreVal,
@@ -230,7 +216,6 @@ if(form) {
 
             mostrarGuias();
 
-            // Resumen de WhatsApp actualizado con Ubigeo
             textoResumen.value = `📦 ELECTRODOMÉSTICOS JARED\n👤 Atendido por: ${usuarioActual.toUpperCase()}\n------------------------\n👤 Cliente: ${datosGuia.nombre}\n📄 DNI/RUC: ${datosGuia.dni}\n📱 Celular: ${datosGuia.celular}\n🚚 Agencia: ${datosGuia.agencia}\n📍 Ubigeo: ${datosGuia.ubigeo}\n📍 Dirección: ${datosGuia.direccion}\n🛒 Producto: ${datosGuia.producto}`;
             modalCopia.classList.add('activo');
 
@@ -241,12 +226,11 @@ if(form) {
             document.getElementById('direccion').style.borderColor = '';
             document.getElementById('referencia').style.borderColor = '';
             document.getElementById('nombre').style.borderColor = ''; 
-            if(checkboxConfirmacion) checkboxConfirmacion.checked = false;
             
             idGuiaEditando = null;
             btnSubmit.innerText = "Generar y Guardar Guía";
             btnSubmit.style.backgroundColor = ""; 
-            
+            btnSubmit.disabled = false;
         })
         .catch(error => {
             console.error("Error al guardar:", error);
@@ -295,14 +279,12 @@ function mostrarGuias() {
                         <td>${g.dni}</td>
                         <td><strong>${g.agencia}</strong><br><small>${g.direccion}</small></td>
                         <td>
-    <div style="display: flex; gap: 8px; flex-wrap: nowrap; justify-content: flex-start;">
-        <button onclick="editarGuia(${g.id})" style="background:#0097e6; color:white; border:none; padding:8px 12px; border-radius:5px; cursor:pointer;" title="Editar">✏️</button>
-
-        <button onclick="imprimirGuia(${g.id})" style="background:#7b1fa2; color:white; border:none; padding:8px 12px; border-radius:5px; cursor:pointer; font-weight:bold;" title="Imprimir Guía">🖨️</button>
-        
-        <button onclick="eliminarGuia(${g.id})" style="background: #ff4757; color: white; border: none; padding:8px 12px; border-radius: 5px; cursor: pointer;" title="Eliminar">🗑️</button>
-    </div>
-</td>
+                            <div style="display: flex; gap: 8px; flex-wrap: nowrap; justify-content: flex-start;">
+                                <button onclick="editarGuia(${g.id})" style="background:#0097e6; color:white; border:none; padding:8px 12px; border-radius:5px; cursor:pointer;" title="Editar">✏️</button>
+                                <button onclick="imprimirGuia(${g.id})" style="background:#7b1fa2; color:white; border:none; padding:8px 12px; border-radius:5px; cursor:pointer; font-weight:bold;" title="Imprimir Guía">🖨️</button>
+                                <button onclick="eliminarGuia(${g.id})" style="background: #ff4757; color: white; border: none; padding:8px 12px; border-radius: 5px; cursor: pointer;" title="Eliminar">🗑️</button>
+                            </div>
+                        </td>
                     </tr>`;
             });
         })
@@ -340,7 +322,6 @@ window.editarGuia = function(id) {
         .then(g => {
             if (g.error) return alert(g.error);
 
-            // Llenamos el formulario (incluyendo ubigeo)
             document.getElementById('dni').value = g.dni;
             document.getElementById('nombre').value = g.nombre;
             document.getElementById('celular').value = g.celular || '';
@@ -360,7 +341,6 @@ window.editarGuia = function(id) {
                 btnSubmit.style.backgroundColor = "#0097e6";
                 btnSubmit.disabled = false;
             }
-            if(checkboxConfirmacion) checkboxConfirmacion.checked = true;
 
             if(sliderTrack) {
                 sliderTrack.style.transform = 'translateX(0)';
@@ -437,24 +417,66 @@ if(canvas) {
 }
 
 // ==========================================
-// 5. AUTOCOMPLETADO DE AGENCIA SHALOM
+// 5. BUSCADOR PERSONALIZADO DE AGENCIAS
 // ==========================================
-document.getElementById('agencia').addEventListener('input', function(e) {
-    const inputAgencia = e.target.value;
-    const opcionesList = document.getElementById('agencias-list').options;
-    
-    for (let i = 0; i < opcionesList.length; i++) {
-        if (opcionesList[i].value === inputAgencia) {
-            
-            const ubigeo = opcionesList[i].getAttribute('data-ubigeo');
-            const direccion = opcionesList[i].getAttribute('data-direccion');
-            const referencia = opcionesList[i].getAttribute('data-referencia');
-            
-            document.getElementById('ubigeo').value = (ubigeo !== '-' && ubigeo !== 'None') ? ubigeo : '';
-            document.getElementById('direccion').value = (direccion !== 'None') ? direccion : '';
-            document.getElementById('referencia').value = (referencia !== 'Sin referencia' && referencia !== 'None') ? referencia : '';
-            
-            break; 
-        }
+const inputAgencia = document.getElementById('agencia');
+const resultadosContainer = document.getElementById('agencia-results');
+const agenciasDataScript = document.getElementById('agencias-data');
+
+let agenciasData = [];
+
+// Leemos el JSON inyectado desde Django en el HTML
+if (agenciasDataScript) {
+    try {
+        agenciasData = JSON.parse(agenciasDataScript.textContent);
+    } catch(e) {
+        console.error("Error cargando datos de agencias:", e);
     }
-});
+}
+
+if (inputAgencia && resultadosContainer) {
+    // Al escribir en el input...
+    inputAgencia.addEventListener('input', function() {
+        const val = this.value.toLowerCase();
+        resultadosContainer.innerHTML = '';
+        
+        if (!val) {
+            resultadosContainer.style.display = 'none';
+            return;
+        }
+
+        // Filtramos buscando el texto
+        const filtradas = agenciasData.filter(a => a.nombre.toLowerCase().includes(val));
+
+        if (filtradas.length > 0) {
+            // Mostramos máximo 10 resultados para no hacer scroll infinito
+            filtradas.slice(0, 10).forEach(agencia => {
+                const div = document.createElement('div');
+                div.classList.add('autocomplete-item');
+                div.innerHTML = `<strong>${agencia.nombre}</strong><br><small style="color: #00C2B3; font-size: 10px;">${agencia.ubigeo !== '-' ? agencia.ubigeo : 'Sin Ubigeo'}</small>`;
+                
+                // Al hacer clic en un resultado...
+                div.addEventListener('click', function() {
+                    inputAgencia.value = agencia.nombre;
+                    document.getElementById('ubigeo').value = (agencia.ubigeo !== '-' && agencia.ubigeo !== 'None') ? agencia.ubigeo : '';
+                    document.getElementById('direccion').value = (agencia.direccion !== 'None') ? agencia.direccion : '';
+                    document.getElementById('referencia').value = (agencia.referencia !== 'Sin referencia' && agencia.referencia !== 'None') ? agencia.referencia : '';
+                    
+                    resultadosContainer.style.display = 'none';
+                });
+                
+                resultadosContainer.appendChild(div);
+            });
+            resultadosContainer.style.display = 'block';
+        } else {
+            resultadosContainer.style.display = 'none';
+        }
+    });
+
+    // Cerrar la lista de sugerencias si el usuario hace clic en cualquier otra parte
+    document.addEventListener('click', function(e) {
+        if (e.target !== inputAgencia) {
+            resultadosContainer.style.display = 'none';
+        }
+    });
+}

@@ -69,32 +69,15 @@ body { background-color: #050b14; position: relative; min-height: 100vh; display
 .form-field { display: flex; flex-direction: column; flex: 1; position: relative; } 
 .form-field label { font-size: 12px; color: #fff; margin-bottom: 4px; }
 
-/* --- NUEVO: Alineación del Listado a la Derecha --- */
-.agencia-container {
-    direction: rtl; /* Empuja el origen del datalist a la derecha */
-    width: 100%;
-}
-
-.agencia-container input {
-    direction: ltr; /* Regresa el texto a la normalidad (izquierda a derecha) */
-    text-align: left;
-    padding: 9px 10px; 
-    background-color: rgba(255, 255, 255, 0.1); 
-    border: 1px solid #1A2F49; 
-    border-radius: 4px; 
-    color: #fff; 
-    font-size: 13px; 
-    width: 100%;
-}
-
 /* Estilos para inputs generales y áreas de texto */
-.form-field input:not([list]), .form-field textarea { 
+.form-field input, .form-field textarea { 
     padding: 9px 10px; 
     background-color: rgba(255, 255, 255, 0.1); 
     border: 1px solid #1A2F49; 
     border-radius: 4px; 
     color: #fff; 
-    font-size: 13px; 
+    font-size: 13px;
+    width: 100%;
 }
 
 .form-field input:focus, .form-field textarea:focus { 
@@ -102,6 +85,41 @@ body { background-color: #050b14; position: relative; min-height: 100vh; display
     border-color: #00C2B3; 
     background-color: rgba(255, 255, 255, 0.15); 
 }
+
+/* --- Buscador Personalizado (JS Autocomplete) --- */
+.custom-autocomplete-results {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    background-color: #1A2F49;
+    border: 1px solid #00C2B3;
+    border-top: none;
+    border-radius: 0 0 8px 8px;
+    max-height: 200px;
+    overflow-y: auto;
+    z-index: 1000;
+    display: none;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.5);
+}
+
+.autocomplete-item {
+    padding: 10px 15px;
+    cursor: pointer;
+    font-size: 13px;
+    color: #fff;
+    border-bottom: 1px solid rgba(255,255,255,0.05);
+    transition: background 0.2s;
+}
+
+.autocomplete-item:hover {
+    background-color: #00C2B3;
+    color: #fff;
+}
+
+.custom-autocomplete-results::-webkit-scrollbar { width: 5px; }
+.custom-autocomplete-results::-webkit-scrollbar-thumb { background: #00C2B3; border-radius: 10px; }
+
 
 .submit-btn { width: 100%; padding: 12px; background-color: #00C2B3; color: white; border: none; border-radius: 4px; font-size: 14px; font-weight: 700; cursor: pointer; transition: background-color 0.2s; flex-shrink: 0;}
 .submit-btn:hover { background-color: #00a094; }
