@@ -11,10 +11,9 @@ body { background-color: #050b14; position: relative; min-height: 100vh; display
 .slider-container {
     width: 90%; 
     max-width: 1250px; 
-    /* --- MÁS REDUCCIÓN DE ALTURA AQUÍ --- */
-    height: 72vh; /* Bajamos al 72% de la pantalla */
-    max-height: 650px; /* Tope máximo más bajito (antes 720px) */
-    min-height: 560px; /* Tope mínimo ajustado */
+    height: 72vh; 
+    max-height: 650px; 
+    min-height: 560px; 
     overflow: hidden; 
     border-radius: 12px;
     box-shadow: 0 15px 50px rgba(0,0,0,0.6);
@@ -36,8 +35,6 @@ body { background-color: #050b14; position: relative; min-height: 100vh; display
 
 /* --- VISTA 1: Tarjeta del Formulario --- */
 .card { display: flex; }
-
-/* Reducimos el padding de 40px a 30px arriba y abajo para compensar */
 .left-panel { flex: 4; background-color: #1A2F49; position: relative; overflow: hidden; padding: 30px 40px; color: white; }
 .left-panel::before { content: ''; position: absolute; top: 30px; right: 120px; width: 100px; height: 100px; background-image: radial-gradient(#aaa 1px, transparent 1px); background-size: 10px 10px; opacity: 0.2; }
 .left-panel::after { content: ''; position: absolute; bottom: 0; left: 0; width: 100%; height: 70%; background-color: #00C2B3; clip-path: polygon(0 35%, 100% 0, 100% 100%, 0% 100%); z-index: 1; }
@@ -45,29 +42,11 @@ body { background-color: #050b14; position: relative; min-height: 100vh; display
 .bottom-text { position: absolute; bottom: 50px; left: 40px; z-index: 5; }
 .bottom-text h1 { font-size: 38px; line-height: 1.2; font-weight: 700; }
 
-/* Reducimos el padding de 40px a 30px arriba y abajo */
 .right-panel { flex: 6; background-color: #0D1F35; color: #fff; padding: 30px 50px; display: flex; flex-direction: column; justify-content: space-between; position: relative; }
 .right-panel::before { content: ''; position: absolute; top: 30px; right: 30px; width: 100px; height: 100px; background-image: radial-gradient(#aaa 1px, transparent 1px); background-size: 10px 10px; opacity: 0.2; }
 
 .right-panel-header { display: flex; justify-content: space-between; align-items: center; z-index: 5; margin-bottom: 10px;}
 .logo { font-size: 26px; font-weight: 700; color: #00C2B3; }
-
-/* Botones de Navegación del Slider */
-.slide-nav-btn {
-    background: rgba(0, 194, 179, 0.1);
-    color: #00C2B3;
-    border: 1px solid rgba(0, 194, 179, 0.3);
-    padding: 8px 16px;
-    border-radius: 20px;
-    cursor: pointer;
-    font-weight: bold;
-    font-size: 13px;
-    display: flex;
-    align-items: center;
-    gap: 8px;
-    transition: all 0.3s;
-}
-.slide-nav-btn:hover { background: #00C2B3; color: #fff; }
 
 /* --- CONTENEDOR DEL FORMULARIO --- */
 .form-container { 
@@ -81,78 +60,62 @@ body { background-color: #050b14; position: relative; min-height: 100vh; display
     padding-right: 5px; 
 }
 
-/* Diseño del Scrollbar del formulario */
+/* Diseño del Scrollbar */
 .form-container::-webkit-scrollbar { width: 6px; }
 .form-container::-webkit-scrollbar-track { background: rgba(255, 255, 255, 0.05); border-radius: 10px; }
 .form-container::-webkit-scrollbar-thumb { background: #00c2b3; border-radius: 10px; }
-.form-container::-webkit-scrollbar-thumb:hover { background: #009c90; }
 
 .form-row { display: flex; gap: 20px; margin-bottom: 10px; } 
-.form-field { display: flex; flex-direction: column; flex: 1; }
+.form-field { display: flex; flex-direction: column; flex: 1; position: relative; } /* position relative para guiar al datalist */
 .form-field label { font-size: 12px; color: #fff; margin-bottom: 4px; }
-.form-field input, .form-field textarea { padding: 9px 10px; background-color: rgba(255, 255, 255, 0.1); border: 1px solid #1A2F49; border-radius: 4px; color: #fff; font-size: 13px; }
-.form-field input::placeholder, .form-field textarea::placeholder { color: #888; }
+
+/* Ajuste específico para inputs con datalist */
+.form-field input { 
+    padding: 9px 10px; 
+    background-color: rgba(255, 255, 255, 0.1); 
+    border: 1px solid #1A2F49; 
+    border-radius: 4px; 
+    color: #fff; 
+    font-size: 13px; 
+    width: 100%;
+}
+
+/* Forzar que el comportamiento del datalist sea más predecible */
+input[list] {
+    direction: ltr;
+    text-align: left;
+}
+
+.form-field textarea { padding: 9px 10px; background-color: rgba(255, 255, 255, 0.1); border: 1px solid #1A2F49; border-radius: 4px; color: #fff; font-size: 13px; }
 .form-field input:focus, .form-field textarea:focus { outline: none; border-color: #00C2B3; background-color: rgba(255, 255, 255, 0.15); }
 
-.submit-btn { width: 250px; padding: 12px; background-color: #00C2B3; color: white; border: none; border-radius: 4px; font-size: 14px; font-weight: 700; cursor: pointer; transition: background-color 0.2s; flex-shrink: 0;}
+.submit-btn { width: 100%; padding: 12px; background-color: #00C2B3; color: white; border: none; border-radius: 4px; font-size: 14px; font-weight: 700; cursor: pointer; transition: background-color 0.2s; flex-shrink: 0;}
 .submit-btn:hover { background-color: #00a094; }
-.submit-btn:disabled { background-color: #2a3b50; color: #666; cursor: not-allowed; }
 
 .right-panel-footer { font-size: 11px; color: #bbb; z-index: 5; margin-top: 5px;}
 
 /* --- VISTA 2: Sección de Tabla de Datos --- */
-.database-section {
-    background-color: #0D1F35;
-    padding: 40px 60px;
-    color: #fff;
-    display: flex;
-    flex-direction: column;
-}
-
+.database-section { background-color: #0D1F35; padding: 40px 60px; color: #fff; display: flex; flex-direction: column; }
 .db-header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 20px; }
 .db-title-group { display: flex; align-items: center; gap: 20px; }
 .db-title-group h2 { color: #00C2B3; }
 
-#buscador { width: 300px; padding: 10px 15px; background-color: rgba(255, 255, 255, 0.1); color: #fff; border: 1px solid #1A2F49; border-radius: 20px; outline: none; transition: border-color 0.3s; }
-#buscador::placeholder { color: #888; }
-#buscador:focus { border-color: #00C2B3; }
+#buscador { width: 300px; padding: 10px 15px; background-color: rgba(255, 255, 255, 0.1); color: #fff; border: 1px solid #1A2F49; border-radius: 20px; outline: none; }
 
-/* Área escroleable de la tabla */
-.table-wrapper {
-    flex: 1;
-    overflow-y: auto;
-    border-radius: 8px;
-    border: 1px solid #1A2F49;
-}
-
-/* Diseño del Scrollbar interno de la tabla */
+.table-wrapper { flex: 1; overflow-y: auto; border-radius: 8px; border: 1px solid #1A2F49; }
 .table-wrapper::-webkit-scrollbar { width: 8px; }
-.table-wrapper::-webkit-scrollbar-track { background: rgba(0,0,0,0.2); }
 .table-wrapper::-webkit-scrollbar-thumb { background: #1A2F49; border-radius: 4px; }
-.table-wrapper::-webkit-scrollbar-thumb:hover { background: #00C2B3; }
 
 table { width: 100%; border-collapse: collapse; }
 th, td { padding: 15px; text-align: left; border-bottom: 1px solid #1A2F49; }
-th { background-color: #112740; color: #00C2B3; font-weight: 600; position: sticky; top: 0; z-index: 1;} /* Cabecera fija */
+th { background-color: #112740; color: #00C2B3; font-weight: 600; position: sticky; top: 0; z-index: 1;} 
 td { color: #bbb; font-size: 14px; }
-td strong { color: #fff; }
 
-.btn-eliminar { background-color: #e84118; color: white; border: none; padding: 8px 12px; border-radius: 4px; cursor: pointer; font-weight: bold; transition: background-color 0.2s; }
-.btn-eliminar:hover { background-color: #c23616; }
-
-/* ==========================================
-   ESTILOS DE LA VENTANA EMERGENTE (MODAL)
-   ========================================== */
+/* MODAL */
 .modal-overlay { display: none; position: fixed; top: 0; left: 0; width: 100vw; height: 100vh; background: rgba(2, 6, 12, 0.9); z-index: 9999; justify-content: center; align-items: center; backdrop-filter: blur(8px); }
 .modal-overlay.activo { display: flex; }
-.modal-contenido { background-color: #0D1F35; padding: 30px; border-radius: 12px; width: 550px; border: 1px solid #00C2B3; box-shadow: 0 15px 50px rgba(0,0,0,0.8); color: white; animation: aparecerModal 0.3s ease-out; }
-@keyframes aparecerModal { from { transform: scale(0.8); opacity: 0; } to { transform: scale(1); opacity: 1; } }
-.modal-contenido h3 { color: #00C2B3; margin-bottom: 5px; }
-#textoResumen { width: 100%; height: 240px; background: rgba(255,255,255,0.05); border: 1px solid #1A2F49; border-radius: 6px; color: #fff; padding: 15px; font-family: monospace; font-size: 14px; resize: none; margin-bottom: 20px; outline: none; line-height: 1.5; }
-#textoResumen:focus { border-color: #00C2B3; }
+.modal-contenido { background-color: #0D1F35; padding: 30px; border-radius: 12px; width: 550px; border: 1px solid #00C2B3; color: white; }
+#textoResumen { width: 100%; height: 240px; background: rgba(255,255,255,0.05); border: 1px solid #1A2F49; border-radius: 6px; color: #fff; padding: 15px; font-family: monospace; font-size: 14px; resize: none; margin-bottom: 20px; outline: none; }
 .modal-botones { display: flex; gap: 15px; }
-.btn-secundario, .btn-terciario { padding: 12px; border: none; border-radius: 6px; cursor: pointer; font-weight: bold; flex: 1; transition: all 0.2s; }
-.btn-secundario { background-color: #00C2B3; color: white; }
-.btn-secundario:hover { background-color: #00a094; }
-.btn-terciario { background-color: transparent; border: 1px solid #bbb; color: #bbb; }
-.btn-terciario:hover { background-color: rgba(255,255,255,0.1); color: white; }
+.btn-secundario { padding: 12px; border: none; border-radius: 6px; cursor: pointer; font-weight: bold; flex: 1; background-color: #00C2B3; color: white; }
+.btn-terciario { padding: 12px; border: 1px solid #bbb; border-radius: 6px; cursor: pointer; font-weight: bold; flex: 1; background-color: transparent; color: #bbb; }
