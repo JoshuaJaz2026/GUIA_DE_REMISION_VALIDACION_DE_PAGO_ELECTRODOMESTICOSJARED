@@ -126,6 +126,29 @@ body { background-color: #050b14; position: relative; min-height: 100vh; display
 
 .right-panel-footer { font-size: 11px; color: #bbb; z-index: 5; margin-top: 5px;}
 
+/* --- Botón "Nuevo Registro" --- */
+.slide-nav-btn {
+    background: rgba(0, 194, 179, 0.1);
+    color: #00C2B3;
+    border: 1px solid rgba(0, 194, 179, 0.4);
+    padding: 8px 18px;
+    border-radius: 20px;
+    cursor: pointer;
+    font-weight: 700;
+    font-size: 13px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    transition: all 0.3s ease;
+}
+
+.slide-nav-btn:hover {
+    background: #00C2B3;
+    color: #fff;
+    box-shadow: 0 4px 15px rgba(0, 194, 179, 0.4);
+    transform: translateY(-2px);
+}
+
 /* --- VISTA 2: Sección de Tabla de Datos --- */
 .database-section { background-color: #0D1F35; padding: 40px 60px; color: #fff; display: flex; flex-direction: column; }
 .db-header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 20px; }
