@@ -218,14 +218,16 @@ if(form) {
 
             // --- NUEVO: Separamos la cabecera visual del texto a copiar ---
             
-            // 1. Llenamos la cabecera visual (no se copia)
+            // --- FORMATO FORMAL PARA SEDE SHALOM ---
+            
+            // 1. Llenamos la cabecera visual del sistema (no se copia)
             const modalAtendido = document.getElementById('modalAtendido');
             if(modalAtendido) {
                 modalAtendido.innerText = usuarioActual.toUpperCase();
             }
 
-            // 2. Llenamos el textarea solo con los datos limpios (esto sí se copia)
-            textoResumen.value = `Cliente: ${datosGuia.nombre}\nDNI/RUC: ${datosGuia.dni}\nCelular: ${datosGuia.celular}\nAgencia: ${datosGuia.agencia}\nUbigeo: ${datosGuia.ubigeo}\nDirección: ${datosGuia.direccion}\nProducto: ${datosGuia.producto}`;
+            // 2. Llenamos el cuadro con el formato solicitado (esto sí se copia)
+            textoResumen.value = `ENTREGAR A SEDE SHALOM: ${datosGuia.agencia} (${datosGuia.ubigeo})\nDIRECCION: ${datosGuia.direccion}\nREFERENCIA: ${datosGuia.referencia}\n\nNOMBRE/RAZON SOCIAL: ${datosGuia.nombre}\nTELEFONO: ${datosGuia.celular}\nDNI/RUC: ${datosGuia.dni}`;
             
             modalCopia.classList.add('activo');
 
