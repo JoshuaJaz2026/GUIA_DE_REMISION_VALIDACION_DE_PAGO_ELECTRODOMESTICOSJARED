@@ -216,8 +216,16 @@ if(form) {
 
             mostrarGuias();
 
-            // --- NUEVO: Resumen formal para copiar sin emojis ---
-            textoResumen.value = `ELECTRODOMÉSTICOS JARED\nAtendido por: ${usuarioActual.toUpperCase()}\n------------------------\nCliente: ${datosGuia.nombre}\nDNI/RUC: ${datosGuia.dni}\nCelular: ${datosGuia.celular}\nAgencia: ${datosGuia.agencia}\nUbigeo: ${datosGuia.ubigeo}\nDirección: ${datosGuia.direccion}\nProducto: ${datosGuia.producto}`;
+            // --- NUEVO: Separamos la cabecera visual del texto a copiar ---
+            
+            // 1. Llenamos la cabecera visual (no se copia)
+            const modalAtendido = document.getElementById('modalAtendido');
+            if(modalAtendido) {
+                modalAtendido.innerText = usuarioActual.toUpperCase();
+            }
+
+            // 2. Llenamos el textarea solo con los datos limpios (esto sí se copia)
+            textoResumen.value = `Cliente: ${datosGuia.nombre}\nDNI/RUC: ${datosGuia.dni}\nCelular: ${datosGuia.celular}\nAgencia: ${datosGuia.agencia}\nUbigeo: ${datosGuia.ubigeo}\nDirección: ${datosGuia.direccion}\nProducto: ${datosGuia.producto}`;
             
             modalCopia.classList.add('activo');
 
