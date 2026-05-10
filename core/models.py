@@ -25,6 +25,7 @@ class GuiaRemision(models.Model):
     # CAMBIO CLAVE: SET_NULL protege tu historial logístico si se borra un usuario
     usuario = models.ForeignKey(User, on_delete=models.SET_NULL, null=True, blank=True) 
     cliente = models.CharField("Nombre del Cliente", max_length=200)
+    fecha_edicion = models.DateTimeField(auto_now=True, null=True)
     
     dni_ruc = models.CharField(
         "DNI/RUC",

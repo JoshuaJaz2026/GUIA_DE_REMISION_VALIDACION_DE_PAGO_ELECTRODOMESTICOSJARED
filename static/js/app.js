@@ -276,7 +276,7 @@ if(btnCerrarModal && modalCopia) {
 function mostrarGuias() {
     if(!tabla) return;
     
-    tabla.innerHTML = '<tr><td colspan="5" style="text-align: center;">Consultando Base de Datos...</td></tr>';
+    tabla.innerHTML = '<tr><td colspan="6" style="text-align: center;">Consultando Base de Datos...</td></tr>';
     
     fetch('/api/historial/')
         .then(response => response.json())
@@ -287,6 +287,7 @@ function mostrarGuias() {
                 tabla.innerHTML += `
                     <tr>
                         <td><strong>${g.fecha}</strong></td>
+                        <td><small style="color: #00c2b3;">${g.fecha_edicion || '-'}</small></td>
                         <td>${g.nombre}</td>
                         <td>${g.dni}</td>
                         <td><strong>${g.agencia}</strong><br><small>${g.direccion}</small></td>
@@ -302,7 +303,7 @@ function mostrarGuias() {
         })
         .catch(error => {
             console.error("Error cargando historial:", error);
-            tabla.innerHTML = '<tr><td colspan="5" style="text-align: center; color: red;">Error de conexión con la base de datos</td></tr>';
+            tabla.innerHTML = '<tr><td colspan="6" style="text-align: center; color: red;">Error de conexión con la base de datos</td></tr>';
         });
 }
 
