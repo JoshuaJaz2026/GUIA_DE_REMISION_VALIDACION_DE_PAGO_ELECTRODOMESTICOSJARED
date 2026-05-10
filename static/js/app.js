@@ -216,7 +216,9 @@ if(form) {
 
             mostrarGuias();
 
-            textoResumen.value = `📦 ELECTRODOMÉSTICOS JARED\n👤 Atendido por: ${usuarioActual.toUpperCase()}\n------------------------\n👤 Cliente: ${datosGuia.nombre}\n📄 DNI/RUC: ${datosGuia.dni}\n📱 Celular: ${datosGuia.celular}\n🚚 Agencia: ${datosGuia.agencia}\n📍 Ubigeo: ${datosGuia.ubigeo}\n📍 Dirección: ${datosGuia.direccion}\n🛒 Producto: ${datosGuia.producto}`;
+            // --- NUEVO: Resumen formal para copiar sin emojis ---
+            textoResumen.value = `ELECTRODOMÉSTICOS JARED\nAtendido por: ${usuarioActual.toUpperCase()}\n------------------------\nCliente: ${datosGuia.nombre}\nDNI/RUC: ${datosGuia.dni}\nCelular: ${datosGuia.celular}\nAgencia: ${datosGuia.agencia}\nUbigeo: ${datosGuia.ubigeo}\nDirección: ${datosGuia.direccion}\nProducto: ${datosGuia.producto}`;
+            
             modalCopia.classList.add('activo');
 
             // Limpiamos todo
