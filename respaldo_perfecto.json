@@ -1,0 +1,4852 @@
+[
+{
+  "model": "core.agenciatransporte",
+  "pk": 1,
+  "fields": {
+    "nombre": "SHALOM - Av Santa Rosa Urb Los Alamos",
+    "ubicacion": "Lima / Lima / San Juan De Lurigancho / Av Santa Rosa Urb Los Alamos",
+    "direccion": "Av. Santa Rosa Mz. D1 Lote 1 Urb. Los Alamos 2da Etapa",
+    "referencia": "Ref. erencia Altura De La Cuadra 13 Del Paradero Canto Grande"
+  }
+},
+{
+  "model": "core.agenciatransporte",
+  "pk": 2,
+  "fields": {
+    "nombre": "SHALOM - Bayovar",
+    "ubicacion": "Lima / Lima / San Juan De Lurigancho / Bayovar",
+    "direccion": "Av. Fernando Wiesse Mz. E8. Lote 38b, Mariscal Cáceres Bayovar - San Juan De Lurigancho - Lima",
+    "referencia": "Auxiliar Próceres De La Independencia, Al Frente De La Universidad San Marcos – Agroindustrial"
+  }
+},
+{
+  "model": "core.agenciatransporte",
+  "pk": 3,
+  "fields": {
+    "nombre": "SHALOM - Los Pinos",
+    "ubicacion": "Lima / Lima / San Juan De Lurigancho / Los Pinos",
+    "direccion": "Mz. B1 Lt. 25 Urbanización Los Pinos San Juan De Lurigancho",
+    "referencia": "Av. Fernando Wiesse - Cerca A La Estación San Martín"
+  }
+},
+{
+  "model": "core.agenciatransporte",
+  "pk": 4,
+  "fields": {
+    "nombre": "SHALOM - Av. Del Mercado",
+    "ubicacion": "Lima / Lima / San Juan De Lurigancho / Av. Del Mercado",
+    "direccion": "Programa Ciudad Mrcal. Caceres, Sector Iii Mz. Q8 Lt. 11 San Juan De Lurigancho - Lima",
+    "referencia": "A Media Cdra. Del Cruce De Av. Del Mercado Con Av. Ampliacion Oeste"
+  }
+},
+{
+  "model": "core.agenciatransporte",
+  "pk": 5,
+  "fields": {
+    "nombre": "SHALOM - Av. Central",
+    "ubicacion": "Lima / Lima / San Juan De Lurigancho / Av. Central",
+    "direccion": "Av. Central Mz R9 Lote 3 Programa Ciudad Mrcal. Caceres, Sector Ii, Barrio 3, Grupo Residencial R - San Juan De Lurigancho",
+    "referencia": "En Medio Del Cruce Con Las Av. El Muro Y Ampliacion Este"
+  }
+},
+{
+  "model": "core.agenciatransporte",
+  "pk": 6,
+  "fields": {
+    "nombre": "SHALOM - Av Circunvalacion Sjl",
+    "ubicacion": "Lima / Lima / San Juan De Lurigancho / Av Circunvalacion Sjl",
+    "direccion": "Av. Circunvalación mz. B-5 Lt. 20 Aa. Hh. sargento Fernando Lores Tenazoa Comuna 20, san Juan De Lurigancho - Lima",
+    "referencia": "A Dos Cdras. Del Colegio Ramiro Priale"
+  }
+},
+{
+  "model": "core.agenciatransporte",
+  "pk": 7,
+  "fields": {
+    "nombre": "SHALOM - Cruz de Motupe",
+    "ubicacion": "Lima / Lima / San Juan De Lurigancho / Cruz de Motupe",
+    "direccion": "Av. Fernando Wiesse Mz. Q Lote 1 Aa.hh. Cruz De Motupe",
+    "referencia": "Sin referencia"
+  }
+},
+{
+  "model": "core.agenciatransporte",
+  "pk": 8,
+  "fields": {
+    "nombre": "SHALOM - Canto Grande",
+    "ubicacion": "Lima / Lima / San Juan De Lurigancho / Canto Grande",
+    "direccion": "Calle San Martin Con Av. Comercial Norte 189 - San Juan De Lurigancho",
+    "referencia": "A 1/2 Cuadra De La Av 6 De Canto Grande - Al Costado Del Play Park (parque Bolognesi)"
+  }
+},
+{
+  "model": "core.agenciatransporte",
+  "pk": 9,
+  "fields": {
+    "nombre": "SHALOM - Sjl- Las Flores",
+    "ubicacion": "Lima / Lima / San Juan De Lurigancho / Sjl- Las Flores",
+    "direccion": "Av. Canto Grande N°. 2570 - Urb. Ganimedes,",
+    "referencia": "Ref. A 3 Cdras. De Plaza Vea"
+  }
+},
+{
+  "model": "core.agenciatransporte",
+  "pk": 10,
+  "fields": {
+    "nombre": "SHALOM - Av. Santa Rosa Cruce Av. El Sol",
+    "ubicacion": "Lima / Lima / San Juan De Lurigancho / Av. Santa Rosa Cruce Av. El Sol",
+    "direccion": "Av. Santa Rosa De Lima Mz. D Lt. 4 - Aahh 2 De Setiembre - San Juan De Lurigancho",
+    "referencia": "A Tres Cdras. Del Cruce Con Av. El Sol"
+  }
+},
+{
+  "model": "core.agenciatransporte",
+  "pk": 11,
+  "fields": {
+    "nombre": "SHALOM - Jicamarca",
+    "ubicacion": "Lima / Huarochiri / San Antonio / Jicamarca",
+    "direccion": "Av. Sinchi Roca Mz. P Lt. 16a P Lote 16a, Aahh Las Praderas De Jicamarca – Sector El Cercado – Anexo 22 Jicamarca – Huarochiri",
+    "referencia": "Cerca Al Arco Porton De Jicamarca"
+  }
+},
+{
+  "model": "core.agenciatransporte",
+  "pk": 12,
+  "fields": {
+    "nombre": "SHALOM - Av. 13 De Enero",
+    "ubicacion": "Lima / Lima / San Juan De Lurigancho / Av. 13 De Enero",
+    "direccion": "Av. 13 De Enero Nº2057, Urb. San Hilarión,",
+    "referencia": "Ref. Cerca A La Estación Los Postes"
+  }
+},
+{
+  "model": "core.agenciatransporte",
+  "pk": 13,
+  "fields": {
+    "nombre": "SHALOM - Sjl-av.proceres",
+    "ubicacion": "Lima / Lima / San Juan De Lurigancho / Sjl-av.proceres",
+    "direccion": "Av. Próceres De La Independencia Nro. 1295 - 1299",
+    "referencia": "Ref. Al Costado Del Banco De La Nación De Av. Los Tusilagos Oeste"
+  }
+},
+{
+  "model": "core.agenciatransporte",
+  "pk": 14,
+  "fields": {
+    "nombre": "SHALOM - Carabayllo Establo",
+    "ubicacion": "Lima / Lima / Carabayllo / Carabayllo Establo",
+    "direccion": "Av. Tupac Amaru N? 441 - 443, Mz. O2 Lt. 35,",
+    "referencia": "Ref. Paradero Establo, A Una Cuadra De La Urb. Santa Isabel"
+  }
+},
+{
+  "model": "core.agenciatransporte",
+  "pk": 15,
+  "fields": {
+    "nombre": "SHALOM - Año Nuevo",
+    "ubicacion": "Lima / Lima / Comas / Año Nuevo",
+    "direccion": "Av. Tupac Amaru N° 7837- 7839 Mz. C Lt. 010 Urb. Popular San Juan bautista I Etapa, Comas - Lima",
+    "referencia": "A Una Cdra. De La Entrada De Collique"
+  }
+},
+{
+  "model": "core.agenciatransporte",
+  "pk": 16,
+  "fields": {
+    "nombre": "SHALOM - Av Tupac Amaru Cdra. 57",
+    "ubicacion": "Lima / Lima / Comas / Av Tupac Amaru Cdra. 57",
+    "direccion": "Av. Tupac Amaru 5725-5727 - Urb. huaquillay I Etapa, comas - Lima - Lima",
+    "referencia": "A Media Cdra. Del Banco De La Nación"
+  }
+},
+{
+  "model": "core.agenciatransporte",
+  "pk": 17,
+  "fields": {
+    "nombre": "SHALOM - Jr Chinchaysuyo Cdra 4",
+    "ubicacion": "Lima / Lima / San Juan De Lurigancho / Jr Chinchaysuyo Cdra 4",
+    "direccion": "Jr. Chinchaysuyo 468 Zarate, San Juan De Lurigancho - Lima",
+    "referencia": "A 1 Cdra. De Tiendas 3 A"
+  }
+},
+{
+  "model": "core.agenciatransporte",
+  "pk": 18,
+  "fields": {
+    "nombre": "SHALOM - Av Univ. Retablo",
+    "ubicacion": "Lima / Lima / Comas / Av Univ. Retablo",
+    "direccion": "Av. Universitaria N° 7241,",
+    "referencia": "Ref. Ex Boulevard De Retablo / A 2 Cdras Del Metro De Belaunde"
+  }
+},
+{
+  "model": "core.agenciatransporte",
+  "pk": 19,
+  "fields": {
+    "nombre": "SHALOM - Av. Univ. Parque Sinchi Roca",
+    "ubicacion": "Lima / Lima / Comas / Av. Univ. Parque Sinchi Roca",
+    "direccion": "Av. Universitaria Norte Mzn. Q1 Lte. 030 Urb. Primavera,comas-lima - Lima",
+    "referencia": "A Media Cdra. Del Ingreso Al Parque Zona Sinchi Roca"
+  }
+},
+{
+  "model": "core.agenciatransporte",
+  "pk": 20,
+  "fields": {
+    "nombre": "SHALOM - Puente Nuevo",
+    "ubicacion": "Lima / Lima / El Agustino / Puente Nuevo",
+    "direccion": "Av 1° De Mayo 3071 - Urb Huancayo",
+    "referencia": "Frente Al Grifo Repsol"
+  }
+},
+{
+  "model": "core.agenciatransporte",
+  "pk": 21,
+  "fields": {
+    "nombre": "SHALOM - La Cincuenta",
+    "ubicacion": "Lima / Lima / Independencia / La Cincuenta",
+    "direccion": "Av. Tupac Amaru N° 4708 - 4710",
+    "referencia": "A Una Cdra. Del Paradero Estación Naranjal"
+  }
+},
+{
+  "model": "core.agenciatransporte",
+  "pk": 22,
+  "fields": {
+    "nombre": "SHALOM - Tres Postes",
+    "ubicacion": "Lima / Lima / Los Olivos / Tres Postes",
+    "direccion": "Av. Alfredo Mendiola Lt. 22 Mz. C3 - Urb. Industrial Infantas,",
+    "referencia": "Ref. A Cdra. Y Media Del Tottus De 3 Postes"
+  }
+},
+{
+  "model": "core.agenciatransporte",
+  "pk": 23,
+  "fields": {
+    "nombre": "SHALOM - Av. Los Platinos",
+    "ubicacion": "Lima / Lima / Los Olivos / Av. Los Platinos",
+    "direccion": "Av. Los Platinos N°. 259, Mz. A - Lt. 17, Urb. Lotización Industrial Infantas Los Olivos - Lima",
+    "referencia": "A Dos Cdras. Y Media De La Av. Alfredo Mendiola Y/o Panamericana Norte (altura Del Paradero Caseta)"
+  }
+},
+{
+  "model": "core.agenciatransporte",
+  "pk": 24,
+  "fields": {
+    "nombre": "SHALOM - Rimac Av. Amancaes",
+    "ubicacion": "Lima / Lima / Rimac / Rimac Av. Amancaes",
+    "direccion": "Av. Amancaes Nro. 644 Urb. Ciudad Y Campo - Rimac",
+    "referencia": "Sin referencia"
+  }
+},
+{
+  "model": "core.agenciatransporte",
+  "pk": 25,
+  "fields": {
+    "nombre": "SHALOM - Campoy",
+    "ubicacion": "Lima / Lima / San Juan De Lurigancho / Campoy",
+    "direccion": "Av. Malecón Checa Mz. B Lt. 7, Urb. Campoy, San Juan De Lurigancho",
+    "referencia": "A 1 Cdra. Del Cruce De Av. Malecón Checa Con Av. San Martín"
+  }
+},
+{
+  "model": "core.agenciatransporte",
+  "pk": 26,
+  "fields": {
+    "nombre": "SHALOM - Av Malecon Checa Cdra. 1",
+    "ubicacion": "Lima / Lima / San Juan De Lurigancho / Av Malecon Checa Cdra. 1",
+    "direccion": "Av. Malecón Miguel Checa Eguiguren N° 167 Y 169 De La Urb. Zárate, Sjl - Lima",
+    "referencia": "Esquina Con Av. Gran Chimú"
+  }
+},
+{
+  "model": "core.agenciatransporte",
+  "pk": 27,
+  "fields": {
+    "nombre": "SHALOM - Av. Gerardo Unger Cdra 64",
+    "ubicacion": "Lima / Lima / San Martin De Porres / Av. Gerardo Unger Cdra 64",
+    "direccion": "Av. Gerardo Unger 6475, Urb. Santa Luisa, 1ra Etapa, S.m.p.",
+    "referencia": "Esquina Con Av. 22 De Agosto, Límite Con Comas / A Una Cdra. Y Media De La Comisaria Santa Luzmila"
+  }
+},
+{
+  "model": "core.agenciatransporte",
+  "pk": 28,
+  "fields": {
+    "nombre": "SHALOM - Urb Santa Elvira",
+    "ubicacion": "Lima / Lima / Ate-vitarte / Urb Santa Elvira",
+    "direccion": "Av. Ferrocarril Mz. C Lt. 19 Parcela 3, Urb. Santa Elvira Sec. 018 zona 3",
+    "referencia": "a Media Cdra. Del Cruce Con Av. De La Cultura"
+  }
+},
+{
+  "model": "core.agenciatransporte",
+  "pk": 29,
+  "fields": {
+    "nombre": "SHALOM - Tungasuca",
+    "ubicacion": "Lima / Lima / Carabayllo / Tungasuca",
+    "direccion": "Av. Trapiche Mz. P Lt. 48, Urb. Tungasuca",
+    "referencia": "Ref. Aux. Av. Chimpu Ocllo Con Aux. Chillón Trapiche, A 1 Cuadra Del Mercado Qatuna"
+  }
+},
+{
+  "model": "core.agenciatransporte",
+  "pk": 30,
+  "fields": {
+    "nombre": "SHALOM - Av. Trapiche",
+    "ubicacion": "Lima / Lima / Comas / Av. Trapiche",
+    "direccion": "Av. Trapiche 886 A 16 2p 2 - Urb. Pinar,",
+    "referencia": "Ref. Frente Al Complejo Deportivo Walon"
+  }
+},
+{
+  "model": "core.agenciatransporte",
+  "pk": 31,
+  "fields": {
+    "nombre": "SHALOM - Jiron Ancash",
+    "ubicacion": "Lima / Lima / El Agustino / Jiron Ancash",
+    "direccion": "Jr. Ancash Mz. B Lt. 11 Aahh Ancieta Alta, El Agustino - Lima - Lima",
+    "referencia": "frente Al Ingreso De Agustino Plaza"
+  }
+},
+{
+  "model": "core.agenciatransporte",
+  "pk": 32,
+  "fields": {
+    "nombre": "SHALOM - Plaza Norte S. Express",
+    "ubicacion": "Lima / Lima / Independencia / Plaza Norte S. Express",
+    "direccion": "Av. Gerardo Unger Nro. 6917 Int. Lb 19",
+    "referencia": "Sin referencia"
+  }
+},
+{
+  "model": "core.agenciatransporte",
+  "pk": 33,
+  "fields": {
+    "nombre": "SHALOM - Plaza Norte Entregas",
+    "ubicacion": "Lima / Lima / Independencia / Plaza Norte Entregas",
+    "direccion": "Av. Gerardo Unger Nro. 6917 Int. Lb 19",
+    "referencia": "Sin referencia"
+  }
+},
+{
+  "model": "core.agenciatransporte",
+  "pk": 34,
+  "fields": {
+    "nombre": "SHALOM - Calle A Con Av Industrial",
+    "ubicacion": "Lima / Lima / Independencia / Calle A Con Av Industrial",
+    "direccion": "Calle A, Mz. D Lt. 26 Urbanización Panamericana (primer Piso) Independencia - Lima - Lima",
+    "referencia": "A 1 Cdra. Del Cruce Con Av. Industrial (lateral De Megaplaza)"
+  }
+},
+{
+  "model": "core.agenciatransporte",
+  "pk": 35,
+  "fields": {
+    "nombre": "SHALOM - Av. Las Palmeras",
+    "ubicacion": "Lima / Lima / Los Olivos / Av. Las Palmeras",
+    "direccion": "Av. Las Palmeras N° 5236 Urb. Villa Norte - Los Olivos",
+    "referencia": "Sin referencia"
+  }
+},
+{
+  "model": "core.agenciatransporte",
+  "pk": 36,
+  "fields": {
+    "nombre": "SHALOM - Calle M. Asencio",
+    "ubicacion": "Lima / Lima / Los Olivos / Calle M. Asencio",
+    "direccion": "Calle Manuel Asencio Segura 309 - Urb. Villa Los Angeles,",
+    "referencia": "Ref. Frente Al Mega Plaza"
+  }
+},
+{
+  "model": "core.agenciatransporte",
+  "pk": 37,
+  "fields": {
+    "nombre": "SHALOM - Av. Carlos Izaguirre Cdra. 5",
+    "ubicacion": "Lima / Lima / Los Olivos / Av. Carlos Izaguirre Cdra. 5",
+    "direccion": "Av. Carlos Izaguirre 513",
+    "referencia": "Al Costado De Tiendas Mass"
+  }
+},
+{
+  "model": "core.agenciatransporte",
+  "pk": 38,
+  "fields": {
+    "nombre": "SHALOM - Av Huandoy Con Av Central",
+    "ubicacion": "Lima / Lima / Los Olivos / Av Huandoy Con Av Central",
+    "direccion": "Av. Huandoy Mza. 72 Lte. 54 P.j. P.m.v. “confraternidad” - Aahh. Enrique Milla Ochoa Los Olivos - Lima",
+    "referencia": "A Una Cdra. Del Cruce Con Av. Central"
+  }
+},
+{
+  "model": "core.agenciatransporte",
+  "pk": 39,
+  "fields": {
+    "nombre": "SHALOM - Rimac Guardia Republicana Cdra. 9",
+    "ubicacion": "Lima / Lima / Rimac / Rimac Guardia Republicana Cdra. 9",
+    "direccion": "Sección Inmobiliaria N°2 – Primer Piso Lt. 11 De La Mz. 2, Urb. Villacampa Rimac",
+    "referencia": "A Una Cdra. Del Cruce Con Av. Felipe Arancibia"
+  }
+},
+{
+  "model": "core.agenciatransporte",
+  "pk": 40,
+  "fields": {
+    "nombre": "SHALOM - Fiori",
+    "ubicacion": "Lima / Lima / San Martin De Porres / Fiori",
+    "direccion": "Av. Miguel Angel N° 235 - Urb. Fiori 4ta Etapa Mz. N-1 Lt. 04 U.i N°6, San Martín De Porres - Lima",
+    "referencia": "A 1 Cdra. Del Cruce Con Av. Marco Polo"
+  }
+},
+{
+  "model": "core.agenciatransporte",
+  "pk": 41,
+  "fields": {
+    "nombre": "SHALOM - Santo Domingo",
+    "ubicacion": "Lima / Lima / Carabayllo / Santo Domingo",
+    "direccion": "Av. A Mz. l2 Lt. 20 Urb. Santo domingo – vi etapa Carabayllo - Lima",
+    "referencia": "En El Cruce De Las Av. Chillon Trapiche Y av. Camino Real"
+  }
+},
+{
+  "model": "core.agenciatransporte",
+  "pk": 42,
+  "fields": {
+    "nombre": "SHALOM - Av. Angelica Gamarra",
+    "ubicacion": "Lima / Lima / Los Olivos / Av. Angelica Gamarra",
+    "direccion": "Av. Angelica Gamarra De Leon Valverde N° 621 Urb El Trebol, Los Olivos - Lima",
+    "referencia": "A La Altura Del Kfc / Cruce Con Av. Alfa"
+  }
+},
+{
+  "model": "core.agenciatransporte",
+  "pk": 43,
+  "fields": {
+    "nombre": "SHALOM - Av Huandoy Con Marañon",
+    "ubicacion": "Lima / Lima / Los Olivos / Av Huandoy Con Marañon",
+    "direccion": "Av. Próceres, Mz. 3, Lt. 23 A.h. Laura Caller - Los Olivos,",
+    "referencia": "Ref. Cruce Entre Av. Huandoy Y Marañón"
+  }
+},
+{
+  "model": "core.agenciatransporte",
+  "pk": 44,
+  "fields": {
+    "nombre": "SHALOM - Av. Dos De Octubre",
+    "ubicacion": "Lima / Lima / Los Olivos / Av. Dos De Octubre",
+    "direccion": "Av. 2 De Octubre Mz. H Lt. 2 - Los Olivos - Pro",
+    "referencia": "Av. 2 De Octubre Con Av. Canta Callao, Al Costado Del Centro De Salud Pro"
+  }
+},
+{
+  "model": "core.agenciatransporte",
+  "pk": 45,
+  "fields": {
+    "nombre": "SHALOM - Av. Huarochirí",
+    "ubicacion": "Lima / Lima / Santa Anita / Av. Huarochirí",
+    "direccion": "Av. Huarochirí Mz. E1 Lt. 03 - Urb. Los Cedros Santa Anita",
+    "referencia": "Cruce De Av. Huarochirí Con Av. Santa Ana"
+  }
+},
+{
+  "model": "core.agenciatransporte",
+  "pk": 46,
+  "fields": {
+    "nombre": "SHALOM - Av Huarochiri Envios",
+    "ubicacion": "Lima / Lima / Santa Anita / Av Huarochiri Envios",
+    "direccion": "Av. Huarochiri Mz. D8 Lt. 13, Urb. Los Cedros, Santa Anita - Lima",
+    "referencia": "A Media Cdra. Del Cruce Con Av. Santa Rosa"
+  }
+},
+{
+  "model": "core.agenciatransporte",
+  "pk": 47,
+  "fields": {
+    "nombre": "SHALOM - Jr Cesar Vallejo",
+    "ubicacion": "Lima / Lima / Santa Anita / Jr Cesar Vallejo",
+    "direccion": "Jr. Cesar Vallejo 302 Mz. B1 Lt. 02 Urb Universal, Santa Anita- Lima-lima",
+    "referencia": "A 1 Cdra. Del Cruce Con Av. Tupac Amaru"
+  }
+},
+{
+  "model": "core.agenciatransporte",
+  "pk": 48,
+  "fields": {
+    "nombre": "SHALOM - Av Marco Puente",
+    "ubicacion": "Lima / Lima / Ate-vitarte / Av Marco Puente",
+    "direccion": "Av. Marco Puente Llanos 309, Mz. A, Lt. 03",
+    "referencia": "Sin referencia"
+  }
+},
+{
+  "model": "core.agenciatransporte",
+  "pk": 49,
+  "fields": {
+    "nombre": "SHALOM - Puente Santa Anita",
+    "ubicacion": "Lima / Lima / Ate-vitarte / Puente Santa Anita",
+    "direccion": "Av. Nicolás Ayllón N° 3080 - Ate Vitarte",
+    "referencia": "Sin referencia"
+  }
+},
+{
+  "model": "core.agenciatransporte",
+  "pk": 50,
+  "fields": {
+    "nombre": "SHALOM - Av El Sol",
+    "ubicacion": "Lima / Lima / Ate-vitarte / Av El Sol",
+    "direccion": "Av. El Sol Mz. S Lt. 2 Zona 03 - Asoc. Parque Industrial El Asesor, Sector 010 Zona 03 - Ate",
+    "referencia": "A Una Cuadra Y Media De La Carretera Central"
+  }
+},
+{
+  "model": "core.agenciatransporte",
+  "pk": 51,
+  "fields": {
+    "nombre": "SHALOM - Av. Carlos Izaguirre Cdra. 14",
+    "ubicacion": "Lima / Lima / Los Olivos / Av. Carlos Izaguirre Cdra. 14",
+    "direccion": "Calle David Alva Manzana H Lote 4 Urb. Cajabamba Los Olivos - Lima",
+    "referencia": "Entre La Av. Carlos Izaguirre Con La Av. Universitaria (frente Al Colegio Pamer)"
+  }
+},
+{
+  "model": "core.agenciatransporte",
+  "pk": 52,
+  "fields": {
+    "nombre": "SHALOM - Santa María De Huachipa",
+    "ubicacion": "Lima / Lima / Lurigancho / Santa María De Huachipa",
+    "direccion": "Av. Circunvalación Mz. A Lt. 1 - D C - P Santa María De Huachipa - Lurigancho - Chosica",
+    "referencia": "Entre La Av. Circunvalación Y La Av. Huachipa"
+  }
+},
+{
+  "model": "core.agenciatransporte",
+  "pk": 53,
+  "fields": {
+    "nombre": "SHALOM - Av. Canta Callao Con Alisos",
+    "ubicacion": "Lima / Lima / San Martin De Porres / Av. Canta Callao Con Alisos",
+    "direccion": "Av. Canta Callao, Mz. A Lt. 3 Urb. Arizona - 2da Etapa",
+    "referencia": "Sin referencia"
+  }
+},
+{
+  "model": "core.agenciatransporte",
+  "pk": 54,
+  "fields": {
+    "nombre": "SHALOM - Av. Peru 15",
+    "ubicacion": "Lima / Lima / San Martin De Porres / Av. Peru 15",
+    "direccion": "Av. Perú 1589, San Martin De Porres - Lima.",
+    "referencia": "Ref. A Dos Cuadras Del Cruce Con La Av. Canadá."
+  }
+},
+{
+  "model": "core.agenciatransporte",
+  "pk": 55,
+  "fields": {
+    "nombre": "SHALOM - Germán Aguirre",
+    "ubicacion": "Lima / Lima / San Martin De Porres / Germán Aguirre",
+    "direccion": "Av. German Aguirre Ugarte 649 Urb. San German - San Martin De Porres",
+    "referencia": "A La Altura De La Cuadra 6 De La Av. German Aguirre Y A 3 Cuadras De Av. Tomas Valle"
+  }
+},
+{
+  "model": "core.agenciatransporte",
+  "pk": 56,
+  "fields": {
+    "nombre": "SHALOM - Av Santa Rosa - Sta Anita",
+    "ubicacion": "Lima / Lima / Santa Anita / Av Santa Rosa - Sta Anita",
+    "direccion": "Av. Santa Rosa #147 – Urb. Santa Anita Mz. B1 Lt. 08 Unidad Inmobiliaria N° 1 - Santa Anita - Lima",
+    "referencia": "A Una Cdra. De La Carretera Central"
+  }
+},
+{
+  "model": "core.agenciatransporte",
+  "pk": 57,
+  "fields": {
+    "nombre": "SHALOM - Malvinas - Jr. Ricardo Treneman",
+    "ubicacion": "Lima / Lima / Cercado Lima / Malvinas - Jr. Ricardo Treneman",
+    "direccion": "Jr. Ricardo Treneman N° 920,",
+    "referencia": "Ref. Dentro Del Local Farenet"
+  }
+},
+{
+  "model": "core.agenciatransporte",
+  "pk": 58,
+  "fields": {
+    "nombre": "SHALOM - Malvinas - Jr. Garcia Villón",
+    "ubicacion": "Lima / Lima / Cercado Lima / Malvinas - Jr. Garcia Villón",
+    "direccion": "Jr. Presbítero García Villon Nro. 560 Cercado Lima - Lima",
+    "referencia": "A La Altura De La Cdra. 5 De Av. Oscar R. Benavides (ex Av. Colonial), En Medio De Las Av. Guillermo Dansey Y Av. Oscar R. Benavides (ex Colonial)"
+  }
+},
+{
+  "model": "core.agenciatransporte",
+  "pk": 59,
+  "fields": {
+    "nombre": "SHALOM - Av Nicolas Dueñas Cdra. 5",
+    "ubicacion": "Lima / Lima / Cercado Lima / Av Nicolas Dueñas Cdra. 5",
+    "direccion": "Av. Nicolas Dueñas 584 Mz. C Lt. 4 – Aahh Primero De Setiembre, Cercado De Lima – Lima - Lima",
+    "referencia": "A Media Cdra. Del Cruce Con Jr. Pedro Garezon"
+  }
+},
+{
+  "model": "core.agenciatransporte",
+  "pk": 60,
+  "fields": {
+    "nombre": "SHALOM - Av Esperanza",
+    "ubicacion": "Lima / Lima / Ate-vitarte / Av Esperanza",
+    "direccion": "Av. Esperanza Mz. K Lt. 06 Las Americas - Ate Vitarte - Lima",
+    "referencia": "Pasando Mercado Raucana"
+  }
+},
+{
+  "model": "core.agenciatransporte",
+  "pk": 61,
+  "fields": {
+    "nombre": "SHALOM - Jr. Raymondi",
+    "ubicacion": "Lima / Lima / La Victoria / Jr. Raymondi",
+    "direccion": "Jr. Antonio Raymondi Nro. 113",
+    "referencia": "Sin referencia"
+  }
+},
+{
+  "model": "core.agenciatransporte",
+  "pk": 62,
+  "fields": {
+    "nombre": "SHALOM - Puente Piedra Naranjitos",
+    "ubicacion": "Lima / Lima / Puente Piedra / Puente Piedra Naranjitos",
+    "direccion": "Fundo Tambo Inga Mz. A Lt. 8, Puente Piedra,",
+    "referencia": "Ref. Paradero Naranjito, Antes Del Cementerio Buen Retiro"
+  }
+},
+{
+  "model": "core.agenciatransporte",
+  "pk": 63,
+  "fields": {
+    "nombre": "SHALOM - Smp-av. Proceres",
+    "ubicacion": "Lima / Lima / San Martin De Porres / Smp-av. Proceres",
+    "direccion": "Av. Próceres N° 588 Urb. Covicem",
+    "referencia": "A 2 Cdras. De Tomás Valle"
+  }
+},
+{
+  "model": "core.agenciatransporte",
+  "pk": 64,
+  "fields": {
+    "nombre": "SHALOM - Av. Carlos Izaguirre Cuadra 23",
+    "ubicacion": "Lima / Lima / San Martin De Porres / Av. Carlos Izaguirre Cuadra 23",
+    "direccion": "Av. Carlos Izaguirre Sub Lt. 8, Mz. C - Asoc. De Viv. Los Nisperos,",
+    "referencia": "Ref. Entre Av. 12 De Octubre Y Av. Santa Rosa"
+  }
+},
+{
+  "model": "core.agenciatransporte",
+  "pk": 65,
+  "fields": {
+    "nombre": "SHALOM - Av Jose Granda Cdra. 25",
+    "ubicacion": "Lima / Lima / San Martin De Porres / Av Jose Granda Cdra. 25",
+    "direccion": "Av. Jose Granda 2546 - San Martin De Porres -lima - Lima",
+    "referencia": "A Una Cdra. Del Óvalo Jose Granda Y Av. Universitaria"
+  }
+},
+{
+  "model": "core.agenciatransporte",
+  "pk": 66,
+  "fields": {
+    "nombre": "SHALOM - Av. Universitaria Cdra. 16",
+    "ubicacion": "Lima / Lima / San Martin De Porres / Av. Universitaria Cdra. 16",
+    "direccion": "Av. Universitaria 1619 - urb. Maria Gracia De Antares Mz. B lt. 25 – San Martin De Porres - Lima",
+    "referencia": "Frente Al Plaza Vea De Universitaria Con Tomas Valle"
+  }
+},
+{
+  "model": "core.agenciatransporte",
+  "pk": 67,
+  "fields": {
+    "nombre": "SHALOM - Los Sauces",
+    "ubicacion": "Lima / Lima / Ate-vitarte / Los Sauces",
+    "direccion": "Av. Santa Rosa N°773 Manzana “a” Lote 6 Urb Los Sauces - Ate",
+    "referencia": "Ref. erencia: Cruce Con La Av Separadora Industrial"
+  }
+},
+{
+  "model": "core.agenciatransporte",
+  "pk": 68,
+  "fields": {
+    "nombre": "SHALOM - Santa Clara",
+    "ubicacion": "Lima / Lima / Ate-vitarte / Santa Clara",
+    "direccion": "Av. Pedro Ruíz Gallo Mz. H Lt. 3. Asoc. Viv. Villa San Luis, Santa Clara - Ate Vitarte - Lima",
+    "referencia": "Ref. Entre El Real Plaza Y La Utp Santa Clara"
+  }
+},
+{
+  "model": "core.agenciatransporte",
+  "pk": 69,
+  "fields": {
+    "nombre": "SHALOM - Av Venezuela",
+    "ubicacion": "Lima / Lima / Brena / Av Venezuela",
+    "direccion": "Av. Venezuela 1670 - Breña,",
+    "referencia": "Ref. Al Costado Del Policlínico De Breña"
+  }
+},
+{
+  "model": "core.agenciatransporte",
+  "pk": 70,
+  "fields": {
+    "nombre": "SHALOM - Av Jose Saco Rojas",
+    "ubicacion": "Lima / Lima / Carabayllo / Av Jose Saco Rojas",
+    "direccion": "Av. José Saco Rojas Mz. A Lt. 15 Programa De Vivienda El Pino, San Antonio - Carabayllo",
+    "referencia": "Frente Al Chifa Hong Fu Y A 3 Cuadras Del Gran Mercado El Pino"
+  }
+},
+{
+  "model": "core.agenciatransporte",
+  "pk": 71,
+  "fields": {
+    "nombre": "SHALOM - Av La Fontana",
+    "ubicacion": "Lima / Lima / La Molina / Av La Fontana",
+    "direccion": "Av La Fontana 440 - La Molina (cc La Rotonda Ii Local 1018)",
+    "referencia": "Sin referencia"
+  }
+},
+{
+  "model": "core.agenciatransporte",
+  "pk": 72,
+  "fields": {
+    "nombre": "SHALOM - Av Flora Tristan",
+    "ubicacion": "Lima / Lima / La Molina / Av Flora Tristan",
+    "direccion": "Av. Flora Tristán N° 885, urb. Santa Patricia Iii Etapa, La Molina - Lima",
+    "referencia": "a Media Cdra. De Molisalud"
+  }
+},
+{
+  "model": "core.agenciatransporte",
+  "pk": 73,
+  "fields": {
+    "nombre": "SHALOM - Av Mexico Co",
+    "ubicacion": "Lima / Lima / La Victoria / Av Mexico Co",
+    "direccion": "Av. Mexico 1125, La Victoria - Lima",
+    "referencia": "Sin referencia"
+  }
+},
+{
+  "model": "core.agenciatransporte",
+  "pk": 74,
+  "fields": {
+    "nombre": "SHALOM - Jr. Luna Pizarro",
+    "ubicacion": "Lima / Lima / La Victoria / Jr. Luna Pizarro",
+    "direccion": "Jr. Luna Pizarro N° 701 - La Victoria,",
+    "referencia": "Ref. Esquina Hipólito Unanue"
+  }
+},
+{
+  "model": "core.agenciatransporte",
+  "pk": 75,
+  "fields": {
+    "nombre": "SHALOM - Ovalo Puente Piedra",
+    "ubicacion": "Lima / Lima / Puente Piedra / Ovalo Puente Piedra",
+    "direccion": "Av. Miguel Grau mz. A Lt. 07 Y 08 Urb. San Martin De Porres, Cercado Puente Piedra - Lima",
+    "referencia": "Espaldas De Tottus De Puente Piedra"
+  }
+},
+{
+  "model": "core.agenciatransporte",
+  "pk": 76,
+  "fields": {
+    "nombre": "SHALOM - Av. Lima Cdra 38",
+    "ubicacion": "Lima / Lima / San Martin De Porres / Av. Lima Cdra 38",
+    "direccion": "Av. Lima 3899 - Smp",
+    "referencia": "A 3 Cdras. Del Tottus De Quilca Con Av. Lima"
+  }
+},
+{
+  "model": "core.agenciatransporte",
+  "pk": 77,
+  "fields": {
+    "nombre": "SHALOM - Av Jose Granda Cdra 38",
+    "ubicacion": "Lima / Lima / San Martin De Porres / Av Jose Granda Cdra 38",
+    "direccion": "Av. José Granda 3826 De La Urb. Condevilla Señor Y Valdivieso Mz. M7 Lt 20, 2 Etapa, 2 Sector - S.m.p. ",
+    "referencia": "Entre Av. Condevilla Y Av. Los Próceres"
+  }
+},
+{
+  "model": "core.agenciatransporte",
+  "pk": 78,
+  "fields": {
+    "nombre": "SHALOM - Av. Dominicos Cdra 14",
+    "ubicacion": "Lima / Lima / San Martin De Porres / Av. Dominicos Cdra 14",
+    "direccion": "Av. Los Dominicos 1460 - Urb. Los Cipreses Mz. Z Lt. 4 - San Martín De Porres",
+    "referencia": "A Una Cdra. Del Cruce Con Av. Santa Rosa Al Lado Del Mercado Los Cipreses"
+  }
+},
+{
+  "model": "core.agenciatransporte",
+  "pk": 79,
+  "fields": {
+    "nombre": "SHALOM - Av. Canta Callao Con Izaguirre",
+    "ubicacion": "Lima / Lima / San Martin De Porres / Av. Canta Callao Con Izaguirre",
+    "direccion": "Av. Canta Callao Mz. A Lt. 3 Asoc. Brisas Santa Rosa 1ra Etapa",
+    "referencia": "A Media Cdra. Del Colegio Amistad y/o A Cuatro Cdras. De La av. Carlos Izaguirre"
+  }
+},
+{
+  "model": "core.agenciatransporte",
+  "pk": 80,
+  "fields": {
+    "nombre": "SHALOM - Av Quilca",
+    "ubicacion": "Callao / Callao / Callao / Av Quilca",
+    "direccion": "Unidad Inmobiliaria N° 1, Av. Quilca Mz. G Sub Lt. 11c, Urb. Aeropuerto – Segundo Sector - Callao",
+    "referencia": "Cruce Con Calle 1, Frente A La Iglesia De Testigos De Jehová"
+  }
+},
+{
+  "model": "core.agenciatransporte",
+  "pk": 81,
+  "fields": {
+    "nombre": "SHALOM - Av Bertello Callao",
+    "ubicacion": "Callao / Callao / Callao / Av Bertello Callao",
+    "direccion": "Av. Alejandro Bertello Bollati mz. B Lt. 20 Y 21 – Urb. Progresiva Bahía Blanca – Callao - Callao - Callao",
+    "referencia": "Frente Al Mercado Costa Azul"
+  }
+},
+{
+  "model": "core.agenciatransporte",
+  "pk": 82,
+  "fields": {
+    "nombre": "SHALOM - Lima Av Tingo María",
+    "ubicacion": "Lima / Lima / Cercado Lima / Lima Av Tingo María",
+    "direccion": "Av. Tingo María N°1252-a - Cercado De Lima - Lima",
+    "referencia": "A Media Cdra. Del Cruce Con Jr. Gral. Orbegoso"
+  }
+},
+{
+  "model": "core.agenciatransporte",
+  "pk": 84,
+  "fields": {
+    "nombre": "SHALOM - Av. Canada",
+    "ubicacion": "Lima / Lima / La Victoria / Av. Canada",
+    "direccion": "Av. Canadá 1603,",
+    "referencia": "Ref. Entre Av. Canadá Con Av. Aviación"
+  }
+},
+{
+  "model": "core.agenciatransporte",
+  "pk": 85,
+  "fields": {
+    "nombre": "SHALOM - Av. San Lorenzo",
+    "ubicacion": "Lima / Lima / Puente Piedra / Av. San Lorenzo",
+    "direccion": "Av. San Lorenzo mz C Lt 20 - adp Virgen De Copacabana, Puente Piedra - Lima.",
+    "referencia": "A Media Cuadra Del Parque Virgen De Copacabana"
+  }
+},
+{
+  "model": "core.agenciatransporte",
+  "pk": 86,
+  "fields": {
+    "nombre": "SHALOM - Av Bertello Smp",
+    "ubicacion": "Lima / Lima / San Martin De Porres / Av Bertello Smp",
+    "direccion": "Av. Alejandro Bertello Bollati Mz. H Lt. 2-a - Asoc. De Viv. San Remo Ii Etapa, San Martín De Porres - Lima - Lima",
+    "referencia": "A Media Cdra. Del Cruce Con Av. Canta Callao"
+  }
+},
+{
+  "model": "core.agenciatransporte",
+  "pk": 87,
+  "fields": {
+    "nombre": "SHALOM - Jesus Maria",
+    "ubicacion": "Lima / Lima / Jesus Maria / Jesus Maria",
+    "direccion": "Av. Mariscal Luzuriaga 584-586 Jesús María - Lima",
+    "referencia": "A Cuadra Y Media Del Parque San José, Paralelo A La Av. Mello Franco"
+  }
+},
+{
+  "model": "core.agenciatransporte",
+  "pk": 88,
+  "fields": {
+    "nombre": "SHALOM - Jr Casanova Con Petit Thouars",
+    "ubicacion": "Lima / Lima / Lince / Jr Casanova Con Petit Thouars",
+    "direccion": "Jr. domingo casanova N°318 Lince - Lima",
+    "referencia": "Cruce Con Petit Thouars"
+  }
+},
+{
+  "model": "core.agenciatransporte",
+  "pk": 89,
+  "fields": {
+    "nombre": "SHALOM - Av Jose Leal Cdra 6",
+    "ubicacion": "Lima / Lima / Lince / Av Jose Leal Cdra 6",
+    "direccion": "Av. Coronel José Leal 648, Urb. Fundo Lobatón, Lince - Lince",
+    "referencia": "Paralela A La Cdra. 6 De La Av. Canevaro"
+  }
+},
+{
+  "model": "core.agenciatransporte",
+  "pk": 90,
+  "fields": {
+    "nombre": "SHALOM - Av Bolivar",
+    "ubicacion": "Lima / Lima / Pueblo Libre / Av Bolivar",
+    "direccion": "Av. Bolivar 1097, Pueblo Libre - Lima",
+    "referencia": "A Media Cdra. Del Cruce av. Gral. José maría Egusquiza"
+  }
+},
+{
+  "model": "core.agenciatransporte",
+  "pk": 91,
+  "fields": {
+    "nombre": "SHALOM - Callao Faucett",
+    "ubicacion": "Callao / Callao / Callao / Callao Faucett",
+    "direccion": "Av. Elmer Faucett N° 492",
+    "referencia": "Sin referencia"
+  }
+},
+{
+  "model": "core.agenciatransporte",
+  "pk": 92,
+  "fields": {
+    "nombre": "SHALOM - Bellavista Callao",
+    "ubicacion": "Callao / Callao / Bellavista / Bellavista Callao",
+    "direccion": "Av. Elmer Faucett 1641 - Urb. Jardines Virú Mz. B Lt 46, Bellavista - Callao",
+    "referencia": "A 2 Cuadras Del Cruce De Av. Faucett Con Av. Venezuela"
+  }
+},
+{
+  "model": "core.agenciatransporte",
+  "pk": 93,
+  "fields": {
+    "nombre": "SHALOM - Puente Arica",
+    "ubicacion": "Lima / Lima / Puente Piedra / Puente Arica",
+    "direccion": "Panamericana Norte Km 32.5",
+    "referencia": "A 1/2 Cuadra Del Puente Arica - Al Costado Del Grifo Repsol"
+  }
+},
+{
+  "model": "core.agenciatransporte",
+  "pk": 94,
+  "fields": {
+    "nombre": "SHALOM - Aviacion 2819",
+    "ubicacion": "Lima / Lima / San Borja / Aviacion 2819",
+    "direccion": "Av. Aviación 2819, Urb. San Borja Sur,",
+    "referencia": "Ref. Al Frente De Bembos"
+  }
+},
+{
+  "model": "core.agenciatransporte",
+  "pk": 95,
+  "fields": {
+    "nombre": "SHALOM - Parad. Los Licenciados",
+    "ubicacion": "Callao / Callao / Ventanilla / Parad. Los Licenciados",
+    "direccion": "Calle 19, Mz. J Lt. 26 Zn - Urb. Coop. De La Marina,",
+    "referencia": "Ref. Al Costado De Lubricentro Pablito Romero"
+  }
+},
+{
+  "model": "core.agenciatransporte",
+  "pk": 96,
+  "fields": {
+    "nombre": "SHALOM - Huaycan Entrada",
+    "ubicacion": "Lima / Lima / Ate-vitarte / Huaycan Entrada",
+    "direccion": "Carretera Central Km 17 Mz. E Lt. 1",
+    "referencia": "Entrada De Huaycan Al Costado Del Grifo Primax. Ex Grifo El Negro."
+  }
+},
+{
+  "model": "core.agenciatransporte",
+  "pk": 97,
+  "fields": {
+    "nombre": "SHALOM - Huaycan Av Horacio Zevallos",
+    "ubicacion": "Lima / Lima / Ate-vitarte / Huaycan Av Horacio Zevallos",
+    "direccion": "Av. Horacio Zeballos Mz. V Lt. 12 Prog. Viv. Residencial Pariachi (sec. 031) Zona 5, Ate - Lima - Lima",
+    "referencia": "Frente Al Circuito De Manejo Garcilaso De La Vega"
+  }
+},
+{
+  "model": "core.agenciatransporte",
+  "pk": 98,
+  "fields": {
+    "nombre": "SHALOM - Los Fresnos",
+    "ubicacion": "Lima / Lima / La Molina / Los Fresnos",
+    "direccion": "Av. Los Fresnos 1305 Tienda 2 - Urb. Portada Del Sol I Etapa - La Molina - Lima",
+    "referencia": "A 3 Cdras. Del Óvalo De Los Cóndores"
+  }
+},
+{
+  "model": "core.agenciatransporte",
+  "pk": 99,
+  "fields": {
+    "nombre": "SHALOM - Av. La Molina Cdra. 35",
+    "ubicacion": "Lima / Lima / La Molina / Av. La Molina Cdra. 35",
+    "direccion": "Av. La Molina (ex av. La Universidad) #3551 Tda -7 Mz. H Sublote 1c, Urb. El Sol De La Molina I Etapa La Molina - Lima",
+    "referencia": "A Media Cdra. Del Cruce Con Av. El Sol"
+  }
+},
+{
+  "model": "core.agenciatransporte",
+  "pk": 100,
+  "fields": {
+    "nombre": "SHALOM - Magdalena Del Mar",
+    "ubicacion": "Lima / Lima / Magdalena Del Mar / Magdalena Del Mar",
+    "direccion": "Jr. Ayacucho N° 756,",
+    "referencia": "Ref. A Una Cdra. Del Mercado Modelo De Magdalesy A 3 Cdras. De La Iglesia Cúpula De Sucre"
+  }
+},
+{
+  "model": "core.agenciatransporte",
+  "pk": 101,
+  "fields": {
+    "nombre": "SHALOM - Av. La Marina",
+    "ubicacion": "Lima / Lima / Pueblo Libre / Av. La Marina",
+    "direccion": "Av. La Marina 1640",
+    "referencia": "Ref. erencia : A Una Cuadra Del Centro Comercial Plaza San Miguel"
+  }
+},
+{
+  "model": "core.agenciatransporte",
+  "pk": 102,
+  "fields": {
+    "nombre": "SHALOM - Av Buenos Aires",
+    "ubicacion": "Lima / Lima / Puente Piedra / Av Buenos Aires",
+    "direccion": "Av. Buenos Aires Mz. D, Sub-lote 188e1 Asociación De Pobladores micaela Bastidas, Puente Piedra - Lima - Lima",
+    "referencia": "A 2 Cdras. De La Demuna De Puente Piedra"
+  }
+},
+{
+  "model": "core.agenciatransporte",
+  "pk": 103,
+  "fields": {
+    "nombre": "SHALOM - Av. Angamos",
+    "ubicacion": "Lima / Lima / San Borja / Av. Angamos",
+    "direccion": "Av. Angamos Este 2521 (ex Av. Primavera) - Conjunto Habitacional Limatambo - San Borja.",
+    "referencia": "Cerca Al Cruce De Av. Angamos Este Con Av. Principal"
+  }
+},
+{
+  "model": "core.agenciatransporte",
+  "pk": 104,
+  "fields": {
+    "nombre": "SHALOM - Ovalo La Perla",
+    "ubicacion": "Callao / Callao / La Perla / Ovalo La Perla",
+    "direccion": "Av. La Marina 530, Urb. Benjamin Doigg Lossio, La Perla, Callao",
+    "referencia": "a 3 Cuadras Del Óvalo De La Perla"
+  }
+},
+{
+  "model": "core.agenciatransporte",
+  "pk": 105,
+  "fields": {
+    "nombre": "SHALOM - Huaycan El Descanso",
+    "ubicacion": "Lima / Lima / Ate-vitarte / Huaycan El Descanso",
+    "direccion": "Av. Jose Carlos Mariategui Mza. B Lte 06, Residencial Pariachi Sec. 031 Zon. 05, Ate - Lima - Lima",
+    "referencia": "Cruce Con La Av. Los Incas"
+  }
+},
+{
+  "model": "core.agenciatransporte",
+  "pk": 106,
+  "fields": {
+    "nombre": "SHALOM - Rep. De Panama",
+    "ubicacion": "Lima / Lima / Surquillo / Rep. De Panama",
+    "direccion": "Av República De Panamá N° 5115,",
+    "referencia": "Ref. Costado Del Grifo Repsol."
+  }
+},
+{
+  "model": "core.agenciatransporte",
+  "pk": 107,
+  "fields": {
+    "nombre": "SHALOM - Av. Principal",
+    "ubicacion": "Lima / Lima / Surquillo / Av. Principal",
+    "direccion": "Lt. 12 Mz. G, Av. Principal 995 (ex Av. Uno) Urb. Los Sauces 2da Etapa, Surquillo",
+    "referencia": "Cruce Con A. Manuel Villarán"
+  }
+},
+{
+  "model": "core.agenciatransporte",
+  "pk": 108,
+  "fields": {
+    "nombre": "SHALOM - Mi Peru",
+    "ubicacion": "Callao / Callao / Mi Peru / Mi Peru",
+    "direccion": "V. Victor Raul Haya De La Torre Mz. A Lt. 02 Asentamiento Humano Confraternidad - Iii Sector - Mi peru – Callao - Callao",
+    "referencia": "Cruce Con Av. Arequipa"
+  }
+},
+{
+  "model": "core.agenciatransporte",
+  "pk": 109,
+  "fields": {
+    "nombre": "SHALOM - Huaycan Av Jose C Mariategui",
+    "ubicacion": "Lima / Lima / Ate-vitarte / Huaycan Av Jose C Mariategui",
+    "direccion": "Av. José Carlos Mariátegui Z. E Lt. 23 Ucv 5 (zona Comercio) - Pueblo Joven \"proyecto Especial Huaycán\" Ate Vitarte - Lima",
+    "referencia": "A Dos Cdras. Del Cruce Con Av. 15 De Julio"
+  }
+},
+{
+  "model": "core.agenciatransporte",
+  "pk": 110,
+  "fields": {
+    "nombre": "SHALOM - La Curva De Manchay",
+    "ubicacion": "Lima / Lima / Pachacamac / La Curva De Manchay",
+    "direccion": "Av. Prolongación De La Av. La Molina Mz. E Lote 21. Ah Paul Poblet Lind, Pachacamac - Lima",
+    "referencia": "A Media Cdra. De Mi Banco"
+  }
+},
+{
+  "model": "core.agenciatransporte",
+  "pk": 111,
+  "fields": {
+    "nombre": "SHALOM - Higuereta",
+    "ubicacion": "Lima / Lima / Santiago De Surco / Higuereta",
+    "direccion": "Calle Barlovento N° 134",
+    "referencia": "Ref. A 3 Cdras De Polvos Rosados, Cerca Al Óvalo Higuereta, Surco"
+  }
+},
+{
+  "model": "core.agenciatransporte",
+  "pk": 113,
+  "fields": {
+    "nombre": "SHALOM - Zapallal",
+    "ubicacion": "Lima / Lima / Puente Piedra / Zapallal",
+    "direccion": "Av. Ancón 678",
+    "referencia": "A La Espalda Del Precio Uno De Fundicion"
+  }
+},
+{
+  "model": "core.agenciatransporte",
+  "pk": 114,
+  "fields": {
+    "nombre": "SHALOM - Av Miguel Grau Pamplona Alta",
+    "ubicacion": "Lima / Lima / San Juan De Miraflores / Av Miguel Grau Pamplona Alta",
+    "direccion": "Av. Almirante Miguel Grau Mz. Y3 Lt. 29, pamplona Alta - San Juan De Miraflores - Lima",
+    "referencia": "A Media Cdra. Del Mercado Ollantay Pamplona alta"
+  }
+},
+{
+  "model": "core.agenciatransporte",
+  "pk": 115,
+  "fields": {
+    "nombre": "SHALOM - Av Tomas Marsano - La Bolichera",
+    "ubicacion": "Lima / Lima / Santiago De Surco / Av Tomas Marsano - La Bolichera",
+    "direccion": "Av. Santiago De Surco Nº 4348, Urbanización La Virreyna, Santiago De Surco - Lima",
+    "referencia": "Al Lado De Inteci Sede Surco"
+  }
+},
+{
+  "model": "core.agenciatransporte",
+  "pk": 117,
+  "fields": {
+    "nombre": "SHALOM - Av San Juan Pamplona Alta",
+    "ubicacion": "Lima / Lima / San Juan De Miraflores / Av San Juan Pamplona Alta",
+    "direccion": "Av. San Juan Mz. 24 Lt. 1, Sect. Nuevo Horizonte, Pp. Jj Pamplona Alta - San Juan De Miraflores",
+    "referencia": "A 3 Cdras. Del Cruce Con Av. Salvador Allende"
+  }
+},
+{
+  "model": "core.agenciatransporte",
+  "pk": 118,
+  "fields": {
+    "nombre": "SHALOM - Manchay Tres Marias",
+    "ubicacion": "Lima / Lima / Pachacamac / Manchay Tres Marias",
+    "direccion": "Av. Victor Malasquez mz. B11 Sub-lote 06-a - aahh Centro Poblado Rural Los Huertos De Manchay Sector B Pachacamac - Lima",
+    "referencia": "A Media Cdra. Del Paradero"
+  }
+},
+{
+  "model": "core.agenciatransporte",
+  "pk": 119,
+  "fields": {
+    "nombre": "SHALOM - Atocongo",
+    "ubicacion": "Lima / Lima / San Juan De Miraflores / Atocongo",
+    "direccion": "Av. De Los Héroes N° 228 - San Juan De Miraflores - (estación Atocongo)",
+    "referencia": "Sin referencia"
+  }
+},
+{
+  "model": "core.agenciatransporte",
+  "pk": 120,
+  "fields": {
+    "nombre": "SHALOM - Maria Auxiliadora",
+    "ubicacion": "Lima / Lima / San Juan De Miraflores / Maria Auxiliadora",
+    "direccion": "Av. Los Héroes 1140 - Sjm,",
+    "referencia": "Ref. Una Cdra. Antes Del Hospital María Auxiliadora"
+  }
+},
+{
+  "model": "core.agenciatransporte",
+  "pk": 121,
+  "fields": {
+    "nombre": "SHALOM - Av. Canevaro",
+    "ubicacion": "Lima / Lima / San Juan De Miraflores / Av. Canevaro",
+    "direccion": "Av. Canevaro 336 - A",
+    "referencia": "A 2 Cuadras De La Av. Vargas Machuga Y A Una Cuadra De La Fiscalía Provincial Penal De S.j.m."
+  }
+},
+{
+  "model": "core.agenciatransporte",
+  "pk": 122,
+  "fields": {
+    "nombre": "SHALOM - Av. Villa Maria",
+    "ubicacion": "Lima / Lima / Villa Maria Del Triunfo / Av. Villa Maria",
+    "direccion": "Av Villa Maria Mz. G12 Lt. 9 - B Ps 1 Sect. Villa Maria Del Triunfo",
+    "referencia": "Av. Villa Maria A 2 Cuadras De La Municipalidad De Vmt Y Al Costado De Essalud"
+  }
+},
+{
+  "model": "core.agenciatransporte",
+  "pk": 123,
+  "fields": {
+    "nombre": "SHALOM - Chorrillos Los Faisanes",
+    "ubicacion": "Lima / Lima / Chorrillos / Chorrillos Los Faisanes",
+    "direccion": "Av. Los Faisanes 420,",
+    "referencia": "Ref. Al Costado De La Tienda John Holden"
+  }
+},
+{
+  "model": "core.agenciatransporte",
+  "pk": 124,
+  "fields": {
+    "nombre": "SHALOM - Nueva Esperanza Vmt",
+    "ubicacion": "Lima / Lima / Villa Maria Del Triunfo / Nueva Esperanza Vmt",
+    "direccion": "Av. 26 De Noviembre, 1728b - 1728c Mz. 90 Sub Lote. 19b Pueblo joven Nueva Esperanza, Villa Maria Del Triunfo - Lima",
+    "referencia": "A 3 Cdras. Del Mercado Virgen De Lourdes"
+  }
+},
+{
+  "model": "core.agenciatransporte",
+  "pk": 125,
+  "fields": {
+    "nombre": "SHALOM - Pesquero",
+    "ubicacion": "Lima / Lima / Villa Maria Del Triunfo / Pesquero",
+    "direccion": "Av. Pachacutec N° 3548,",
+    "referencia": "Ref. Frente A Real Plaza, A 1 Cdra. De Mayorsa"
+  }
+},
+{
+  "model": "core.agenciatransporte",
+  "pk": 126,
+  "fields": {
+    "nombre": "SHALOM - Chorrillos Co",
+    "ubicacion": "Lima / Lima / Chorrillos / Chorrillos Co",
+    "direccion": "Av. Santa Anita N.° 580, Chorrillos - Lima",
+    "referencia": "Al Costado Del Mercado Santa Anita, Cruce Con San Genaro"
+  }
+},
+{
+  "model": "core.agenciatransporte",
+  "pk": 127,
+  "fields": {
+    "nombre": "SHALOM - Surco Mateo Pumacahua",
+    "ubicacion": "Lima / Lima / Santiago De Surco / Surco Mateo Pumacahua",
+    "direccion": "Av. San Juan Mz A Lote 01 Mateo Pumacahua - Surco",
+    "referencia": "A 2 Cuadras De La Av. Tupac Amaru Entre El Límite De Chorrillos Y Surco"
+  }
+},
+{
+  "model": "core.agenciatransporte",
+  "pk": 128,
+  "fields": {
+    "nombre": "SHALOM - Las Delicias De Villa",
+    "ubicacion": "Lima / Lima / Chorrillos / Las Delicias De Villa",
+    "direccion": "Av. 12 De Octubre Mz. A - 03, Lt. 02, Urb. Aria - Las Delicias De Villa",
+    "referencia": "A Dos Cuadras De La Av. Defensores Del Morro (ex Av. Huaylas)"
+  }
+},
+{
+  "model": "core.agenciatransporte",
+  "pk": 129,
+  "fields": {
+    "nombre": "SHALOM - 01 De Mayo",
+    "ubicacion": "Lima / Lima / Villa El Salvador / 01 De Mayo",
+    "direccion": "Av. 01de Mayo 1 Sect Gp 23 - A Mz N Lote 13 - V.e.s.",
+    "referencia": "Av. Pastor Sevilla Con Av. 1 De Mayo A 2 Cuadras Del Hospital De La Solidaridad Por La Ruta C"
+  }
+},
+{
+  "model": "core.agenciatransporte",
+  "pk": 130,
+  "fields": {
+    "nombre": "SHALOM - Ancon",
+    "ubicacion": "Lima / Lima / Ancon / Ancon",
+    "direccion": "Carretera Serpentín De Pasamayo mz. G Lt. 3 Sublt. B - Asoc. De Prop. Casa Huerta Ind. Pecuarias San Pedro Zona 4, Ancón - Lima-lima",
+    "referencia": "A 1 Cdra. Del Ovalo De Ancón"
+  }
+},
+{
+  "model": "core.agenciatransporte",
+  "pk": 131,
+  "fields": {
+    "nombre": "SHALOM - Av. Cesar Vallejo",
+    "ubicacion": "Lima / Lima / Villa El Salvador / Av. Cesar Vallejo",
+    "direccion": "Av. Cesar Vallejo, Mz. F Lt. 1 - Sect. 2,",
+    "referencia": "Ref. Frente A Essalud, Al Costado Del Mercado Villa Sur"
+  }
+},
+{
+  "model": "core.agenciatransporte",
+  "pk": 132,
+  "fields": {
+    "nombre": "SHALOM - Las Conchitas",
+    "ubicacion": "Lima / Lima / Villa Maria Del Triunfo / Las Conchitas",
+    "direccion": "Av. Pachacutec 6779, Mz. N, Lt. 20, Villa Maria Del Triunfo",
+    "referencia": "Ref. erencia: A Una Cdra. Del Grifo Repsol Las Conchitas"
+  }
+},
+{
+  "model": "core.agenciatransporte",
+  "pk": 133,
+  "fields": {
+    "nombre": "SHALOM - Óvalo Mariátegui",
+    "ubicacion": "Lima / Lima / Villa El Salvador / Óvalo Mariátegui",
+    "direccion": "Av. Pastor Sevilla Sect. 6 - Gp 7 - Mz. A - Lote 05 - V.e.s.",
+    "referencia": "A 2 Cuadras Del Óvalo Mariátegui Con 3 De Octubre"
+  }
+},
+{
+  "model": "core.agenciatransporte",
+  "pk": 134,
+  "fields": {
+    "nombre": "SHALOM - Av. Lima - Vmt",
+    "ubicacion": "Lima / Lima / Villa Maria Del Triunfo / Av. Lima - Vmt",
+    "direccion": "Av. Lima 2208 José Gálvez- Villa María Del Triunfo,",
+    "referencia": "Ref. A Dos Cdras. De La Curva José Gálvez"
+  }
+},
+{
+  "model": "core.agenciatransporte",
+  "pk": 135,
+  "fields": {
+    "nombre": "SHALOM - Chosica",
+    "ubicacion": "Lima / Lima / Lurigancho / Chosica",
+    "direccion": "El Sol 124 (parque Echenique) Lurigancho - Chosica",
+    "referencia": "Sin referencia"
+  }
+},
+{
+  "model": "core.agenciatransporte",
+  "pk": 136,
+  "fields": {
+    "nombre": "SHALOM - Av. Pastor Sevilla",
+    "ubicacion": "Lima / Lima / Villa El Salvador / Av. Pastor Sevilla",
+    "direccion": "Mz. B Lt. 3 Barrio 3 Sector 2 - 4ta Etapa - Ves,",
+    "referencia": "Ref. Por El Óvalo Cerro Lomas, Frente Al Colegio Virgen Del Rosario"
+  }
+},
+{
+  "model": "core.agenciatransporte",
+  "pk": 137,
+  "fields": {
+    "nombre": "SHALOM - Av Manuel Valle",
+    "ubicacion": "Lima / Lima / Pachacamac / Av Manuel Valle",
+    "direccion": "Av. Manuel Valle Sub - Lote 2 - 1, Número De Parcela J, Proyecto Huertos De Pachacamac, Valle Lurín - Pachacamac - Lima",
+    "referencia": "Frente Al Estudio De Canal 4 (america Televisión)"
+  }
+},
+{
+  "model": "core.agenciatransporte",
+  "pk": 138,
+  "fields": {
+    "nombre": "SHALOM - Puente Lurin",
+    "ubicacion": "Lima / Lima / Lurin / Puente Lurin",
+    "direccion": "Antigua Panamericana Sur, lote 2, Mz. B, Primer Piso Lurín - Lima",
+    "referencia": "A Cdra. Y Media Del Cruce Con Av. Santa Cruz"
+  }
+},
+{
+  "model": "core.agenciatransporte",
+  "pk": 139,
+  "fields": {
+    "nombre": "SHALOM - Nuevo Lurin",
+    "ubicacion": "Lima / Lima / Lurin / Nuevo Lurin",
+    "direccion": "Av. Antigua Panamericana Sur Km 37 Mz C Lt 17 - Fundo Las Salinas",
+    "referencia": "Ref. erencia A Cuadra Y Media Del Mercado Virgen De Las Mercedes."
+  }
+},
+{
+  "model": "core.agenciatransporte",
+  "pk": 140,
+  "fields": {
+    "nombre": "SHALOM - Punta Hermosa",
+    "ubicacion": "Lima / Lima / Punta Hermosa / Punta Hermosa",
+    "direccion": "Av. Garcia Rada Mz.b Lt.04, Aahh Asociacion De vivienda Y Desarrollo Integral Nueva Generacion, Punta hermosa - Lima",
+    "referencia": "A Una Cdra. Del Paradero Peatonal De Punta Hermosa"
+  }
+},
+{
+  "model": "core.agenciatransporte",
+  "pk": 141,
+  "fields": {
+    "nombre": "SHALOM - Chancay",
+    "ubicacion": "Lima / Huaral / Chancay / Chancay",
+    "direccion": "Prolongación San Martín N°403 Chancay",
+    "referencia": "Ref. erencia: A Una Cdra. De La Av. Panamericana Norte"
+  }
+},
+{
+  "model": "core.agenciatransporte",
+  "pk": 142,
+  "fields": {
+    "nombre": "SHALOM - Huaral",
+    "ubicacion": "Lima / Huaral / Huaral / Huaral",
+    "direccion": "Av. Jorge Chavez 647,",
+    "referencia": "Ref. Entre La Av. Grau Y Bolognesi (cerca Al Paradero Moto Naturales)"
+  }
+},
+{
+  "model": "core.agenciatransporte",
+  "pk": 143,
+  "fields": {
+    "nombre": "SHALOM - Ant Panam Sur Cdra 11",
+    "ubicacion": "Lima / Cañete / Chilca / Ant Panam Sur Cdra 11",
+    "direccion": "Antigua Panamericana Sur Cdra. 11 Mz. 46, Lt. 08. Chilca - Cañete - Lima",
+    "referencia": "A Media Cdra. Del Hotel El Pacífico"
+  }
+},
+{
+  "model": "core.agenciatransporte",
+  "pk": 144,
+  "fields": {
+    "nombre": "SHALOM - Mala",
+    "ubicacion": "Lima / Cañete / Mala / Mala",
+    "direccion": "Av. Marchand # 250, Distrito De Mala .",
+    "referencia": "Ref. A Unas Casas Frente A La Distribuidora Primax Gas"
+  }
+},
+{
+  "model": "core.agenciatransporte",
+  "pk": 145,
+  "fields": {
+    "nombre": "SHALOM - Sayan",
+    "ubicacion": "Lima / Huaura / Sayan / Sayan",
+    "direccion": "Calle Naranjo N° 211.sayan - Huaura - Lima",
+    "referencia": "A Media Cdra. De La Plaza De Armas Y De La Municipalidad"
+  }
+},
+{
+  "model": "core.agenciatransporte",
+  "pk": 146,
+  "fields": {
+    "nombre": "SHALOM - Salaverry Huacho Co",
+    "ubicacion": "Lima / Huaura / Huacho / Salaverry Huacho Co",
+    "direccion": "Prolongación Salaverry N° 764 Huacho",
+    "referencia": "Ref. erencia : Cruce Con La Av La Paz"
+  }
+},
+{
+  "model": "core.agenciatransporte",
+  "pk": 147,
+  "fields": {
+    "nombre": "SHALOM - Huacho Av Indacochea",
+    "ubicacion": "Lima / Huaura / Huacho / Huacho Av Indacochea",
+    "direccion": "Av. Mercedes Indacochea 1276 Huacho - Huaura - Lima",
+    "referencia": "Intersección Con Pedro Ruiz Gallo, A 2 Cdras. De La Universidad Nacional José Faustino Sánchez Carrión"
+  }
+},
+{
+  "model": "core.agenciatransporte",
+  "pk": 148,
+  "fields": {
+    "nombre": "SHALOM - Huaura",
+    "ubicacion": "Lima / Huaura / Huaura / Huaura",
+    "direccion": "Av. Las Malvinas Mz. C Lote 16 Urb. El Rosario Sur Huaura",
+    "referencia": "A Espaldas De La Plaza De Armas, A 1 Cdra. De La Calle Los Alamos"
+  }
+},
+{
+  "model": "core.agenciatransporte",
+  "pk": 149,
+  "fields": {
+    "nombre": "SHALOM - La Oroya",
+    "ubicacion": "Junin / Yauli / La Oroya / La Oroya",
+    "direccion": "Av. Arévalo S/n (carretera Central) - Anexo El Tambo - Santa Rosa De Sacco",
+    "referencia": "Sin referencia"
+  }
+},
+{
+  "model": "core.agenciatransporte",
+  "pk": 150,
+  "fields": {
+    "nombre": "SHALOM - Huayllay",
+    "ubicacion": "Pasco / Pasco / Huayllay / Huayllay",
+    "direccion": "Calle Lima S/n Barrio Arenales Huayllay Pasco",
+    "referencia": "Ref. erencia: Al Costado Del Colegio Cesar Vallejo"
+  }
+},
+{
+  "model": "core.agenciatransporte",
+  "pk": 151,
+  "fields": {
+    "nombre": "SHALOM - Cañete San Vicente",
+    "ubicacion": "Lima / Cañete / San Vicente De Canet / Cañete San Vicente",
+    "direccion": "Aa.hh. Víctor Andrés Belaunde Mz. B Lt. 12, San Vicente De Cañete - Cañete - Lima",
+    "referencia": "Sin referencia"
+  }
+},
+{
+  "model": "core.agenciatransporte",
+  "pk": 152,
+  "fields": {
+    "nombre": "SHALOM - Cañete Imperial",
+    "ubicacion": "Lima / Cañete / Imperial / Cañete Imperial",
+    "direccion": "Jr. Augusto B. Leguía N.º 457, Mz E, Centro Poblado Imperial, Imperial - Cañete - Lima",
+    "referencia": "Cevichería Brisas Del mar"
+  }
+},
+{
+  "model": "core.agenciatransporte",
+  "pk": 153,
+  "fields": {
+    "nombre": "SHALOM - Nuevo Imperial Co",
+    "ubicacion": "Lima / Cañete / Nuevo Imperial / Nuevo Imperial Co",
+    "direccion": "Fundo Santa Adela, Mz. A, Lotes 8 Y 9 – Carretera Cañete A Yauyos Nuevo Imperial - Cañete - Lima",
+    "referencia": "Al Costado Del Restaurant la Ruta Brava"
+  }
+},
+{
+  "model": "core.agenciatransporte",
+  "pk": 154,
+  "fields": {
+    "nombre": "SHALOM - Supe",
+    "ubicacion": "Lima / Barranca / Supe / Supe",
+    "direccion": "Av. Francisco Vidal 1120, Supe - Barranca - Lima",
+    "referencia": "Al Costado De Lubricentro Ciriaco Y Media Cdra. De La Cruz Misionera"
+  }
+},
+{
+  "model": "core.agenciatransporte",
+  "pk": 155,
+  "fields": {
+    "nombre": "SHALOM - Tarma",
+    "ubicacion": "Junin / Tarma / Tarma / Tarma",
+    "direccion": "Jr. Amazonas Nro. 1164 Tarma - Junín",
+    "referencia": "entre Jr. Amazonas Con Av. Vienrich"
+  }
+},
+{
+  "model": "core.agenciatransporte",
+  "pk": 156,
+  "fields": {
+    "nombre": "SHALOM - Barranca",
+    "ubicacion": "Lima / Barranca / Barranca / Barranca",
+    "direccion": "Jr. Andres Reyes Buitron 416. Barranca - Barranca – Lima",
+    "referencia": "A 2 Cdrs. Del Parque El Olvivar / A Mtrs. De La Casa Del Maestro"
+  }
+},
+{
+  "model": "core.agenciatransporte",
+  "pk": 157,
+  "fields": {
+    "nombre": "SHALOM - Cerro De Pasco",
+    "ubicacion": "Pasco / Pasco / Chaupimarca / Cerro De Pasco",
+    "direccion": "Jr. Huaricapcha S/n A.h. Tupac Amaru Chaupimarca,",
+    "referencia": "Ref. Frente Al Nuevo Terminal"
+  }
+},
+{
+  "model": "core.agenciatransporte",
+  "pk": 158,
+  "fields": {
+    "nombre": "SHALOM - Jauja",
+    "ubicacion": "Junin / Jauja / Jauja / Jauja",
+    "direccion": "Jr. Estanislao Marquez 286, Yauyos - Jauja - Junín",
+    "referencia": "Esquina Con Jr. 4 De Enero"
+  }
+},
+{
+  "model": "core.agenciatransporte",
+  "pk": 159,
+  "fields": {
+    "nombre": "SHALOM - Paramonga",
+    "ubicacion": "Lima / Barranca / Paramonga / Paramonga",
+    "direccion": "Av. Central N° 305 Mz. N1 Lt. 17",
+    "referencia": "Urb. Miguel Grau"
+  }
+},
+{
+  "model": "core.agenciatransporte",
+  "pk": 160,
+  "fields": {
+    "nombre": "SHALOM - Concepcion",
+    "ubicacion": "Junin / Concepcion / Concepcion / Concepcion",
+    "direccion": "Carretera Central Lt. 7 - Mz. E5, Concepción - Concepción - Junín",
+    "referencia": "Esquina Con Tupac Amaru"
+  }
+},
+{
+  "model": "core.agenciatransporte",
+  "pk": 161,
+  "fields": {
+    "nombre": "SHALOM - Chincha Pueblo Nuevo",
+    "ubicacion": "Ica / Chincha / Pueblo Nuevo / Chincha Pueblo Nuevo",
+    "direccion": "Aa. Hh. Los Alamos, Calle Los Laureles Mz. 17 Lt. 11- A",
+    "referencia": "A 2 Cdras. De La Posta Los Álamos"
+  }
+},
+{
+  "model": "core.agenciatransporte",
+  "pk": 162,
+  "fields": {
+    "nombre": "SHALOM - Sunampe Co",
+    "ubicacion": "Ica / Chincha / Sunampe / Sunampe Co",
+    "direccion": "Carr. Panamericana sur Nro. 198 -b , Sin Barrio Cercado Sunampe, Sunampe - Chincha - Ica",
+    "referencia": "Antigua panamericana Sur Frente A La Entrada De Grocio Prado."
+  }
+},
+{
+  "model": "core.agenciatransporte",
+  "pk": 163,
+  "fields": {
+    "nombre": "SHALOM - Chupaca",
+    "ubicacion": "Junin / Chupaca / Chupaca / Chupaca",
+    "direccion": "Jr. Ramon Castilla 201, Chupaca - Chupaca - Junin",
+    "referencia": "A Una Cdra. De La Plaza Principal De Chupaca"
+  }
+},
+{
+  "model": "core.agenciatransporte",
+  "pk": 164,
+  "fields": {
+    "nombre": "SHALOM - Prolong Luis Massaro",
+    "ubicacion": "Ica / Chincha / Chincha Alta / Prolong Luis Massaro",
+    "direccion": "Prolongacion Luis Massaro N°247 - Chincha Alta",
+    "referencia": "Sin referencia"
+  }
+},
+{
+  "model": "core.agenciatransporte",
+  "pk": 165,
+  "fields": {
+    "nombre": "SHALOM - Calle Los Angeles",
+    "ubicacion": "Ica / Chincha / Chincha Alta / Calle Los Angeles",
+    "direccion": "Calle Los Ángeles N° Casa 217 01 - A Sin Barriio Cercado, Chincha Alta - Chincha - Ica",
+    "referencia": "A 2 Cdras. De La Plaza De Armas De Chncha Pasando Electrodunas"
+  }
+},
+{
+  "model": "core.agenciatransporte",
+  "pk": 166,
+  "fields": {
+    "nombre": "SHALOM - Pilcomayo",
+    "ubicacion": "Junin / Huancayo / Pilcomayo / Pilcomayo",
+    "direccion": "Plaza Independencia 131, Pilcomayo - Huancayo - Junín",
+    "referencia": "Plaza Principal De Pilcomayo"
+  }
+},
+{
+  "model": "core.agenciatransporte",
+  "pk": 167,
+  "fields": {
+    "nombre": "SHALOM - San Agustin De Cajas",
+    "ubicacion": "Junin / Huancayo / San Agustin / San Agustin De Cajas",
+    "direccion": "Carretera Central Km 7.5 S/n San Agustin – Huancayo – Junín",
+    "referencia": "Frente A La Envasadora Solgas"
+  }
+},
+{
+  "model": "core.agenciatransporte",
+  "pk": 168,
+  "fields": {
+    "nombre": "SHALOM - Terminal De Bus",
+    "ubicacion": "Junin / Huancayo / Huancayo / Terminal De Bus",
+    "direccion": "Av. Evitamiento S/n - Counter N°13",
+    "referencia": "Sin referencia"
+  }
+},
+{
+  "model": "core.agenciatransporte",
+  "pk": 169,
+  "fields": {
+    "nombre": "SHALOM - Ciudad Universitaria",
+    "ubicacion": "Junin / Huancayo / El Tambo / Ciudad Universitaria",
+    "direccion": "Jr Tarma Nro. 37 - 24, El Tambo - Huancayo - Junín",
+    "referencia": "Al Costado De La Facultad De Ingeniería Metalúrgica Uncp"
+  }
+},
+{
+  "model": "core.agenciatransporte",
+  "pk": 170,
+  "fields": {
+    "nombre": "SHALOM - Av Mariscal Castilla Co Parque Industrial",
+    "ubicacion": "Junin / Huancayo / El Tambo / Av Mariscal Castilla Co Parque Industrial",
+    "direccion": "Av Mariscal Castilla 2769",
+    "referencia": "Frente Al Colegio Andres Bello"
+  }
+},
+{
+  "model": "core.agenciatransporte",
+  "pk": 171,
+  "fields": {
+    "nombre": "SHALOM - Pio Pata",
+    "ubicacion": "Junin / Huancayo / El Tambo / Pio Pata",
+    "direccion": "Av. Huancavelica 1201, El Tambo - Huancayo - Junín",
+    "referencia": "Esquina Con El Jr. La Victoria"
+  }
+},
+{
+  "model": "core.agenciatransporte",
+  "pk": 172,
+  "fields": {
+    "nombre": "SHALOM - Huancayo Jr. Ica",
+    "ubicacion": "Junin / Huancayo / Huancayo / Huancayo Jr. Ica",
+    "direccion": "Jr. Ica Nº 1143 - Huancayo,",
+    "referencia": "Ref. Entre El Jr. Ica Y El Jr. Tacna"
+  }
+},
+{
+  "model": "core.agenciatransporte",
+  "pk": 173,
+  "fields": {
+    "nombre": "SHALOM - Terminal Los Andes",
+    "ubicacion": "Junin / Huancayo / Huancayo / Terminal Los Andes",
+    "direccion": "Av. Ferrocarril S/n - Huancayo - Counter N° 14",
+    "referencia": "Terminal Terrestre Los Andes, Frente Al Open Plaza"
+  }
+},
+{
+  "model": "core.agenciatransporte",
+  "pk": 175,
+  "fields": {
+    "nombre": "SHALOM - San Carlos Huancayo",
+    "ubicacion": "Junin / Huancayo / Huancayo / San Carlos Huancayo",
+    "direccion": "Pj. San Fernando 209 Huancayo - Huancayo - Junin",
+    "referencia": "Esquina Del Jr. San Fernando Y Mártires Del Periodismo"
+  }
+},
+{
+  "model": "core.agenciatransporte",
+  "pk": 176,
+  "fields": {
+    "nombre": "SHALOM - Chilca Huancayo",
+    "ubicacion": "Junin / Huancayo / Chilca / Chilca Huancayo",
+    "direccion": "Jr. 28 De Julio N° 935",
+    "referencia": "Esquina 28 De Julio Y Santos Chocano"
+  }
+},
+{
+  "model": "core.agenciatransporte",
+  "pk": 177,
+  "fields": {
+    "nombre": "SHALOM - San Ramón",
+    "ubicacion": "Junin / Chanchamayo / San Ramon / San Ramón",
+    "direccion": "Jr. Ucayali 102 - San Ramón,",
+    "referencia": "Ref. Frente A La Caja Huancayo Y El Parque El Avión"
+  }
+},
+{
+  "model": "core.agenciatransporte",
+  "pk": 178,
+  "fields": {
+    "nombre": "SHALOM - La Merced",
+    "ubicacion": "Junin / Chanchamayo / La Merced / La Merced",
+    "direccion": "Av. Peru 931 Sector Pampa Del Carmen, La Merced -chanchamayo - Junín",
+    "referencia": "Frente A La Cooperativa Chanchamayo"
+  }
+},
+{
+  "model": "core.agenciatransporte",
+  "pk": 179,
+  "fields": {
+    "nombre": "SHALOM - San Clemente",
+    "ubicacion": "Ica / Pisco / San Clemente / San Clemente",
+    "direccion": "Av. Los Libertadores Grupo Número 1 Mz,91 Lote 7ª San Clemente - Pisco - Ica",
+    "referencia": "Libertadores Sexta Cuadra,frente Del Grifo Santa Rosa"
+  }
+},
+{
+  "model": "core.agenciatransporte",
+  "pk": 180,
+  "fields": {
+    "nombre": "SHALOM - Av Abraham Valdelomar Co",
+    "ubicacion": "Ica / Pisco / Pisco / Av Abraham Valdelomar Co",
+    "direccion": "Av. Abraham Valdelomar Nro. Puerta 965 Pisco - Pisco - Ica",
+    "referencia": "A Una Cdra. Por La Posta San Martin"
+  }
+},
+{
+  "model": "core.agenciatransporte",
+  "pk": 181,
+  "fields": {
+    "nombre": "SHALOM - La Villa Cruce Pisco",
+    "ubicacion": "Ica / Pisco / Pisco / La Villa Cruce Pisco",
+    "direccion": "C. P. Oblacion Villa Los Angeles Mz.a Lt 13 B La Villa pisco-pisco-ica",
+    "referencia": "A 100 Metros Con Dirección Al Sur Dedl Cruce Panamericana Antigua C/n Av. Fermín Tangüis"
+  }
+},
+{
+  "model": "core.agenciatransporte",
+  "pk": 182,
+  "fields": {
+    "nombre": "SHALOM - Ambo",
+    "ubicacion": "Huanuco / Ambo / Ambo / Ambo",
+    "direccion": "Av. Las Americas 501",
+    "referencia": "Al Frente Del Colegio Juan José Crespo Y Castillo"
+  }
+},
+{
+  "model": "core.agenciatransporte",
+  "pk": 183,
+  "fields": {
+    "nombre": "SHALOM - Perene",
+    "ubicacion": "Junin / Chanchamayo / Perene / Perene",
+    "direccion": "Av. Marginal S/n Aa.vv San Jacinto - perene - Chanchamayo - Junin",
+    "referencia": "Antes Del Ultimo Rompemuelle De San Jacinto"
+  }
+},
+{
+  "model": "core.agenciatransporte",
+  "pk": 184,
+  "fields": {
+    "nombre": "SHALOM - Oxapampa",
+    "ubicacion": "Pasco / Oxapampa / Oxapampa / Oxapampa",
+    "direccion": "Mz. 239 Sub Lote H – 1 Oxapampa - Oxapampa - Pasco",
+    "referencia": "Entre Av. Angélica Frey Y Jr. Lima"
+  }
+},
+{
+  "model": "core.agenciatransporte",
+  "pk": 185,
+  "fields": {
+    "nombre": "SHALOM - Villa Rica",
+    "ubicacion": "Pasco / Oxapampa / Villa Rica / Villa Rica",
+    "direccion": "Av. Leopoldo Krausse N° 442 Villa Rica - Oxapampa - Pasco",
+    "referencia": "Entre El Jr. Pozuzo Y Jr. Cooperativa, Al Costado De La Notaría Guerra Y A 20 Metros De La Plaza Principal"
+  }
+},
+{
+  "model": "core.agenciatransporte",
+  "pk": 186,
+  "fields": {
+    "nombre": "SHALOM - Huancavelica",
+    "ubicacion": "Huancavelica / Huancavelica / Huancavelica / Huancavelica",
+    "direccion": "Av. Universitaria 1003 - Huancavelica",
+    "referencia": "A 1 Cdra. De La Escuela Santa Ana Y A 3 Cdras. Del Puente Del Ejército (barrio Santa Ana)"
+  }
+},
+{
+  "model": "core.agenciatransporte",
+  "pk": 187,
+  "fields": {
+    "nombre": "SHALOM - Jr Aguilar",
+    "ubicacion": "Huanuco / Huanuco / Huanuco / Jr Aguilar",
+    "direccion": "Jr. Aguilar N° 872 - Huánuco",
+    "referencia": "Sin referencia"
+  }
+},
+{
+  "model": "core.agenciatransporte",
+  "pk": 188,
+  "fields": {
+    "nombre": "SHALOM - Amarilis Co",
+    "ubicacion": "Huanuco / Huanuco / Amarilis / Amarilis Co",
+    "direccion": "Jr. Los Pinos Lote 3 -d2 Urb Los Pinos - Amarilis - Huánuco",
+    "referencia": "A La Espalda De Toyota Huánuco"
+  }
+},
+{
+  "model": "core.agenciatransporte",
+  "pk": 189,
+  "fields": {
+    "nombre": "SHALOM - Huarmey",
+    "ubicacion": "Ancash / Huarmey / Huarmey / Huarmey",
+    "direccion": "Carr. Panamericana Norte N° Km 293 Sect. Panamericana Huarmey – Ancash",
+    "referencia": "a 4 Cdras. Del Terminal Terrestre De Sur A Norte"
+  }
+},
+{
+  "model": "core.agenciatransporte",
+  "pk": 190,
+  "fields": {
+    "nombre": "SHALOM - Pichanaki",
+    "ubicacion": "Junin / Chanchamayo / Bajo Pichanaqui / Pichanaki",
+    "direccion": "Av. Venus Lt. 20 Ciudad Satélite",
+    "referencia": "Ref. . ( A 1 Cuadra Y Media Del Parque De Satélite)"
+  }
+},
+{
+  "model": "core.agenciatransporte",
+  "pk": 191,
+  "fields": {
+    "nombre": "SHALOM - Salas Ica",
+    "ubicacion": "Ica / Ica / Salas / Salas Ica",
+    "direccion": "Sub Lote 01 zona panamericana sur km. 293.350, Salas guadalupe - Ica - Ica",
+    "referencia": "Frente Al Estadio De Salas Guadalupe"
+  }
+},
+{
+  "model": "core.agenciatransporte",
+  "pk": 192,
+  "fields": {
+    "nombre": "SHALOM - Ica Subtanjalla Co",
+    "ubicacion": "Ica / Ica / Subtanjalla / Ica Subtanjalla Co",
+    "direccion": "C.p - Sector Macacona /predio Parcela 214 Lote 2, Subtanjalla - Ica - Ica",
+    "referencia": "Panamericana Sur Frente A La Entrada Del Arrabal"
+  }
+},
+{
+  "model": "core.agenciatransporte",
+  "pk": 193,
+  "fields": {
+    "nombre": "SHALOM - Satipo",
+    "ubicacion": "Junin / Satipo / Satipo / Satipo",
+    "direccion": "Jr. Francisco Irazola 1077 - Junín ",
+    "referencia": "Fábrica La Satipeña"
+  }
+},
+{
+  "model": "core.agenciatransporte",
+  "pk": 194,
+  "fields": {
+    "nombre": "SHALOM - La Tinguiña",
+    "ubicacion": "Ica / Ica / La Tinguina / La Tinguiña",
+    "direccion": "Av. Victorio Gotuzzo N° 506 - Tinguiña - Ica",
+    "referencia": "Cruce Con Fray Ramón Rosas, Al Costado De La Comisaria P.n.p. La Tinguiña"
+  }
+},
+{
+  "model": "core.agenciatransporte",
+  "pk": 195,
+  "fields": {
+    "nombre": "SHALOM - Ica San Joaquin",
+    "ubicacion": "Ica / Ica / Ica / Ica San Joaquin",
+    "direccion": "Pasaje Grau N° 101 San Joaquin - Ica",
+    "referencia": "A 1 Cdra De Petro Peru"
+  }
+},
+{
+  "model": "core.agenciatransporte",
+  "pk": 196,
+  "fields": {
+    "nombre": "SHALOM - Parcona",
+    "ubicacion": "Ica / Ica / Parcona / Parcona",
+    "direccion": "Cp. De Parcona -cercado (primera Etapa) Mz. B Lote 16 Parcona - Ica",
+    "referencia": "Av. 18 De Febrero y Cruce De Av. Natividad Paco"
+  }
+},
+{
+  "model": "core.agenciatransporte",
+  "pk": 197,
+  "fields": {
+    "nombre": "SHALOM - Ica Av. Jj Elias",
+    "ubicacion": "Ica / Ica / Ica / Ica Av. Jj Elias",
+    "direccion": "Manzana B, Sub-lote 02 Del Fundo La Palma Ica",
+    "referencia": "Cruce De Av. Cutervo Con Av. J.j Elias"
+  }
+},
+{
+  "model": "core.agenciatransporte",
+  "pk": 198,
+  "fields": {
+    "nombre": "SHALOM - Ica Urb. Manzanilla",
+    "ubicacion": "Ica / Ica / Ica / Ica Urb. Manzanilla",
+    "direccion": "Av. Manuel Santana Chiri N°359 A1 – Ica",
+    "referencia": "Cruce Con Calle Baltazar Caravedo"
+  }
+},
+{
+  "model": "core.agenciatransporte",
+  "pk": 199,
+  "fields": {
+    "nombre": "SHALOM - Mazamari",
+    "ubicacion": "Junin / Satipo / Mazamari / Mazamari",
+    "direccion": "Jr. Jorge Chavez Nro 144 Lt. 8a Junín - Satipo– Mazamari",
+    "referencia": "Cerca A La Vía Principal, Al Costado Del Hospedaje Luján 1er Piso"
+  }
+},
+{
+  "model": "core.agenciatransporte",
+  "pk": 200,
+  "fields": {
+    "nombre": "SHALOM - Pangoa",
+    "ubicacion": "Junin / Satipo / Pangoa / Pangoa",
+    "direccion": "Av. Marginal S/n Número Villa Chavini Pangoa - Satipo - Junín",
+    "referencia": "Al Costado De La Tienda Honda Inversiones Arauco San Martín De Pangoa"
+  }
+},
+{
+  "model": "core.agenciatransporte",
+  "pk": 201,
+  "fields": {
+    "nombre": "SHALOM - Ica Santiago",
+    "ubicacion": "Ica / Ica / Santiago / Ica Santiago",
+    "direccion": "Centro Poblado Santiago Mz. E, Lt. 01 Sector Ii Santiago - Ica - Ica",
+    "referencia": "Frente A La Comisaria De Santiago"
+  }
+},
+{
+  "model": "core.agenciatransporte",
+  "pk": 202,
+  "fields": {
+    "nombre": "SHALOM - Carhuaz",
+    "ubicacion": "Ancash / Carhuaz / Carhuaz / Carhuaz",
+    "direccion": "Carretera Central 00s/n Cent Carhuaz - Carhuaz - Áncash",
+    "referencia": "Media Cuadra Antes De Llegar Al Estadio Municipal Capitan Carlos Mejia"
+  }
+},
+{
+  "model": "core.agenciatransporte",
+  "pk": 203,
+  "fields": {
+    "nombre": "SHALOM - Casma",
+    "ubicacion": "Ancash / Casma / Casma / Casma",
+    "direccion": "Av. Miguel Grau Mz. D 4 Lt. 1 Casma - Ancash",
+    "referencia": "Frente Al Jardín De Infancia"
+  }
+},
+{
+  "model": "core.agenciatransporte",
+  "pk": 204,
+  "fields": {
+    "nombre": "SHALOM - Tingo Maria Co Buenos Aires",
+    "ubicacion": "Huanuco / Leoncio Prado / Rupa Rupa / Tingo Maria Co Buenos Aires",
+    "direccion": "Calle Rosario Central,",
+    "referencia": "Ref. Segunda Entrada De Buenos Aires, En La Misma Esquina"
+  }
+},
+{
+  "model": "core.agenciatransporte",
+  "pk": 205,
+  "fields": {
+    "nombre": "SHALOM - Huanta",
+    "ubicacion": "Ayacucho / Huanta / Huanta / Huanta",
+    "direccion": "Jr. Gervasio Santillana N°976 - Huanta - Ayacucho.",
+    "referencia": "Cruce Con Jr. Revolución"
+  }
+},
+{
+  "model": "core.agenciatransporte",
+  "pk": 206,
+  "fields": {
+    "nombre": "SHALOM - Tingo María - Leoncio Prado",
+    "ubicacion": "Huanuco / Leoncio Prado / Rupa Rupa / Tingo María - Leoncio Prado",
+    "direccion": "Av. Tito Jaime 914, Rupa Rupa- Leoncio Prado - Huanuco",
+    "referencia": "A Dos Cdras. De La Plaza De Armas Leoncio Pardo"
+  }
+},
+{
+  "model": "core.agenciatransporte",
+  "pk": 207,
+  "fields": {
+    "nombre": "SHALOM - Yungay",
+    "ubicacion": "Ancash / Yungay / Yungay / Yungay",
+    "direccion": "Jr. Industrial, Lte. 14 - Yungay",
+    "referencia": "Al Costado Del Terminal Terrestre Y La Tapiceria Fredy"
+  }
+},
+{
+  "model": "core.agenciatransporte",
+  "pk": 208,
+  "fields": {
+    "nombre": "SHALOM - Ayacucho Co",
+    "ubicacion": "Ayacucho / Huamanga / Ayacucho / Ayacucho Co",
+    "direccion": "Aa.hh Complejo Artesanal T1 Lt1 - Ayacucho",
+    "referencia": "Ref. erencia : A Una Cuadra De La Puerta 2 Del Terminal Terrestre Libertadores De América"
+  }
+},
+{
+  "model": "core.agenciatransporte",
+  "pk": 209,
+  "fields": {
+    "nombre": "SHALOM - Jesus Nazareno",
+    "ubicacion": "Ayacucho / Huamanga / Jesus Nazareno / Jesus Nazareno",
+    "direccion": "Jr. José María Eguren 451 - Jesus Nazareno - Huamanga - Ayacucho",
+    "referencia": "Cruce Con Jr. Mariano Melgar"
+  }
+},
+{
+  "model": "core.agenciatransporte",
+  "pk": 210,
+  "fields": {
+    "nombre": "SHALOM - Carmen Alto",
+    "ubicacion": "Ayacucho / Huamanga / Carmen Alto / Carmen Alto",
+    "direccion": "Asentamiento Humano Carmen Alto Mz B1 Lote 9 Zona Ii Acuchimay Carmen Alto – Huamanga- Ayacucho",
+    "referencia": "A 1 Cuadra De La Municipalidad De Carmen Alto"
+  }
+},
+{
+  "model": "core.agenciatransporte",
+  "pk": 211,
+  "fields": {
+    "nombre": "SHALOM - Caraz",
+    "ubicacion": "Ancash / Huaylas / Caraz / Caraz",
+    "direccion": "Av. 9 De Octubre N° 259 - Huaylas,",
+    "referencia": "Ref. Al Costado De La Empresa Móvil Tours"
+  }
+},
+{
+  "model": "core.agenciatransporte",
+  "pk": 212,
+  "fields": {
+    "nombre": "SHALOM - Aucayacu",
+    "ubicacion": "Huanuco / Leoncio Prado / Jose Crespo Y Castil / Aucayacu",
+    "direccion": "Jr. Chiclayo 247 0c-02 Cent Aucayu, Leoncio Prado, Huánuco",
+    "referencia": "Atrás Del Estadio Municipal"
+  }
+},
+{
+  "model": "core.agenciatransporte",
+  "pk": 213,
+  "fields": {
+    "nombre": "SHALOM - Av. Pacífico Belen",
+    "ubicacion": "Ancash / Santa / Nuevo Chimbote / Av. Pacífico Belen",
+    "direccion": "Aa.hh. Belen Mz O Lt 28 - Nuevo Chimbote - Santa - Ancash",
+    "referencia": "Frente Al Grifo Doxa"
+  }
+},
+{
+  "model": "core.agenciatransporte",
+  "pk": 214,
+  "fields": {
+    "nombre": "SHALOM - Ovalo De La Familia",
+    "ubicacion": "Ancash / Santa / Nuevo Chimbote / Ovalo De La Familia",
+    "direccion": "Urbanización José Carlos Mariategui (ex Unicreto) Mz R 3 Lt 3",
+    "referencia": "A Una Cuadra Del Óvalo La Familia"
+  }
+},
+{
+  "model": "core.agenciatransporte",
+  "pk": 215,
+  "fields": {
+    "nombre": "SHALOM - Garatea",
+    "ubicacion": "Ancash / Santa / Nuevo Chimbote / Garatea",
+    "direccion": "Urb. Nicolas Garatea Mz. 100 lt. 24 - Nuevo Chimbote - Santa - Ancash",
+    "referencia": "Frente Al Paradero Autos N.- Garatea"
+  }
+},
+{
+  "model": "core.agenciatransporte",
+  "pk": 216,
+  "fields": {
+    "nombre": "SHALOM - Tres De Octubre",
+    "ubicacion": "Ancash / Santa / Nuevo Chimbote / Tres De Octubre",
+    "direccion": "Av. José Pardo Mz. K, Lt. 17 - Tres De Octubre,",
+    "referencia": "Ref. Frente Al Óvalo Las Américas"
+  }
+},
+{
+  "model": "core.agenciatransporte",
+  "pk": 217,
+  "fields": {
+    "nombre": "SHALOM - Av. Los Pescadores Co",
+    "ubicacion": "Ancash / Santa / Chimbote / Av. Los Pescadores Co",
+    "direccion": "Par. Parcela N° 16757 - E Sector La Perla Tres Cabezas - Ancash",
+    "referencia": "frente Al Estadio Centenario"
+  }
+},
+{
+  "model": "core.agenciatransporte",
+  "pk": 218,
+  "fields": {
+    "nombre": "SHALOM - Av Enrique Meiggs",
+    "ubicacion": "Ancash / Santa / Chimbote / Av Enrique Meiggs",
+    "direccion": "Av. Enrique Meiggs N° 2457.",
+    "referencia": "Sin referencia"
+  }
+},
+{
+  "model": "core.agenciatransporte",
+  "pk": 219,
+  "fields": {
+    "nombre": "SHALOM - El Ingenio",
+    "ubicacion": "Ica / Nazca / El Ingenio / El Ingenio",
+    "direccion": "Av. Principal Tulin 204, El Ingenio - Nazca - Ica",
+    "referencia": "Fremte A A La Plaza De Tulin"
+  }
+},
+{
+  "model": "core.agenciatransporte",
+  "pk": 220,
+  "fields": {
+    "nombre": "SHALOM - Aguaytía",
+    "ubicacion": "Ucayali / Padre Abad / Aguaytia / Aguaytía",
+    "direccion": "U. Vecinal Barrio Unido Mz. 1 Lt. 2, Padre Abad - Ucayali",
+    "referencia": "Al Costado Del Terminal Terrestre De Aguaytia"
+  }
+},
+{
+  "model": "core.agenciatransporte",
+  "pk": 221,
+  "fields": {
+    "nombre": "SHALOM - Av Jose Galvez",
+    "ubicacion": "Ancash / Santa / Chimbote / Av Jose Galvez",
+    "direccion": "Av. José Gálvez 791, Chimbote - Santa - Ancash",
+    "referencia": "a 1 Cdra. Antes De Llegar Al Puente Gálvez"
+  }
+},
+{
+  "model": "core.agenciatransporte",
+  "pk": 222,
+  "fields": {
+    "nombre": "SHALOM - Av Circunvalacion Nazca",
+    "ubicacion": "Ica / Nazca / Nazca / Av Circunvalacion Nazca",
+    "direccion": "En La Esquina De La Av. Circunvalación Con Calle S/n, Hoy Calle Las Mercedes S/n Nasca",
+    "referencia": "Ref. erencia: Al Lado De La Iep Jean Piaget"
+  }
+},
+{
+  "model": "core.agenciatransporte",
+  "pk": 223,
+  "fields": {
+    "nombre": "SHALOM - Vista Alegre Co",
+    "ubicacion": "Ica / Nazca / Vista Alegre / Vista Alegre Co",
+    "direccion": "carretera Panamericana Sur N° 906, Vista Alegre - Nazca - ica",
+    "referencia": "Frente Al Aeropuerto De Vista Alegre"
+  }
+},
+{
+  "model": "core.agenciatransporte",
+  "pk": 224,
+  "fields": {
+    "nombre": "SHALOM - Uchiza",
+    "ubicacion": "San Martin / Tocache / Uchiza / Uchiza",
+    "direccion": "Av. Leoncio Prado N°524 - Uchiza - Tocache - San Martin",
+    "referencia": "A Media Cdra. De La Plaza Central / Frente A Coopact"
+  }
+},
+{
+  "model": "core.agenciatransporte",
+  "pk": 225,
+  "fields": {
+    "nombre": "SHALOM - Jr Fredy Aliaga Co",
+    "ubicacion": "San Martin / Tocache / Tocache / Jr Fredy Aliaga Co",
+    "direccion": "Jr. Fredy Aliaga N°3046 -tocache - Tocache - San Martin",
+    "referencia": "al Costado Del Recreo Campestre Estragos"
+  }
+},
+{
+  "model": "core.agenciatransporte",
+  "pk": 226,
+  "fields": {
+    "nombre": "SHALOM - Chao",
+    "ubicacion": "La Libertad / Viru / Chao / Chao",
+    "direccion": "Av. Victor Raul Haya De La Torre 575 Chao - Viru",
+    "referencia": "A Media Cdra. De La Comisaría De Chao"
+  }
+},
+{
+  "model": "core.agenciatransporte",
+  "pk": 227,
+  "fields": {
+    "nombre": "SHALOM - Av Fernando Belaunde",
+    "ubicacion": "San Martin / Tocache / Tocache / Av Fernando Belaunde",
+    "direccion": "Av. Fernando Belaunde C-09 Mz H6 (21), Lt. 04, Cercado De Tocache",
+    "referencia": "Frente Al Mercadillo De Tocache"
+  }
+},
+{
+  "model": "core.agenciatransporte",
+  "pk": 228,
+  "fields": {
+    "nombre": "SHALOM - San Juan De Marcona",
+    "ubicacion": "Ica / Nazca / Marcona / San Juan De Marcona",
+    "direccion": "Aa.hh. San Martín De Porres E-4 San Juan De Marcona - Nazca - Ica",
+    "referencia": "cruce De Av. Las Orquídeas Con Av. San Martin De Porras A Dos Puertas Del Hotel San Martin"
+  }
+},
+{
+  "model": "core.agenciatransporte",
+  "pk": 229,
+  "fields": {
+    "nombre": "SHALOM - Andahuaylas",
+    "ubicacion": "Apurimac / Andahuaylas / Andahuaylas / Andahuaylas",
+    "direccion": "Av. Los Cedros 274,",
+    "referencia": "Ref. A 70 Metros Del Puente Del Hospital De Andahuaylas"
+  }
+},
+{
+  "model": "core.agenciatransporte",
+  "pk": 230,
+  "fields": {
+    "nombre": "SHALOM - Puente Viru",
+    "ubicacion": "La Libertad / Viru / Viru / Puente Viru",
+    "direccion": "Panamericana Norte N° 933 Puente Virú - Virú - La Libertad",
+    "referencia": "A Media Cdra. Del Grifo Zona Etna/media Cdra. Del Semaforo Zona Etna"
+  }
+},
+{
+  "model": "core.agenciatransporte",
+  "pk": 231,
+  "fields": {
+    "nombre": "SHALOM - Viru Centro",
+    "ubicacion": "La Libertad / Viru / Viru / Viru Centro",
+    "direccion": "Calle Puno N° 125 - Mz. 32 Lt. 7a - Virú - La Libertad",
+    "referencia": "A Media Cdra. Del Cruce De La Av. Viru Con La Calle Jorge Chavez / a Media Cdra. De La Plazuela Maria Parado De Bellido"
+  }
+},
+{
+  "model": "core.agenciatransporte",
+  "pk": 232,
+  "fields": {
+    "nombre": "SHALOM - Huamachuco",
+    "ubicacion": "La Libertad / Sanchez Carrion / Huamachuco / Huamachuco",
+    "direccion": "Jr. Simon Bolivar 763, Huamachuco Sanchez Carrion - La Libertad",
+    "referencia": "Entre Jr. Independecia Y Jr. Alfonso Ugarte"
+  }
+},
+{
+  "model": "core.agenciatransporte",
+  "pk": 233,
+  "fields": {
+    "nombre": "SHALOM - Moche",
+    "ubicacion": "La Libertad / Trujillo / Moche / Moche",
+    "direccion": "Av. La Marina Lote 25 - B – Moche – Trujillo - La Libertad",
+    "referencia": "A Media Cdra De La Comisaría De Moche"
+  }
+},
+{
+  "model": "core.agenciatransporte",
+  "pk": 234,
+  "fields": {
+    "nombre": "SHALOM - Pucallpa Co Federico Basadre",
+    "ubicacion": "Ucayali / Coronel Portillo / Pucallpa Yarinacocha / Pucallpa Co Federico Basadre",
+    "direccion": "Carretera Federico Basadre Km 6.800 Yarinacocha - Coronel Portillo - Ucayali",
+    "referencia": "Entrada Del Asentamiento Humano Alan Sisley/al Costado De La Empresa Jvj Service Oriente Sac"
+  }
+},
+{
+  "model": "core.agenciatransporte",
+  "pk": 235,
+  "fields": {
+    "nombre": "SHALOM - Manantay Av Tupac Amaru",
+    "ubicacion": "Ucayali / Coronel Portillo / Pucallpa Manantay / Manantay Av Tupac Amaru",
+    "direccion": "Av. Tupac Amaru 2315 manantay - Coronel Portillo - Ucayali",
+    "referencia": "A Media Cdra. De La Polleria Emanuel"
+  }
+},
+{
+  "model": "core.agenciatransporte",
+  "pk": 236,
+  "fields": {
+    "nombre": "SHALOM - Quillabamba",
+    "ubicacion": "Cusco / La Convencion / Santa Ana / Quillabamba",
+    "direccion": "Jr. Puno Lt. 10 Y 11 Mz. G Urb. Santa Ana, Cusco - La Convencion - Santa Ana",
+    "referencia": "A Media Cdra.l Del Estadio Municipal De Quillabamba / Cruce Con Prolongacion Jr. Martin Pio Concha"
+  }
+},
+{
+  "model": "core.agenciatransporte",
+  "pk": 237,
+  "fields": {
+    "nombre": "SHALOM - Yarinacocha Av Universitaria",
+    "ubicacion": "Ucayali / Coronel Portillo / Pucallpa Yarinacocha / Yarinacocha Av Universitaria",
+    "direccion": "Av. Universitaria Mza A Lote 6, Yarinacocha - Coronel Portillo - Ucayali",
+    "referencia": "A Media Cdra. Del Local Rokalpa"
+  }
+},
+{
+  "model": "core.agenciatransporte",
+  "pk": 238,
+  "fields": {
+    "nombre": "SHALOM - Manantay Av Aguaytia",
+    "ubicacion": "Ucayali / Coronel Portillo / Pucallpa Manantay / Manantay Av Aguaytia",
+    "direccion": "Av. Aguaytia Mz., 26 Lt. 20 manantay - Coronel Portillo - Ucayali",
+    "referencia": "A Media Cdra. Del Nuevo Mercado De San Fernando"
+  }
+},
+{
+  "model": "core.agenciatransporte",
+  "pk": 239,
+  "fields": {
+    "nombre": "SHALOM - Calleria Jr Jose Galvez",
+    "ubicacion": "Ucayali / Coronel Portillo / Pucallpa Calleria / Calleria Jr Jose Galvez",
+    "direccion": "Jr. Jose Galvez 147 Calleria - Coronel Portillo - Ucayali.",
+    "referencia": "A Media Cuadra De La Av. Centenario"
+  }
+},
+{
+  "model": "core.agenciatransporte",
+  "pk": 240,
+  "fields": {
+    "nombre": "SHALOM - Calleria Av Saenz Peña",
+    "ubicacion": "Ucayali / Coronel Portillo / Pucallpa Calleria / Calleria Av Saenz Peña",
+    "direccion": "Av. Saenz Peña 229, Calleria - Coronel Portillo - Ucayali",
+    "referencia": "A Dos Cuadras Del Ovalo De Federico Basadre Y Saenz Peña"
+  }
+},
+{
+  "model": "core.agenciatransporte",
+  "pk": 241,
+  "fields": {
+    "nombre": "SHALOM - Yarinacocha Centro",
+    "ubicacion": "Ucayali / Coronel Portillo / Pucallpa Yarinacocha / Yarinacocha Centro",
+    "direccion": "Jr. Tupac Amaru, Mz. 50, Lt. 07,",
+    "referencia": "Ref. A Espalda De Maestranza De Yarinacocha"
+  }
+},
+{
+  "model": "core.agenciatransporte",
+  "pk": 242,
+  "fields": {
+    "nombre": "SHALOM - Abancay",
+    "ubicacion": "Apurimac / Abancay / Abancay / Abancay",
+    "direccion": "Av. Panamericana S/n - Abancay - Apurímac",
+    "referencia": "A 100 Metros De La Comisaría De Bellavista, Al Costado De Maderera Vega"
+  }
+},
+{
+  "model": "core.agenciatransporte",
+  "pk": 243,
+  "fields": {
+    "nombre": "SHALOM - Trujillo La Perla",
+    "ubicacion": "La Libertad / Trujillo / Trujillo / Trujillo La Perla",
+    "direccion": "Av. La Perla Mz. E Lote 05 Urb. Ingenieria – Trujillo – La Libertad",
+    "referencia": "A 1 Cdra. Del Colegio Bruning"
+  }
+},
+{
+  "model": "core.agenciatransporte",
+  "pk": 244,
+  "fields": {
+    "nombre": "SHALOM - Calle Santa Cruz - America Sur",
+    "ubicacion": "La Libertad / Trujillo / Trujillo / Calle Santa Cruz - America Sur",
+    "direccion": "Calle Santa Cruz n° 389 Chicago - Trujillo - La Libertad",
+    "referencia": "A Media Cdra. De La Av. America Sur/a Media Cuadra Del Estadio Chan Chan."
+  }
+},
+{
+  "model": "core.agenciatransporte",
+  "pk": 245,
+  "fields": {
+    "nombre": "SHALOM - Av Larco",
+    "ubicacion": "La Libertad / Trujillo / Victor Larco Herrera / Av Larco",
+    "direccion": "Av. Larco 865, Trujillo - Trujillo - La Libertad",
+    "referencia": "Mz X Lt 28 Cui San Andres V Etapa Tercer Sector Y Frente Al Colegio Jesus Maria"
+  }
+},
+{
+  "model": "core.agenciatransporte",
+  "pk": 246,
+  "fields": {
+    "nombre": "SHALOM - Atahualpa",
+    "ubicacion": "La Libertad / Trujillo / Trujillo / Atahualpa",
+    "direccion": "Calle Atahualpa 481 – Trujillo – La Libertad",
+    "referencia": "A 1/2 Cdra De La Av Los Incas"
+  }
+},
+{
+  "model": "core.agenciatransporte",
+  "pk": 247,
+  "fields": {
+    "nombre": "SHALOM - Ovalo Papal",
+    "ubicacion": "La Libertad / Trujillo / Trujillo / Ovalo Papal",
+    "direccion": "Urb. Vista Hermosa Mz. F Lt. 11 Piso °1 Trujillo - Trujillo - La Libertad",
+    "referencia": "A Espaldas Del Metro Del Ovalo Papal"
+  }
+},
+{
+  "model": "core.agenciatransporte",
+  "pk": 248,
+  "fields": {
+    "nombre": "SHALOM - Otuzco",
+    "ubicacion": "La Libertad / Otuzco / Otuzco / Otuzco",
+    "direccion": "Av. Alfredo Gutiérrez N° 120 - Otuzco - Otuzco - La Libertad.",
+    "referencia": "Sin referencia"
+  }
+},
+{
+  "model": "core.agenciatransporte",
+  "pk": 249,
+  "fields": {
+    "nombre": "SHALOM - Av Hnos Uceda - America Norte",
+    "ubicacion": "La Libertad / Trujillo / Trujillo / Av Hnos Uceda - America Norte",
+    "direccion": "Av. Hermanos Uceda Meza N° 269 Urb Miraflores Ii Etapa - trujillo - Trujillo - La Libertad",
+    "referencia": "A Una Cdra. De Av. America Norte. / Entre Av. Miraflores Y Av. Salvador Lara"
+  }
+},
+{
+  "model": "core.agenciatransporte",
+  "pk": 250,
+  "fields": {
+    "nombre": "SHALOM - Calle Liverpool",
+    "ubicacion": "La Libertad / Trujillo / Trujillo / Calle Liverpool",
+    "direccion": "Calle Liverpool N° 329 / Urb. Santa Isabel - Trujillo.",
+    "referencia": "A Una Cuadra Antes De La Iglesia De Mansiche"
+  }
+},
+{
+  "model": "core.agenciatransporte",
+  "pk": 251,
+  "fields": {
+    "nombre": "SHALOM - Av Hermanos Angulo",
+    "ubicacion": "La Libertad / Trujillo / El Porvenir / Av Hermanos Angulo",
+    "direccion": "Av. Hermanos Angulo 628, Trujillo",
+    "referencia": "A Espaldas De La Municipalidad El Porvenir"
+  }
+},
+{
+  "model": "core.agenciatransporte",
+  "pk": 252,
+  "fields": {
+    "nombre": "SHALOM - Jr. Cahuide",
+    "ubicacion": "La Libertad / Trujillo / El Porvenir / Jr. Cahuide",
+    "direccion": "Jr. Cahuide N° 342 Aa.hh La Merced - El Porvenir - Trujillo - La Libertad",
+    "referencia": "A Una Cdra. Del Arco Del Porvenir / A Una Cdra. De La Parroquia El Buen Pastor"
+  }
+},
+{
+  "model": "core.agenciatransporte",
+  "pk": 253,
+  "fields": {
+    "nombre": "SHALOM - Alto Trujillo",
+    "ubicacion": "La Libertad / Trujillo / El Porvenir / Alto Trujillo",
+    "direccion": "Av. Prolongación 12 De Noviembre, Mz. Q, Lt. 25,",
+    "referencia": "Ref. A Media Cdra. De La Comisaría Alto Trujillo"
+  }
+},
+{
+  "model": "core.agenciatransporte",
+  "pk": 254,
+  "fields": {
+    "nombre": "SHALOM - Av. Las Magnolias",
+    "ubicacion": "La Libertad / Trujillo / El Porvenir / Av. Las Magnolias",
+    "direccion": "Av. Las Magnolias Mz. 25 Lt. 2a Nuevo Porvenir, El Porvenir - Trujillo - La Libertad",
+    "referencia": "A Una Cdra. Del Poder Judicial Cisaj Sede El Porvenir"
+  }
+},
+{
+  "model": "core.agenciatransporte",
+  "pk": 255,
+  "fields": {
+    "nombre": "SHALOM - Av Tahuantinsuyo",
+    "ubicacion": "La Libertad / Trujillo / La Esperanza / Av Tahuantinsuyo",
+    "direccion": "Av. Tahuantinsuyo N° 739, la Esperanza – trujillo – la Libertad",
+    "referencia": "Diagonal A Grifo El Amigo. / Entre Pasaje Santa Ana Y Av. Los Laureles"
+  }
+},
+{
+  "model": "core.agenciatransporte",
+  "pk": 256,
+  "fields": {
+    "nombre": "SHALOM - Ovalo Huanchaco Co",
+    "ubicacion": "La Libertad / Trujillo / Huanchaco / Ovalo Huanchaco Co",
+    "direccion": "Carretera Via De Evitamiento 576.2 Huanchaquito Alto - Trujillo - La Libertad",
+    "referencia": "A 1 Cdra. De Ovalo Huanchaco / Al Costado De Condominio Las Brisas"
+  }
+},
+{
+  "model": "core.agenciatransporte",
+  "pk": 257,
+  "fields": {
+    "nombre": "SHALOM - Wichanzao",
+    "ubicacion": "La Libertad / Trujillo / La Esperanza / Wichanzao",
+    "direccion": "Mz. 1 Lt. 23 Aa.hh Wichanzao – la Esperanza – trujillo – la Libertad",
+    "referencia": "Al Costado Del Almacén Sunat. / Diagonal Al Hospital De Alta Complejidad Virgen De La Puerta"
+  }
+},
+{
+  "model": "core.agenciatransporte",
+  "pk": 258,
+  "fields": {
+    "nombre": "SHALOM - El Milagro",
+    "ubicacion": "La Libertad / Trujillo / Huanchaco / El Milagro",
+    "direccion": "Av. Industrial Mz 23 Lt. 13 Sector Ii – el Milagro, Huanchaco - Trujillo - La Libertad",
+    "referencia": "A 2 cdras. de la plaza de armas de el Milagro"
+  }
+},
+{
+  "model": "core.agenciatransporte",
+  "pk": 259,
+  "fields": {
+    "nombre": "SHALOM - Cajabamba",
+    "ubicacion": "Cajamarca / Cajabamba / Cajabamba / Cajabamba",
+    "direccion": "Jr. Caceres N° 211 Cajabamba – Cajamarca",
+    "referencia": "Esquina Con Jose Leal"
+  }
+},
+{
+  "model": "core.agenciatransporte",
+  "pk": 260,
+  "fields": {
+    "nombre": "SHALOM - Chala",
+    "ubicacion": "Arequipa / Caraveli / Chala / Chala",
+    "direccion": "Av. Emancipacion Nro. S/n Mz. 78 Lt. 10.",
+    "referencia": "A Media Cdra. Del Parque Del Niño Chalino"
+  }
+},
+{
+  "model": "core.agenciatransporte",
+  "pk": 261,
+  "fields": {
+    "nombre": "SHALOM - Casa Grande",
+    "ubicacion": "La Libertad / Ascope / Casa Grande / Casa Grande",
+    "direccion": "Calle Luis sánchez N° 152 Sector Parte Alta. Casa Grande - Ascope - La Libertad",
+    "referencia": "Cruce Con av. Estadio"
+  }
+},
+{
+  "model": "core.agenciatransporte",
+  "pk": 262,
+  "fields": {
+    "nombre": "SHALOM - San Marcos",
+    "ubicacion": "Cajamarca / San Marcos / Pedro Galvez / San Marcos",
+    "direccion": "Jr. Adolfo Amorin Bueno N° 140 San Marcos – Cajamarca",
+    "referencia": "Al Frente De La Plaza Agropecuaria"
+  }
+},
+{
+  "model": "core.agenciatransporte",
+  "pk": 263,
+  "fields": {
+    "nombre": "SHALOM - Juanjuí Fernando Belaunde Terry Co",
+    "ubicacion": "San Martin / Mariscal Caceres / Juanjui / Juanjuí Fernando Belaunde Terry Co",
+    "direccion": "Carretera Fernando Terry Km. 1 S/n",
+    "referencia": "Ref. Al Costado De Paradero De Autos Huallaga Express"
+  }
+},
+{
+  "model": "core.agenciatransporte",
+  "pk": 264,
+  "fields": {
+    "nombre": "SHALOM - Juanjui Centro",
+    "ubicacion": "San Martin / Mariscal Caceres / Juanjui / Juanjui Centro",
+    "direccion": "Jr. Sargento Lorez N° 568, Juanjui - Mariscal Cáceres - San Martin",
+    "referencia": "A una Cdra. De Del Jr. Huallaga Cdra. 11 Y A Una Cdra. De Importaciones Patricia"
+  }
+},
+{
+  "model": "core.agenciatransporte",
+  "pk": 265,
+  "fields": {
+    "nombre": "SHALOM - Paijan",
+    "ubicacion": "La Libertad / Ascope / Paijan / Paijan",
+    "direccion": "Av. Panamericana Norte N° 1320 - Paijan",
+    "referencia": "Sin referencia"
+  }
+},
+{
+  "model": "core.agenciatransporte",
+  "pk": 266,
+  "fields": {
+    "nombre": "SHALOM - San Martin Bellavista",
+    "ubicacion": "San Martin / Bellavista / Bellavista / San Martin Bellavista",
+    "direccion": "Av. Lima S/n C-4 Mz 71 – Lote A – Tercer Piso, Bellavista- Bellavista- San Martin",
+    "referencia": "espaldas De Ferretería El Iman"
+  }
+},
+{
+  "model": "core.agenciatransporte",
+  "pk": 267,
+  "fields": {
+    "nombre": "SHALOM - Huaraclla",
+    "ubicacion": "Cajamarca / Cajamarca / Jesus / Huaraclla",
+    "direccion": "Mz. A Lote S/n Cp Huaraclla - Jesus - Cajamarca",
+    "referencia": "A Una Cdra. De La I.e. José Olaya Balandra."
+  }
+},
+{
+  "model": "core.agenciatransporte",
+  "pk": 268,
+  "fields": {
+    "nombre": "SHALOM - Cusco Urubamba",
+    "ubicacion": "Cusco / Urubamba / Urubamba / Cusco Urubamba",
+    "direccion": "Lt. E-3 Fracción -1, Sector Patahuasi, Urubamba – Urubamba - Cusco",
+    "referencia": "A Una Cdra. De La Carretera A Ollantaytambo / A Media Cdra. Del Parque Teresita"
+  }
+},
+{
+  "model": "core.agenciatransporte",
+  "pk": 269,
+  "fields": {
+    "nombre": "SHALOM - Anta Izcuchaca",
+    "ubicacion": "Cusco / Anta / Anta / Anta Izcuchaca",
+    "direccion": "Parque Del Carmen Lt. 1 Mz. B 2, Anta - Anta - Cusco",
+    "referencia": "Paradero Carmen, Pista Principal Izcuchaca"
+  }
+},
+{
+  "model": "core.agenciatransporte",
+  "pk": 270,
+  "fields": {
+    "nombre": "SHALOM - Barrio San Martín",
+    "ubicacion": "Cajamarca / Cajamarca / Cajamarca / Barrio San Martín",
+    "direccion": "Jirón Los Gladiolos N° 336 barrio San Martín, Cajamarca – Cajamarca – Cajamarca",
+    "referencia": "A La Altura De La Cdra. 13 De La Vía De Evitamiento Sur /a Una Cdra. De La Universidad Nacional De Cajamarca"
+  }
+},
+{
+  "model": "core.agenciatransporte",
+  "pk": 271,
+  "fields": {
+    "nombre": "SHALOM - Baños Del Inca",
+    "ubicacion": "Cajamarca / Cajamarca / Los Banos Del Inca / Baños Del Inca",
+    "direccion": "Jr. Cahuide N° 242 – Lotiz. Hurtado Miller – Baños Del Inca – Cajamarca",
+    "referencia": "A Espaldas De Senati Y A Una Cdra. De La Base De Serenazgo De Baños Del Inca"
+  }
+},
+{
+  "model": "core.agenciatransporte",
+  "pk": 272,
+  "fields": {
+    "nombre": "SHALOM - Cajamarca Co",
+    "ubicacion": "Cajamarca / Cajamarca / Cajamarca / Cajamarca Co",
+    "direccion": "Av. Independencia N° 787 Barrio Santa Elena",
+    "referencia": "Sin referencia"
+  }
+},
+{
+  "model": "core.agenciatransporte",
+  "pk": 273,
+  "fields": {
+    "nombre": "SHALOM - Chinchero",
+    "ubicacion": "Cusco / Urubamba / Chinchero / Chinchero",
+    "direccion": "Av. Mateo Pumacahua S/n, Chinchero - Urubamba - Cusco",
+    "referencia": "Al costado De La Caja Cusco / En La Misma Carretera A Urubamba"
+  }
+},
+{
+  "model": "core.agenciatransporte",
+  "pk": 274,
+  "fields": {
+    "nombre": "SHALOM - Saposoa",
+    "ubicacion": "San Martin / Huallaga / Saposoa / Saposoa",
+    "direccion": "Av. Loreto S/n - Saposoa - El Huallaga - San Martin",
+    "referencia": "En El Hostal El Gato, A Una Cdra. Y Media De La Plaza De Armas"
+  }
+},
+{
+  "model": "core.agenciatransporte",
+  "pk": 275,
+  "fields": {
+    "nombre": "SHALOM - Cajamarca Horacio Zevallos",
+    "ubicacion": "Cajamarca / Cajamarca / Cajamarca / Cajamarca Horacio Zevallos",
+    "direccion": "Jr. Emilio Barrantes Mz X Lote 3 Urb. Horacio Zevallos - Cajamarca.",
+    "referencia": "A Una Cuadra De La Universidad Privada Del Norte (upn) Y Vía De Evitamiento Norte Cuadra 13."
+  }
+},
+{
+  "model": "core.agenciatransporte",
+  "pk": 276,
+  "fields": {
+    "nombre": "SHALOM - Barrio San Jose",
+    "ubicacion": "Cajamarca / Cajamarca / Cajamarca / Barrio San Jose",
+    "direccion": "Jr. Chanchamayo N° 1162 - Barrio San José Cajamarca,",
+    "referencia": "Ref. Paralela Con Jr. Huancavelica Y Jr. Sara Macdougall."
+  }
+},
+{
+  "model": "core.agenciatransporte",
+  "pk": 277,
+  "fields": {
+    "nombre": "SHALOM - Huambocancha Baja",
+    "ubicacion": "Cajamarca / Cajamarca / Cajamarca / Huambocancha Baja",
+    "direccion": "Mz. A Lote S/n – Barrio Huambocancha Baja – Cajamarca",
+    "referencia": "A Una Cdra. Del Paradero De La P13/al Costado Del Campo Deportivo El Patriarca"
+  }
+},
+{
+  "model": "core.agenciatransporte",
+  "pk": 278,
+  "fields": {
+    "nombre": "SHALOM - Picota",
+    "ubicacion": "San Martin / Picota / Picota / Picota",
+    "direccion": "Av. Fernando Belaunde Terry Lote 2b Picota - Picota - San Martin.",
+    "referencia": "A Una Cdra. De La Comisaria De Picota Salida A Bellavista"
+  }
+},
+{
+  "model": "core.agenciatransporte",
+  "pk": 279,
+  "fields": {
+    "nombre": "SHALOM - Cusco Calca",
+    "ubicacion": "Cusco / Calca / Calca / Cusco Calca",
+    "direccion": "Av. Vilcanota Mz. A Lt 4 Calca - Cusco",
+    "referencia": "Frente Al Grifo Petro Perú O El Óvalo Puma - Entrada De Calca"
+  }
+},
+{
+  "model": "core.agenciatransporte",
+  "pk": 280,
+  "fields": {
+    "nombre": "SHALOM - Tica Tica",
+    "ubicacion": "Cusco / Cusco / Cusco / Tica Tica",
+    "direccion": "Arco Ticatica Pustipata, Lt. N° A - 11 - 2, Cusco",
+    "referencia": "En La Av. Principal A 3 Cdras. Del Mercado Tica Tica"
+  }
+},
+{
+  "model": "core.agenciatransporte",
+  "pk": 281,
+  "fields": {
+    "nombre": "SHALOM - Av Antonio Lorena",
+    "ubicacion": "Cusco / Cusco / Santiago / Av Antonio Lorena",
+    "direccion": "Prolongación Av. Antonio Lorena # 140 - Santiago, Cusco,",
+    "referencia": "Ref. Al Frente Del Cementerio Almudena"
+  }
+},
+{
+  "model": "core.agenciatransporte",
+  "pk": 282,
+  "fields": {
+    "nombre": "SHALOM - Huancaro",
+    "ubicacion": "Cusco / Cusco / Santiago / Huancaro",
+    "direccion": "Urb. Villa Union F-1-b Huancaro, Santiago - Cusco - Cusco",
+    "referencia": "Frente A La Iglesia De Los Mormones/ A Una Cdra. Del Mercado Huancaro"
+  }
+},
+{
+  "model": "core.agenciatransporte",
+  "pk": 283,
+  "fields": {
+    "nombre": "SHALOM - Urb. Bancopata Av. Industrial",
+    "ubicacion": "Cusco / Cusco / Santiago / Urb. Bancopata Av. Industrial",
+    "direccion": "Av. Industrial Urb. Bancopata J-20, Santiago - Cusco",
+    "referencia": "a 2 Cdras. Del Ovalo Pachacutec, Frente A La Empresa Coca Cola"
+  }
+},
+{
+  "model": "core.agenciatransporte",
+  "pk": 284,
+  "fields": {
+    "nombre": "SHALOM - Av Pachacutec",
+    "ubicacion": "Cusco / Cusco / Wanchaq / Av Pachacutec",
+    "direccion": "Av. Pachacutec 429 - Wanchaq",
+    "referencia": "A 100 Mtrs. De La Piscina Wanchaq"
+  }
+},
+{
+  "model": "core.agenciatransporte",
+  "pk": 285,
+  "fields": {
+    "nombre": "SHALOM - Tembladera Cajamarca",
+    "ubicacion": "Cajamarca / Contumaza / Yonan / Tembladera Cajamarca",
+    "direccion": "Jr. Bolognesi S/n – Tembladera - Yonan - Contumazá - Cajamarca",
+    "referencia": "Al Frente Del Parque Víctor Raúl Haya De La Torre"
+  }
+},
+{
+  "model": "core.agenciatransporte",
+  "pk": 286,
+  "fields": {
+    "nombre": "SHALOM - San Pedro De Lloc",
+    "ubicacion": "La Libertad / Pacasmayo / San Pedro De Lloc / San Pedro De Lloc",
+    "direccion": "Av. Vía De Evitamiento N° 407, San Pedro De Lloc - Pacasmayo - La Libertad",
+    "referencia": "A Media Cdra. De La Calle Libertad/ A Media Cdra. Del Paradero De La Via De Evitamiento"
+  }
+},
+{
+  "model": "core.agenciatransporte",
+  "pk": 287,
+  "fields": {
+    "nombre": "SHALOM - San Pablo Cajamarca",
+    "ubicacion": "Cajamarca / San Pablo / San Pablo / San Pablo Cajamarca",
+    "direccion": "Jr. Tnt. Lorenzo Iglesia N° 910 - San Pablo – Cajamarca - Cajamarca",
+    "referencia": "A Media Cdra. Del Hospital San Pablo"
+  }
+},
+{
+  "model": "core.agenciatransporte",
+  "pk": 288,
+  "fields": {
+    "nombre": "SHALOM - Cusco Parque Industrial",
+    "ubicacion": "Cusco / Cusco / Wanchaq / Cusco Parque Industrial",
+    "direccion": "Av. Las Americas Mz. E Lt. 20, 2da Etapa, Urb. Parque Industrial, Wanchaq - Cusco",
+    "referencia": "Al Frente De Talleres Pfuro, Al Frente De Mederera Urpi, Paralela a La Av Via Expresa."
+  }
+},
+{
+  "model": "core.agenciatransporte",
+  "pk": 289,
+  "fields": {
+    "nombre": "SHALOM - Velasco Astete",
+    "ubicacion": "Cusco / Cusco / Wanchaq / Velasco Astete",
+    "direccion": "Velasco Astete D3 - Wanchaq,",
+    "referencia": "Ref. A 2 Cdras. Del Aereopuerto"
+  }
+},
+{
+  "model": "core.agenciatransporte",
+  "pk": 290,
+  "fields": {
+    "nombre": "SHALOM - Cachimayo - San Sebastian",
+    "ubicacion": "Cusco / Cusco / San Sebastian / Cachimayo - San Sebastian",
+    "direccion": "Urb. Cachimayo A-37 Av. La Cultura – San Sebastian – Cusco",
+    "referencia": "Entre Paradero Enaco Y Parque Cachimayo, A 2 Cuadra De La Universidad Andina."
+  }
+},
+{
+  "model": "core.agenciatransporte",
+  "pk": 291,
+  "fields": {
+    "nombre": "SHALOM - Cusco Co Via Evitamiento",
+    "ubicacion": "Cusco / Cusco / San Sebastian / Cusco Co Via Evitamiento",
+    "direccion": "Av. Evitamiento S/n Ups Chacahuayco, san Sebastian - Cusco - Cusco",
+    "referencia": "Vía evitamiento En El Paradero Horacio"
+  }
+},
+{
+  "model": "core.agenciatransporte",
+  "pk": 292,
+  "fields": {
+    "nombre": "SHALOM - Via Expresa Sur",
+    "ubicacion": "Cusco / Cusco / San Sebastian / Via Expresa Sur",
+    "direccion": "Urb. Tupac Amaru B-1-2 san Sebastian – Cusco",
+    "referencia": "Terminando La Via Expresa Zona Sur"
+  }
+},
+{
+  "model": "core.agenciatransporte",
+  "pk": 293,
+  "fields": {
+    "nombre": "SHALOM - Celendin",
+    "ubicacion": "Cajamarca / Celendin / Celendin / Celendin",
+    "direccion": "Jr. Pedro Ortiz Montoya 148,",
+    "referencia": "Ref. Esquina Con Av. Amazonas"
+  }
+},
+{
+  "model": "core.agenciatransporte",
+  "pk": 294,
+  "fields": {
+    "nombre": "SHALOM - San Jeronimo",
+    "ubicacion": "Cusco / Cusco / San Jeronimo / San Jeronimo",
+    "direccion": "Calle Ciro Alegría 226 - 224",
+    "referencia": "Una Cuadra Antes Del Paradero Penal En El Carril De Bajada"
+  }
+},
+{
+  "model": "core.agenciatransporte",
+  "pk": 295,
+  "fields": {
+    "nombre": "SHALOM - Pacasmayo Centro",
+    "ubicacion": "La Libertad / Pacasmayo / Pacasmayo / Pacasmayo Centro",
+    "direccion": "Av. Gonzalo Ugaz Salcedo S/n - Pacasmayo - La Libertad",
+    "referencia": "Al Costado Del Estadio Municipal De Pacasmayo / A Media Cdra. Del Supermercado Tottus"
+  }
+},
+{
+  "model": "core.agenciatransporte",
+  "pk": 296,
+  "fields": {
+    "nombre": "SHALOM - Pisac",
+    "ubicacion": "Cusco / Calca / Pisac / Pisac",
+    "direccion": "Av Vilcanota S/n, Pisac - Calca - Cusco",
+    "referencia": "A Media Cdra. Del Puente De Pisac / Carretera A Taray"
+  }
+},
+{
+  "model": "core.agenciatransporte",
+  "pk": 297,
+  "fields": {
+    "nombre": "SHALOM - Pacasmayo Las Palmeras",
+    "ubicacion": "La Libertad / Pacasmayo / Pacasmayo / Pacasmayo Las Palmeras",
+    "direccion": "Ctra. Panamericana Norte N° Mz. P Lt. 4a - A.h. Las Palmeras,",
+    "referencia": "Ref. Entre Av. Sucre Y Av. Leoncio Prado"
+  }
+},
+{
+  "model": "core.agenciatransporte",
+  "pk": 298,
+  "fields": {
+    "nombre": "SHALOM - Ciudad De Dios",
+    "ubicacion": "La Libertad / Pacasmayo / Guadalupe / Ciudad De Dios",
+    "direccion": "Mz. A Lt. 01 Cpm Ciudad De Dios - Sec. Los Ángeles – Guadalupe – La Libertad",
+    "referencia": "Al Costado Del Molino Samán Y A Dos Cuadras Del Cruce A Cajamarca"
+  }
+},
+{
+  "model": "core.agenciatransporte",
+  "pk": 299,
+  "fields": {
+    "nombre": "SHALOM - San Miguel Cajamarca",
+    "ubicacion": "Cajamarca / San Miguel / San Miguel / San Miguel Cajamarca",
+    "direccion": "Jr. Bolognesi N° 717 – San Miguel – Cajamarca - Cajamarca",
+    "referencia": "Al Costado Del Coliseo Y El Paradero De Llapa Y Cochán."
+  }
+},
+{
+  "model": "core.agenciatransporte",
+  "pk": 300,
+  "fields": {
+    "nombre": "SHALOM - Guadalupe La Libertad",
+    "ubicacion": "La Libertad / Pacasmayo / Guadalupe / Guadalupe La Libertad",
+    "direccion": "Av. Nilla Cerruty N° 299 - Guadalupe – Pacasmayo – La Libertad",
+    "referencia": "Al Costado Del Grifo Repsol - Neotech"
+  }
+},
+{
+  "model": "core.agenciatransporte",
+  "pk": 301,
+  "fields": {
+    "nombre": "SHALOM - Chepen",
+    "ubicacion": "La Libertad / Chepen / Chepen / Chepen",
+    "direccion": "Prolongacion Ezequiel Gonzales Caceda 193 - Sec. Chepen, Frente Al Coliseo",
+    "referencia": "Sin referencia"
+  }
+},
+{
+  "model": "core.agenciatransporte",
+  "pk": 302,
+  "fields": {
+    "nombre": "SHALOM - Oropesa",
+    "ubicacion": "Cusco / Quispicanchi / Oropesa / Oropesa",
+    "direccion": "Sec. Chimpapampa Apv. Jose Ccarlos Mareategui s/n, Oropesa - Quispicanchi - Cusco",
+    "referencia": "A Una Cdra. De La Carreta A Urcos / A Una Cdra. De La Panificadora Cachito Amarillo"
+  }
+},
+{
+  "model": "core.agenciatransporte",
+  "pk": 303,
+  "fields": {
+    "nombre": "SHALOM - San Jose De Sisa",
+    "ubicacion": "San Martin / El Dorado / San Jose De Sisa / San Jose De Sisa",
+    "direccion": "Jr. Bolognesi Cdra 6, San Jose De Sisa - El Dorado - San Martin",
+    "referencia": "Altura De Jr Lamas Y Jr Eladio Tapullima"
+  }
+},
+{
+  "model": "core.agenciatransporte",
+  "pk": 304,
+  "fields": {
+    "nombre": "SHALOM - Pacanguilla",
+    "ubicacion": "La Libertad / Chepen / Pacanga / Pacanguilla",
+    "direccion": "Carretera Panamericana # 835 - Urb. Pacanguilla - Distrito Pacanga,",
+    "referencia": "Ref. En La Misma Panamericana"
+  }
+},
+{
+  "model": "core.agenciatransporte",
+  "pk": 305,
+  "fields": {
+    "nombre": "SHALOM - Santo Tomas",
+    "ubicacion": "Cusco / Chumbivilcas / Santo Tomas / Santo Tomas",
+    "direccion": "Calle Bolognesi Mz. 02 Lt. 25, Santo Tomas - Chumbivilcas - Cusco",
+    "referencia": "A Espaldas De La Polleria Pico Dorado Y A Media Cdra. De La Av Santa Barbara"
+  }
+},
+{
+  "model": "core.agenciatransporte",
+  "pk": 306,
+  "fields": {
+    "nombre": "SHALOM - Bambamarca",
+    "ubicacion": "Cajamarca / Hualgayoc / Bambamarca / Bambamarca",
+    "direccion": "Av. Tupac Amaru 1105,",
+    "referencia": "Ref. Al Costado Del Paradero Al Cumbe"
+  }
+},
+{
+  "model": "core.agenciatransporte",
+  "pk": 307,
+  "fields": {
+    "nombre": "SHALOM - Tarapoto Co Jr Alfonso Ugarte",
+    "ubicacion": "San Martin / San Martin / Tarapoto / Tarapoto Co Jr Alfonso Ugarte",
+    "direccion": "Jr. Alfonso Ugarte N°2283 - Tarapoto - San Martin - San Martin",
+    "referencia": "frente A La Cancha Sintético El Golazo"
+  }
+},
+{
+  "model": "core.agenciatransporte",
+  "pk": 308,
+  "fields": {
+    "nombre": "SHALOM - Jr. Ramón Castilla",
+    "ubicacion": "San Martin / San Martin / Tarapoto / Jr. Ramón Castilla",
+    "direccion": "Jr. Ramon Castilla N°1362 Tarapoto - San Martin",
+    "referencia": "A Media Cdra. De Mannucci Motor S.a."
+  }
+},
+{
+  "model": "core.agenciatransporte",
+  "pk": 309,
+  "fields": {
+    "nombre": "SHALOM - Jr. Tahuantinsuyo",
+    "ubicacion": "San Martin / San Martin / Tarapoto / Jr. Tahuantinsuyo",
+    "direccion": "Jr. Tahuantinsuyo N° 158 - Tarapoto - San Martín",
+    "referencia": "Al Costado Del Grifo San Martín"
+  }
+},
+{
+  "model": "core.agenciatransporte",
+  "pk": 310,
+  "fields": {
+    "nombre": "SHALOM - Tarapoto La Banda De Shilcayo",
+    "ubicacion": "San Martin / San Martin / La Banda De Shilcayo / Tarapoto La Banda De Shilcayo",
+    "direccion": "Jr. Perú N°186,",
+    "referencia": "Ref. A 2 Cdrs. De La Plaza De La Banda De Shilcayo"
+  }
+},
+{
+  "model": "core.agenciatransporte",
+  "pk": 311,
+  "fields": {
+    "nombre": "SHALOM - Urcos",
+    "ubicacion": "Cusco / Quispicanchi / Urcos / Urcos",
+    "direccion": "Mayupata S/n Paucarbamba, Urcos - Quispicanchi - Cusco",
+    "referencia": "Ref. Al Frende Del Estadio Municipal De Urcos / Al Frente Del Terminal Terrestre De Urcos"
+  }
+},
+{
+  "model": "core.agenciatransporte",
+  "pk": 312,
+  "fields": {
+    "nombre": "SHALOM - Jr Leoncio Prado",
+    "ubicacion": "San Martin / San Martin / Tarapoto / Jr Leoncio Prado",
+    "direccion": "Jr. Leoncio Prado N° 1175,",
+    "referencia": "Ref. A Una Cuadra Del Instituto María Parado De Bellido"
+  }
+},
+{
+  "model": "core.agenciatransporte",
+  "pk": 313,
+  "fields": {
+    "nombre": "SHALOM - Tarapoto Jr. Sargento Lorez",
+    "ubicacion": "San Martin / San Martin / Morales / Tarapoto Jr. Sargento Lorez",
+    "direccion": "Jr. Sargento Lorez N° 264, Morales - San Martin",
+    "referencia": "A Una Cdra. Y Media De La Plaza De Morales, Frente A Vulcano Gas"
+  }
+},
+{
+  "model": "core.agenciatransporte",
+  "pk": 314,
+  "fields": {
+    "nombre": "SHALOM - Lamas",
+    "ubicacion": "San Martin / Lamas / Lamas / Lamas",
+    "direccion": "Jr. 16 De Octubre N°1137,",
+    "referencia": "Ref. A La Espalda Del Grifo Vargas Tello"
+  }
+},
+{
+  "model": "core.agenciatransporte",
+  "pk": 315,
+  "fields": {
+    "nombre": "SHALOM - Chota",
+    "ubicacion": "Cajamarca / Chota / Chota / Chota",
+    "direccion": "Av. Fray José Arana N 805",
+    "referencia": "Ref. erencia : Frente Al Terminal Angel Divino"
+  }
+},
+{
+  "model": "core.agenciatransporte",
+  "pk": 316,
+  "fields": {
+    "nombre": "SHALOM - Ocongate",
+    "ubicacion": "Cusco / Quispicanchi / Ocongate / Ocongate",
+    "direccion": "Sect. Mayo Ucjo S/n, Ocongate - Quispicanchi - Cusco",
+    "referencia": "A La Espalda Del Terminal De Buses De Ocongate / A Orillas De La Carreta A Mazuko"
+  }
+},
+{
+  "model": "core.agenciatransporte",
+  "pk": 317,
+  "fields": {
+    "nombre": "SHALOM - Chachapoyas Co Dos De Mayo",
+    "ubicacion": "Amazonas / Chachapoyas / Chachapoyas / Chachapoyas Co Dos De Mayo",
+    "direccion": "Jr. Dos De Mayo Cdra. 15 S/n Chachapoyas,",
+    "referencia": "Ref. Junto A Terminal De Combis Etsa"
+  }
+},
+{
+  "model": "core.agenciatransporte",
+  "pk": 318,
+  "fields": {
+    "nombre": "SHALOM - Chachapoyas Jr Grau",
+    "ubicacion": "Amazonas / Chachapoyas / Chachapoyas / Chachapoyas Jr Grau",
+    "direccion": "Jr. Grau 270",
+    "referencia": "Junto A La Agencia De Viajes Monteverde"
+  }
+},
+{
+  "model": "core.agenciatransporte",
+  "pk": 319,
+  "fields": {
+    "nombre": "SHALOM - Reque",
+    "ubicacion": "Lambayeque / Chiclayo / Reque / Reque",
+    "direccion": "Av. Mariscal Ramon Castilla Mz. 4 Lote 14, Reque - Chiclayo - Lambayeque",
+    "referencia": "A Media Cdra. De La Interseccion Con Calle San Martin / A Unos Mtrs De Alborada Eventos Y Recepciones"
+  }
+},
+{
+  "model": "core.agenciatransporte",
+  "pk": 320,
+  "fields": {
+    "nombre": "SHALOM - Monsefu",
+    "ubicacion": "Lambayeque / Chiclayo / Monsefu / Monsefu",
+    "direccion": "av. Venezuela N° 221, Monsefú - Chiclayo - Lambayeque",
+    "referencia": "Ref 01: A Media Cdra. De La Calle Diego Ferre Y A Cdra. Y Media Del Parque Artesanal De Monsefú"
+  }
+},
+{
+  "model": "core.agenciatransporte",
+  "pk": 321,
+  "fields": {
+    "nombre": "SHALOM - Soritor",
+    "ubicacion": "San Martin / Moyobamba / Soritor / Soritor",
+    "direccion": "Jr. Miguel Grau Cdra 7 N°741 Mz.05 Lte.16b, Soritor - Moyobamba - San Martín",
+    "referencia": "A Media Cdra. De La Iglesia Asambleas De Dios"
+  }
+},
+{
+  "model": "core.agenciatransporte",
+  "pk": 322,
+  "fields": {
+    "nombre": "SHALOM - Combapata",
+    "ubicacion": "Cusco / Canchis / Combapata / Combapata",
+    "direccion": "Av. Señor De Huanca S/n - Combapata - Canchis - Cusco",
+    "referencia": "Al Costado Del Grifo Señor De Qoylluriti - A Orillas De La Misma Carretera A Sicuani"
+  }
+},
+{
+  "model": "core.agenciatransporte",
+  "pk": 323,
+  "fields": {
+    "nombre": "SHALOM - Chongoyape",
+    "ubicacion": "Lambayeque / Chiclayo / Chongoyape / Chongoyape",
+    "direccion": "Av. Atahualpa N° 1200 - Chongoyape - Chiclayo - Lambayeque",
+    "referencia": "Interseccion Con Calle Iquitos / A 2 Cdras. De La Interseccion Con La Av. Chiclayo"
+  }
+},
+{
+  "model": "core.agenciatransporte",
+  "pk": 324,
+  "fields": {
+    "nombre": "SHALOM - Patapo",
+    "ubicacion": "Lambayeque / Chiclayo / Patapo / Patapo",
+    "direccion": "Av. Chongoyape N° S/n Sector Cerro Mirador, Patapo - Chiclayo - Lambayeque",
+    "referencia": "A Una Cdra. Y Media De La Intersección Con Av Trapiche / Al Frente Del Polideportivo Del Cerro Mirador"
+  }
+},
+{
+  "model": "core.agenciatransporte",
+  "pk": 325,
+  "fields": {
+    "nombre": "SHALOM - Cutervo",
+    "ubicacion": "Cajamarca / Cutervo / Cutervo / Cutervo",
+    "direccion": "Av. Salomón Vilchez Murga S/n. Cdra 9 Referencia",
+    "referencia": "Frente A La Clínica Cutervo"
+  }
+},
+{
+  "model": "core.agenciatransporte",
+  "pk": 326,
+  "fields": {
+    "nombre": "SHALOM - Tuman",
+    "ubicacion": "Lambayeque / Chiclayo / Tuman / Tuman",
+    "direccion": "Av. El Progreso N° 52 - Sector Santa Rosa,",
+    "referencia": "Ref. Entre La Av. El Progreso Y 1° De Mayo, Frente A La Canchita De Grass Sintético"
+  }
+},
+{
+  "model": "core.agenciatransporte",
+  "pk": 327,
+  "fields": {
+    "nombre": "SHALOM - Luya",
+    "ubicacion": "Amazonas / Luya / Luya / Luya",
+    "direccion": "Jr. Ramón Castilla S/n, Luya - Amazonas",
+    "referencia": "Entre El Colegio Secundario Ramón Castilla Y El Jr. José Gálvez, A Media Cdra. Del Agente De Venta De Pasajes De Civa, Móvil Y Transporte Chiclayo"
+  }
+},
+{
+  "model": "core.agenciatransporte",
+  "pk": 328,
+  "fields": {
+    "nombre": "SHALOM - Av Victor R. Haya Co",
+    "ubicacion": "Lambayeque / Chiclayo / La Victoria / Av Victor R. Haya Co",
+    "direccion": "Av. Víctor Raul Haya De La Torre 2470 La Victoria - Chiclayo",
+    "referencia": "Entre La Via Evitamiento Y Panamericana"
+  }
+},
+{
+  "model": "core.agenciatransporte",
+  "pk": 329,
+  "fields": {
+    "nombre": "SHALOM - Pomalca",
+    "ubicacion": "Lambayeque / Chiclayo / Pomalca / Pomalca",
+    "direccion": "Calle 25 Mz. I Lt. 6 Sect. 6 San Juan, Pomalca - Chiclayo - Lambayeque",
+    "referencia": "A Una Cdra. Y Media De La Intersección Con Av. San Martin/ Al Frente De La Iglesia Mormon"
+  }
+},
+{
+  "model": "core.agenciatransporte",
+  "pk": 330,
+  "fields": {
+    "nombre": "SHALOM - Mariscal Nieto",
+    "ubicacion": "Lambayeque / Chiclayo / Chiclayo / Mariscal Nieto",
+    "direccion": "Calle Mariscal Nieto N° 390,",
+    "referencia": "Ref. Entre Mariscal Nieto Y Miguel Grau"
+  }
+},
+{
+  "model": "core.agenciatransporte",
+  "pk": 331,
+  "fields": {
+    "nombre": "SHALOM - Pimentel",
+    "ubicacion": "Lambayeque / Chiclayo / Pimentel / Pimentel",
+    "direccion": "Calle Miguel Grau Mz B Lote 3 - pimentel - chiclayo - Lambayeque",
+    "referencia": "Al Costado De La Comisaria De Pimentel"
+  }
+},
+{
+  "model": "core.agenciatransporte",
+  "pk": 332,
+  "fields": {
+    "nombre": "SHALOM - Av Las Americas",
+    "ubicacion": "Lambayeque / Chiclayo / Chiclayo / Av Las Americas",
+    "direccion": "Av. Las Américas Lt. 42 Mz. D, Urb. Monterrico - I Etapa, Chiclayo - Chiclayo - Lambayeque",
+    "referencia": "A Media Cdra. entre La Av. Colectora Y Av. Las Americas Y A Media Cdra. Del Grifo Sr. De Sipán"
+  }
+},
+{
+  "model": "core.agenciatransporte",
+  "pk": 333,
+  "fields": {
+    "nombre": "SHALOM - Calle Tahuantinsuyo",
+    "ubicacion": "Lambayeque / Chiclayo / Jose Leonardo Ortiz / Calle Tahuantinsuyo",
+    "direccion": "Calle Tahuantinsuyo 995 - Urb. San Lorenzo - Jose Leonardo Ortiz - Chiclayo - Lambayeque",
+    "referencia": "Entre La Cdra. 2 De Av. América Y La Calle Tahuantinsuyo/a Media Cdra. De La Iglesia Los Mormones"
+  }
+},
+{
+  "model": "core.agenciatransporte",
+  "pk": 334,
+  "fields": {
+    "nombre": "SHALOM - Ovalo Orquideas Co",
+    "ubicacion": "San Martin / Moyobamba / Moyobamba / Ovalo Orquideas Co",
+    "direccion": "Jr. 20 De Abril 2138",
+    "referencia": "Ref. erencia : Altura De La Pampa Del Hambre"
+  }
+},
+{
+  "model": "core.agenciatransporte",
+  "pk": 335,
+  "fields": {
+    "nombre": "SHALOM - Rioja",
+    "ubicacion": "San Martin / Rioja / Rioja / Rioja",
+    "direccion": "Ctra. Fernando Belaúnde Terry N° 415,",
+    "referencia": "Ref. Al Costado De La Clínica Chilcon Hope"
+  }
+},
+{
+  "model": "core.agenciatransporte",
+  "pk": 336,
+  "fields": {
+    "nombre": "SHALOM - Miraflores Chiclayo",
+    "ubicacion": "Lambayeque / Chiclayo / Chiclayo / Miraflores Chiclayo",
+    "direccion": "Av. Panamericana 975 Pp Jj Luis Alberto Sanchez, Chiclayo - Chiclayo - Lambayeque",
+    "referencia": "A Media Cdra. Del Ovalo Señor De Sipan / Al Frente De Derco Center"
+  }
+},
+{
+  "model": "core.agenciatransporte",
+  "pk": 337,
+  "fields": {
+    "nombre": "SHALOM - Av Balta Cdra. 36",
+    "ubicacion": "Lambayeque / Chiclayo / Jose Leonardo Ortiz / Av Balta Cdra. 36",
+    "direccion": "Av. Jose Balta N° 3653 C.p.m. Primero De Mayo Jose Leonardo Ortiz -chiclayo -lambayeque",
+    "referencia": "Entre La Av. Balta Y Néstor Barsallo / a 2 Cuadras De La Av. Chiclayo"
+  }
+},
+{
+  "model": "core.agenciatransporte",
+  "pk": 338,
+  "fields": {
+    "nombre": "SHALOM - Moyobamba Centro",
+    "ubicacion": "San Martin / Moyobamba / Moyobamba / Moyobamba Centro",
+    "direccion": "Jr. Serafín Filomeno N°279, Moyobamba - Moyobamba - San Martín",
+    "referencia": "A Una Cuadra Imedia Del Cumo (centro Cultural De Moyobamba)"
+  }
+},
+{
+  "model": "core.agenciatransporte",
+  "pk": 339,
+  "fields": {
+    "nombre": "SHALOM - Segunda Jerusalen",
+    "ubicacion": "San Martin / Rioja / Elias Soplin Vargas / Segunda Jerusalen",
+    "direccion": "Jr. Lima Mz. 43 Lt. 08 , Elias Soplin Vargas - Rioja - San Martin",
+    "referencia": "Al Costado De Tienda Chingay"
+  }
+},
+{
+  "model": "core.agenciatransporte",
+  "pk": 340,
+  "fields": {
+    "nombre": "SHALOM - Ferreñafe",
+    "ubicacion": "Lambayeque / Ferrenafe / Ferrenafe / Ferreñafe",
+    "direccion": "Av. Andrés A. Cáceres N°550a,",
+    "referencia": "Ref. Al Costado Del Grifo Primax"
+  }
+},
+{
+  "model": "core.agenciatransporte",
+  "pk": 341,
+  "fields": {
+    "nombre": "SHALOM - Lambayeque Centro",
+    "ubicacion": "Lambayeque / Lambayeque / Lambayeque / Lambayeque Centro",
+    "direccion": "Av. Federico Villarreal N° 491, Lambayeque - Lambayeque - Lambayeque",
+    "referencia": "A Media Cdra. De La Interseccion De La av. Federico Villarreal Con Calle Emiliano Niño"
+  }
+},
+{
+  "model": "core.agenciatransporte",
+  "pk": 342,
+  "fields": {
+    "nombre": "SHALOM - Aplao",
+    "ubicacion": "Arequipa / Castilla / Aplao / Aplao",
+    "direccion": "Ubica En La Manzana X1, Lote 07, De La Calle 8 De Setiembre, Aplao - Castilla - Arequipa",
+    "referencia": "A Una Cdra. De Ministerial Público Fiscalía"
+  }
+},
+{
+  "model": "core.agenciatransporte",
+  "pk": 343,
+  "fields": {
+    "nombre": "SHALOM - Lambayeque Panamericana",
+    "ubicacion": "Lambayeque / Lambayeque / Lambayeque / Lambayeque Panamericana",
+    "direccion": "Calle Paraguay Mz. D Lt 2a Unidad Vecinal Indoamérica - lambayeque,",
+    "referencia": "Al Costado De La Fábrica De Kinkones Bruning / A 01 Cuadra Del Puente Lambayeque"
+  }
+},
+{
+  "model": "core.agenciatransporte",
+  "pk": 344,
+  "fields": {
+    "nombre": "SHALOM - Nueva Cajamarca",
+    "ubicacion": "San Martin / Rioja / Nueva Cajamarca / Nueva Cajamarca",
+    "direccion": "Av. Cajamarca Norte Mz. 51 Lt. 15,",
+    "referencia": "Ref. Al Costado De Essalud"
+  }
+},
+{
+  "model": "core.agenciatransporte",
+  "pk": 345,
+  "fields": {
+    "nombre": "SHALOM - Sicuani Av Manuel Callo",
+    "ubicacion": "Cusco / Canchis / Sicuani / Sicuani Av Manuel Callo",
+    "direccion": "Jr. Inambari Nro. 208, Sicuani - Canchis - Cusco",
+    "referencia": "Al Frente Del Bcp Y De Caja Piura"
+  }
+},
+{
+  "model": "core.agenciatransporte",
+  "pk": 346,
+  "fields": {
+    "nombre": "SHALOM - Sicuani Co Ovalo San Andres",
+    "ubicacion": "Cusco / Canchis / Sicuani / Sicuani Co Ovalo San Andres",
+    "direccion": "Prolong. Av. Arequipa 1010 S/n,",
+    "referencia": "Ref. Al Costado Del Grifo Guadalupe En El Óvalo San Andrés"
+  }
+},
+{
+  "model": "core.agenciatransporte",
+  "pk": 347,
+  "fields": {
+    "nombre": "SHALOM - Pedro Ruiz",
+    "ubicacion": "Amazonas / Bongara / Jazan / Pedro Ruiz",
+    "direccion": "Av. Sacsahuaman N° 513 - Pedro Ruiz",
+    "referencia": "A Media Cuadra De La Ugel"
+  }
+},
+{
+  "model": "core.agenciatransporte",
+  "pk": 348,
+  "fields": {
+    "nombre": "SHALOM - Espinar",
+    "ubicacion": "Cusco / Espinar / Yauri ( Espinar ) / Espinar",
+    "direccion": "Av. Tintaya N° 215 Espinar",
+    "referencia": "A Dos Cuadra S De Los Bomberos"
+  }
+},
+{
+  "model": "core.agenciatransporte",
+  "pk": 349,
+  "fields": {
+    "nombre": "SHALOM - Yurimaguas",
+    "ubicacion": "Loreto / Alto Amazonas / Yurimaguas / Yurimaguas",
+    "direccion": "Calle Jorge Chávez N° 300,",
+    "referencia": "Ref. Esquina Con Progreso, Al Costado De Enapu"
+  }
+},
+{
+  "model": "core.agenciatransporte",
+  "pk": 350,
+  "fields": {
+    "nombre": "SHALOM - Tucume",
+    "ubicacion": "Lambayeque / Lambayeque / Tucume / Tucume",
+    "direccion": "Av. Federico Villarreal N° 982 (ctra. Fernando Belaunde Terry),",
+    "referencia": "Ref. A Media Cdra. Del Cementerio Jardines De La Paz"
+  }
+},
+{
+  "model": "core.agenciatransporte",
+  "pk": 351,
+  "fields": {
+    "nombre": "SHALOM - Morrope",
+    "ubicacion": "Lambayeque / Lambayeque / Morrope / Morrope",
+    "direccion": "Calle Tahuantinsuyo N° 821, Morrope - Lambayeque",
+    "referencia": "Frente Al Parque Infantil De Morrope"
+  }
+},
+{
+  "model": "core.agenciatransporte",
+  "pk": 352,
+  "fields": {
+    "nombre": "SHALOM - Jayanca",
+    "ubicacion": "Lambayeque / Lambayeque / Jayanca / Jayanca",
+    "direccion": "Calle Diego Ferre N°1321 - jayanca - Lambayeque",
+    "referencia": "Al Frente Del Centro De Salud De Jayanca / A Media Cdra. Del Grifo Asia"
+  }
+},
+{
+  "model": "core.agenciatransporte",
+  "pk": 353,
+  "fields": {
+    "nombre": "SHALOM - Camana",
+    "ubicacion": "Arequipa / Camana / Camana / Camana",
+    "direccion": "Calle Agustín Gamarra N° 451, Cercado Camaná,",
+    "referencia": "Ref. Al Frente Del Delivey Caseritos"
+  }
+},
+{
+  "model": "core.agenciatransporte",
+  "pk": 354,
+  "fields": {
+    "nombre": "SHALOM - Pardo Miguel Naranjos",
+    "ubicacion": "San Martin / Rioja / Pardo Miguel / Pardo Miguel Naranjos",
+    "direccion": "Jr. Miguel Grau 101 Mz. 34 Lt. 6, Pardo Miguel - Rioja - San Martin",
+    "referencia": "Av. Marginal Cdra 5"
+  }
+},
+{
+  "model": "core.agenciatransporte",
+  "pk": 355,
+  "fields": {
+    "nombre": "SHALOM - Bagua Grande",
+    "ubicacion": "Amazonas / Utcubamba / Bagua Grande / Bagua Grande",
+    "direccion": "Av. Chachapoyas 1094 Sector Gonchillo",
+    "referencia": "A 2 Cuadras De La Clínica Señor De Los Milagros"
+  }
+},
+{
+  "model": "core.agenciatransporte",
+  "pk": 356,
+  "fields": {
+    "nombre": "SHALOM - Calle Yarabamba",
+    "ubicacion": "Arequipa / Caylloma / Majes / Calle Yarabamba",
+    "direccion": "Calle Yarabamba, Mz. Y Lt 7. Villa El Pedregal, Majes - Caylloma - Arequipa",
+    "referencia": "A Media Cdra. De La Notaria Terán Bejar"
+  }
+},
+{
+  "model": "core.agenciatransporte",
+  "pk": 357,
+  "fields": {
+    "nombre": "SHALOM - Av Colonizadores Co",
+    "ubicacion": "Arequipa / Caylloma / Majes / Av Colonizadores Co",
+    "direccion": "Av. Lote Colonizadores. 4 Parcela 180, Majes - Caylloma - Arequipa",
+    "referencia": "A Media Cdra. Del Grifo El Eje"
+  }
+},
+{
+  "model": "core.agenciatransporte",
+  "pk": 358,
+  "fields": {
+    "nombre": "SHALOM - Bagua Capital",
+    "ubicacion": "Amazonas / Bagua / Bagua / Bagua Capital",
+    "direccion": "Av. Héroes De Cenepa N° 345, Bagua - Bagua - Amazonas",
+    "referencia": "Frente Al"
+  }
+},
+{
+  "model": "core.agenciatransporte",
+  "pk": 359,
+  "fields": {
+    "nombre": "SHALOM - Jaen",
+    "ubicacion": "Cajamarca / Jaen / Jaen / Jaen",
+    "direccion": "Av. Pakammuros Cuadra 6 S/n",
+    "referencia": "Ref. erencia: Esquina Con Calle Libertad N° 490"
+  }
+},
+{
+  "model": "core.agenciatransporte",
+  "pk": 360,
+  "fields": {
+    "nombre": "SHALOM - Olmos",
+    "ubicacion": "Lambayeque / Lambayeque / Olmos / Olmos",
+    "direccion": "Av. Augusto B. Leguía Mz. 87 Lt. 32  - olmos - Lambayeque",
+    "referencia": "Al Frente De La Comisaria De Olmos."
+  }
+},
+{
+  "model": "core.agenciatransporte",
+  "pk": 361,
+  "fields": {
+    "nombre": "SHALOM - Mazuko",
+    "ubicacion": "Madre De Dios / Tambopata / Inambari / Mazuko",
+    "direccion": "Av. Los Pioneros, Lt. 2 Y 3, Inambari – Tambopata - Madre De Dios",
+    "referencia": "al Costado Del Terminal Terrestre De Mazuko / Al Pie De La Carretera Al Rio Inambari"
+  }
+},
+{
+  "model": "core.agenciatransporte",
+  "pk": 362,
+  "fields": {
+    "nombre": "SHALOM - El Cruce La Joya",
+    "ubicacion": "Arequipa / Arequipa / La Joya / El Cruce La Joya",
+    "direccion": "Lateral 12 C Lt. 32, El Cruce La Joya - Arequipa",
+    "referencia": "Al Costado Del Grifo Primax De La Joya"
+  }
+},
+{
+  "model": "core.agenciatransporte",
+  "pk": 363,
+  "fields": {
+    "nombre": "SHALOM - Yura",
+    "ubicacion": "Arequipa / Arequipa / Yura / Yura",
+    "direccion": "Mz. O Lt. 4 Zna 2 Ciudad De Dios - Yura - Arequipa",
+    "referencia": "Carretera Yura"
+  }
+},
+{
+  "model": "core.agenciatransporte",
+  "pk": 364,
+  "fields": {
+    "nombre": "SHALOM - Ciudad Municipal",
+    "ubicacion": "Arequipa / Arequipa / Cerro Colorado / Ciudad Municipal",
+    "direccion": "Mz. A, Sub Lt. 2 A, Asentamiento Poblacional Asociación Centro Industrial Las Canteras, Cerro Colorado - Arequipa",
+    "referencia": "Al Costado Del Grifo Primax"
+  }
+},
+{
+  "model": "core.agenciatransporte",
+  "pk": 365,
+  "fields": {
+    "nombre": "SHALOM - Autopista La Joya",
+    "ubicacion": "Arequipa / Arequipa / Cerro Colorado / Autopista La Joya",
+    "direccion": "Asoc. Urbanizadora Peruarbo Sector Peru Zona I Mz. B4 Lt. 4 - Autopista La Joya - Arequipa",
+    "referencia": "Autopista Arequipa - La Joya, A Dos Cdras. Del Sauna Candamo"
+  }
+},
+{
+  "model": "core.agenciatransporte",
+  "pk": 366,
+  "fields": {
+    "nombre": "SHALOM - Asoc Las Flores - Av 54",
+    "ubicacion": "Arequipa / Arequipa / Cerro Colorado / Asoc Las Flores - Av 54",
+    "direccion": "Asoc. Las Flores Zn.2 Mz.j Lt.8 - Cerro Colorado",
+    "referencia": "Ref. erencia: Av 54 - A Media Cuadra De Ferretería Gino"
+  }
+},
+{
+  "model": "core.agenciatransporte",
+  "pk": 367,
+  "fields": {
+    "nombre": "SHALOM - Asoc. Nuevo Horizonte - Av. 54",
+    "ubicacion": "Arequipa / Arequipa / Cerro Colorado / Asoc. Nuevo Horizonte - Av. 54",
+    "direccion": "Nuevo Horizonte Mz.h Lote 12 - Cerro Colorado - Arequipa",
+    "referencia": "Con Av.54 A Cuatro Cdras. De Inkafarma"
+  }
+},
+{
+  "model": "core.agenciatransporte",
+  "pk": 368,
+  "fields": {
+    "nombre": "SHALOM - Zamacola",
+    "ubicacion": "Arequipa / Arequipa / Cerro Colorado / Zamacola",
+    "direccion": "Calle Yavarí 507 B - Zamacola - Cerro Colorado – Arequipa",
+    "referencia": "A Una Cuadra De La Posta De Zamacola (marcisa Campos)"
+  }
+},
+{
+  "model": "core.agenciatransporte",
+  "pk": 369,
+  "fields": {
+    "nombre": "SHALOM - Av Charcani",
+    "ubicacion": "Arequipa / Arequipa / Cayma / Av Charcani",
+    "direccion": "Av. Charcani 401 Asoc. Jose Olaya",
+    "referencia": "Frente Al Colegio Mendel"
+  }
+},
+{
+  "model": "core.agenciatransporte",
+  "pk": 370,
+  "fields": {
+    "nombre": "SHALOM - Plaza La Tomilla",
+    "ubicacion": "Arequipa / Arequipa / Cayma / Plaza La Tomilla",
+    "direccion": "Av. Ramón Castilla N° 1000 - B La Tomilla Cayma",
+    "referencia": "En La Misma Plaza Tomilla"
+  }
+},
+{
+  "model": "core.agenciatransporte",
+  "pk": 371,
+  "fields": {
+    "nombre": "SHALOM - Av Pumacahua",
+    "ubicacion": "Arequipa / Arequipa / Cerro Colorado / Av Pumacahua",
+    "direccion": "Urb. San Felipe Av Pumacahua Lt 14, Cerro Colorado Arequipa",
+    "referencia": "A Dos Cdras. Antes De Llegar Al Metro Cencosud / Ex Notaria Concha Revilla."
+  }
+},
+{
+  "model": "core.agenciatransporte",
+  "pk": 372,
+  "fields": {
+    "nombre": "SHALOM - Av Los Incas",
+    "ubicacion": "Arequipa / Arequipa / Cerro Colorado / Av Los Incas",
+    "direccion": "Av. Los Incas N° 604 Semirural Pachacutec – Cerro Colorado - Arequipa",
+    "referencia": "Esquina Con Calle San Martin Semirural Pachacutec"
+  }
+},
+{
+  "model": "core.agenciatransporte",
+  "pk": 373,
+  "fields": {
+    "nombre": "SHALOM - Uchumayo",
+    "ubicacion": "Arequipa / Arequipa / Uchumayo / Uchumayo",
+    "direccion": "Urb. El Carmen M. E. Lt. 1 Congata Del Distrito Uchumayo - Arequipa",
+    "referencia": "A Dos Cdras. De La Comisaria Congata"
+  }
+},
+{
+  "model": "core.agenciatransporte",
+  "pk": 374,
+  "fields": {
+    "nombre": "SHALOM - Ayaviri",
+    "ubicacion": "Puno / Melgar / Ayaviri / Ayaviri",
+    "direccion": "Jr. Santa Rosa Prolongación S/n Magisterial - Puno - Melgar - Ayaviri",
+    "referencia": "A 50 Metros Del Óvalo, Salida A Juliaca"
+  }
+},
+{
+  "model": "core.agenciatransporte",
+  "pk": 375,
+  "fields": {
+    "nombre": "SHALOM - Av Augusto Salazar Bondy",
+    "ubicacion": "Arequipa / Arequipa / Alto Selva Alegre / Av Augusto Salazar Bondy",
+    "direccion": "Augusto Salazar Bondy Mz J Lt 4 Alto Selva Alegre - Arequipa",
+    "referencia": "a Media Cdra. De La Iglesia Guadalupe"
+  }
+},
+{
+  "model": "core.agenciatransporte",
+  "pk": 376,
+  "fields": {
+    "nombre": "SHALOM - Av Parra 379 Co",
+    "ubicacion": "Arequipa / Arequipa / Arequipa / Av Parra 379 Co",
+    "direccion": "Av. Parra 379 - Arequipa",
+    "referencia": "Sin referencia"
+  }
+},
+{
+  "model": "core.agenciatransporte",
+  "pk": 377,
+  "fields": {
+    "nombre": "SHALOM - Av Lima",
+    "ubicacion": "Arequipa / Arequipa / Alto Selva Alegre / Av Lima",
+    "direccion": "Av. Lima N° 406 – Alto Selva Alegre - Arequipa",
+    "referencia": "Esquina Con Av. Obrera Cuadra 20"
+  }
+},
+{
+  "model": "core.agenciatransporte",
+  "pk": 378,
+  "fields": {
+    "nombre": "SHALOM - Jacobo Hunter",
+    "ubicacion": "Arequipa / Arequipa / Jacobo Hunter / Jacobo Hunter",
+    "direccion": "Calle Argentina # 405 - A, Jacobo Hunter - Arequipa",
+    "referencia": "Frente Al Cajero De Caja Arequipa Y Esquina Con El Banco Caja Arequipa"
+  }
+},
+{
+  "model": "core.agenciatransporte",
+  "pk": 379,
+  "fields": {
+    "nombre": "SHALOM - Miraflores Arequipa",
+    "ubicacion": "Arequipa / Arequipa / Miraflores / Miraflores Arequipa",
+    "direccion": "Av. Goyoneche N° 1422",
+    "referencia": "Esquina Francisco Bolognesi"
+  }
+},
+{
+  "model": "core.agenciatransporte",
+  "pk": 380,
+  "fields": {
+    "nombre": "SHALOM - Matarani",
+    "ubicacion": "Arequipa / Islay / Islay / Matarani",
+    "direccion": "Asentamiento Humano. Puerto Nuevo Mz. I Lt. 18 Av. Bello Horizonte, islay - islay - Arequipa",
+    "referencia": "Frente Al Parque Ecológico"
+  }
+},
+{
+  "model": "core.agenciatransporte",
+  "pk": 381,
+  "fields": {
+    "nombre": "SHALOM - Mariano Melgar",
+    "ubicacion": "Arequipa / Arequipa / Mariano Melgar / Mariano Melgar",
+    "direccion": "Calle Ancash N° 202 - Mariano Melgar",
+    "referencia": "A La Altura Del Coliseo Del Niño"
+  }
+},
+{
+  "model": "core.agenciatransporte",
+  "pk": 382,
+  "fields": {
+    "nombre": "SHALOM - Urb Manuel Prado",
+    "ubicacion": "Arequipa / Arequipa / Paucarpata / Urb Manuel Prado",
+    "direccion": "Calle Belén N°100 - A Urb. Manuel Prado - Paucarpata",
+    "referencia": "Ref. A Espaldas Del Cc. Mall Aventura Porongoche."
+  }
+},
+{
+  "model": "core.agenciatransporte",
+  "pk": 383,
+  "fields": {
+    "nombre": "SHALOM - Av Jesus",
+    "ubicacion": "Arequipa / Arequipa / Paucarpata / Av Jesus",
+    "direccion": "Av. Jesús N° 1100 Paucarpata – Arequipa",
+    "referencia": "Con Esquina arturo Villegas N° 101."
+  }
+},
+{
+  "model": "core.agenciatransporte",
+  "pk": 384,
+  "fields": {
+    "nombre": "SHALOM - Av Socabaya - Los Toritos",
+    "ubicacion": "Arequipa / Arequipa / Socabaya / Av Socabaya - Los Toritos",
+    "direccion": "Av. Socabaya 301 - Urb. San Martín De Socabaya",
+    "referencia": "Al Frente Del Parque Victor Barriga"
+  }
+},
+{
+  "model": "core.agenciatransporte",
+  "pk": 385,
+  "fields": {
+    "nombre": "SHALOM - Av. Horacio Zevallos",
+    "ubicacion": "Arequipa / Arequipa / Socabaya / Av. Horacio Zevallos",
+    "direccion": "Asentamiento Urbano Municipal Horacio Zeballos Gamez Sector E Mz. 1 Lt. 18 socabaya - Arequipa",
+    "referencia": "al Costado Del Colegio Joule Y/o 2 Cdras. Del Penal De Socabaya"
+  }
+},
+{
+  "model": "core.agenciatransporte",
+  "pk": 386,
+  "fields": {
+    "nombre": "SHALOM - Mollendo Co",
+    "ubicacion": "Arequipa / Islay / Mollendo / Mollendo Co",
+    "direccion": "Mariscal Castilla 472 –a, Arequipa - Islay - Mollendo",
+    "referencia": "al Costado De Cei “mi carrusel”"
+  }
+},
+{
+  "model": "core.agenciatransporte",
+  "pk": 387,
+  "fields": {
+    "nombre": "SHALOM - Cercado Mollendo",
+    "ubicacion": "Arequipa / Islay / Mollendo / Cercado Mollendo",
+    "direccion": "Calle Dean Valdivia 388 Cercado,",
+    "referencia": "Ref. Esquina Con Blondel"
+  }
+},
+{
+  "model": "core.agenciatransporte",
+  "pk": 388,
+  "fields": {
+    "nombre": "SHALOM - San Ignacio",
+    "ubicacion": "Cajamarca / San Ignacio / San Ignacio / San Ignacio",
+    "direccion": "Pasaje Tres N° 113 Urb Santa Rosa, Cajamarca - San Ignacio",
+    "referencia": "Frente Al Estado Municipal"
+  }
+},
+{
+  "model": "core.agenciatransporte",
+  "pk": 389,
+  "fields": {
+    "nombre": "SHALOM - Huancabamba",
+    "ubicacion": "Piura / Huancabamba / Huancabamba / Huancabamba",
+    "direccion": "Av. Ramon Castilla 0351 Huancabamba - Piura",
+    "referencia": "A 1 Cuadra De La Capilla Ramon Castilla"
+  }
+},
+{
+  "model": "core.agenciatransporte",
+  "pk": 390,
+  "fields": {
+    "nombre": "SHALOM - Cocachacra",
+    "ubicacion": "Arequipa / Islay / Cocachacra / Cocachacra",
+    "direccion": "Centro Poblado Cocachacra Mz. N5 Sub-lote 5b Calle Dean Valdivia, Cocachacra - Islay - Arequipa",
+    "referencia": "del Parque San Francisco Una Cdra. Hacia Abajo"
+  }
+},
+{
+  "model": "core.agenciatransporte",
+  "pk": 391,
+  "fields": {
+    "nombre": "SHALOM - Azangaro",
+    "ubicacion": "Puno / Azangaro / Azangaro / Azangaro",
+    "direccion": "Av. Próceres S/n, Azángaro - Puno",
+    "referencia": "a Dos Cdras. Del Parque De La Madre / A Orillas De La Misma Av. Proceres"
+  }
+},
+{
+  "model": "core.agenciatransporte",
+  "pk": 392,
+  "fields": {
+    "nombre": "SHALOM - Iberia",
+    "ubicacion": "Madre De Dios / Tahuamanu / Iberia / Iberia",
+    "direccion": "Av. Jorge Chavez Mz. H1 Sub Lote 11-b, Iberia - Tahuamanu - Madre De Dios",
+    "referencia": "A Una Cdra. De La Empresa Real Dorado / A Una Cdra. Y Media De La Av Jose Aldamiz"
+  }
+},
+{
+  "model": "core.agenciatransporte",
+  "pk": 393,
+  "fields": {
+    "nombre": "SHALOM - Morropon",
+    "ubicacion": "Piura / Morropon / Morropon / Morropon",
+    "direccion": "Jr. Adrianzén N° 099, Morropon - Morropon - Piura",
+    "referencia": "A Espaldas De Del Terminal Terrestre De Trampsa"
+  }
+},
+{
+  "model": "core.agenciatransporte",
+  "pk": 394,
+  "fields": {
+    "nombre": "SHALOM - Sechura",
+    "ubicacion": "Piura / Sechura / Sechura / Sechura",
+    "direccion": "Av. Bayovar N° 311",
+    "referencia": "Al Costado De Antena 10 Radio"
+  }
+},
+{
+  "model": "core.agenciatransporte",
+  "pk": 395,
+  "fields": {
+    "nombre": "SHALOM - Av. Lampa",
+    "ubicacion": "Puno / San Roman / Juliaca / Av. Lampa",
+    "direccion": "Av. Lampa Mz. B2 Lt. 3 Urb. Santa Adriana, Juliaca - San Román - Puno",
+    "referencia": "A Media Cdra. De La Posta De Salud De La Urb. Santa Adriana"
+  }
+},
+{
+  "model": "core.agenciatransporte",
+  "pk": 396,
+  "fields": {
+    "nombre": "SHALOM - Av Heroes Del Pacifico Co",
+    "ubicacion": "Puno / San Roman / Juliaca / Av Heroes Del Pacifico Co",
+    "direccion": "Av. Héroes De La Guerra Del Pacifico Km 3.5, Juliaca - San Román - Puno",
+    "referencia": "Al Frente Del Grifo Leon Service"
+  }
+},
+{
+  "model": "core.agenciatransporte",
+  "pk": 397,
+  "fields": {
+    "nombre": "SHALOM - Las Mercedes",
+    "ubicacion": "Puno / San Roman / Juliaca / Las Mercedes",
+    "direccion": "Jr. Porvenir N° 228 Urb. Las Mercedes, San Roman - Puno",
+    "referencia": "A Una Cdra. De La Av. Circunvalacion Oeste - A Una Cdra. Del Terminal Las Mercedes"
+  }
+},
+{
+  "model": "core.agenciatransporte",
+  "pk": 398,
+  "fields": {
+    "nombre": "SHALOM - Av Independencia",
+    "ubicacion": "Puno / San Roman / Juliaca / Av Independencia",
+    "direccion": "Av. Independencia Nro. 1538 Mz. A1 Lt. 04 Urb. Horacio Zeballos Gamez, Juliaca - San Román - Puno",
+    "referencia": "Al Frente Del Grifo San Carlos / Cruce Con Jr 21 De Eneroref"
+  }
+},
+{
+  "model": "core.agenciatransporte",
+  "pk": 399,
+  "fields": {
+    "nombre": "SHALOM - La Union",
+    "ubicacion": "Piura / Piura / La Union / La Union",
+    "direccion": "Av. Lima N° 590",
+    "referencia": "Frente A Tiendas Chancafe Q"
+  }
+},
+{
+  "model": "core.agenciatransporte",
+  "pk": 400,
+  "fields": {
+    "nombre": "SHALOM - Chulucanas",
+    "ubicacion": "Piura / Morropon / Chulucanas / Chulucanas",
+    "direccion": "Jr. Huancavelica N° 548 Referencia : Al Lado Del Terminal De Ronco",
+    "referencia": "Al Lado Del Terminal De Ronco"
+  }
+},
+{
+  "model": "core.agenciatransporte",
+  "pk": 401,
+  "fields": {
+    "nombre": "SHALOM - Av. Huancane Cdra. 9",
+    "ubicacion": "Puno / San Roman / Juliaca / Av. Huancane Cdra. 9",
+    "direccion": "Jr. Sillustani N° 202, San Roman - Juliaca",
+    "referencia": "A 3 Cdras. Del Hospital Carlos Monge Medrano"
+  }
+},
+{
+  "model": "core.agenciatransporte",
+  "pk": 402,
+  "fields": {
+    "nombre": "SHALOM - Jr Agustin Gamarra",
+    "ubicacion": "Puno / San Roman / Juliaca / Jr Agustin Gamarra",
+    "direccion": "Jr. Agustin Gamarra Mz. R1 Lt. 09 Urb. Huancane, Juliaca - San Román - Puno",
+    "referencia": "A Una Cdra. De La Av. Huancane / Cruce Con Jr. Alberto Cuentas Zabala"
+  }
+},
+{
+  "model": "core.agenciatransporte",
+  "pk": 403,
+  "fields": {
+    "nombre": "SHALOM - Jr. Mama Ocllo",
+    "ubicacion": "Puno / San Roman / Juliaca / Jr. Mama Ocllo",
+    "direccion": "Jr. Mama Ocllo 915 - B ( Cruce Con Jr Azángaro )",
+    "referencia": "Sin referencia"
+  }
+},
+{
+  "model": "core.agenciatransporte",
+  "pk": 404,
+  "fields": {
+    "nombre": "SHALOM - Av. Modesto Borda",
+    "ubicacion": "Puno / San Roman / Juliaca / Av. Modesto Borda",
+    "direccion": "Av. Modesto Borda Mz. A Lt. 04 Urb. Arrabal Don Julio, Juliaca - San Roman - Puno",
+    "referencia": "Dos Cdras. Antes Del Grifo Blanco / A Dos Cdras. Del Salon De Eventos Paraiso Azul"
+  }
+},
+{
+  "model": "core.agenciatransporte",
+  "pk": 405,
+  "fields": {
+    "nombre": "SHALOM - Catacaos",
+    "ubicacion": "Piura / Piura / Catacaos / Catacaos",
+    "direccion": "Av. Francisco Bolognesi Mz. 60 Lt. 37 Catacaos - Piura - Piura",
+    "referencia": "Al Lado Del Ex Pronei"
+  }
+},
+{
+  "model": "core.agenciatransporte",
+  "pk": 406,
+  "fields": {
+    "nombre": "SHALOM - Tambopata Av Circunvalacion",
+    "ubicacion": "Madre De Dios / Tambopata / Tambopata / Tambopata Av Circunvalacion",
+    "direccion": "Av. Circunvalacion Mz. C Lt. 01, Tambopata - Tambopata - Madre De Dios",
+    "referencia": "A Dos Cdras. De La Carretera Interoceanica Sur / Cruce Con Jr. Las Mercedes Cabello"
+  }
+},
+{
+  "model": "core.agenciatransporte",
+  "pk": 407,
+  "fields": {
+    "nombre": "SHALOM - Tambopata Av La Joya Co",
+    "ubicacion": "Madre De Dios / Tambopata / Tambopata / Tambopata Av La Joya Co",
+    "direccion": "Av. La Joya N° 122 - Pto. Maldonado,",
+    "referencia": "Ref. Frente Al Óvalo De Los Otorongos"
+  }
+},
+{
+  "model": "core.agenciatransporte",
+  "pk": 408,
+  "fields": {
+    "nombre": "SHALOM - Av 15 De Agosto",
+    "ubicacion": "Madre De Dios / Tambopata / Tambopata / Av 15 De Agosto",
+    "direccion": "Av. 15 De Agosto n° 529, Tambopata - Tambopata - Madre De Dios",
+    "referencia": "a Espaldas Del Colegio Carlos Fermin Fitzcarrald / Cruce Con Jr. Ica"
+  }
+},
+{
+  "model": "core.agenciatransporte",
+  "pk": 409,
+  "fields": {
+    "nombre": "SHALOM - Av Tacna",
+    "ubicacion": "Piura / Piura / Castilla / Av Tacna",
+    "direccion": "Av. Tacna 509 Castilla - Piura,",
+    "referencia": "Ref. Frente A Ugel De Castilla"
+  }
+},
+{
+  "model": "core.agenciatransporte",
+  "pk": 410,
+  "fields": {
+    "nombre": "SHALOM - Tacala",
+    "ubicacion": "Piura / Piura / Castilla / Tacala",
+    "direccion": "Carr. Panamericana A-2 Ah. Almirante Miguel Grau I Etapa, Castilla - Piura - Piura",
+    "referencia": "Al Costado De Cerámicas San Lorenzo"
+  }
+},
+{
+  "model": "core.agenciatransporte",
+  "pk": 411,
+  "fields": {
+    "nombre": "SHALOM - El Triunfo",
+    "ubicacion": "Madre De Dios / Tambopata / Las Piedras / El Triunfo",
+    "direccion": "Av. Interoceanica Km. 1 , Las Piedras - Tambopata - Madre De Dios",
+    "referencia": "Al Costado Del Grifo Virgen Natividad"
+  }
+},
+{
+  "model": "core.agenciatransporte",
+  "pk": 412,
+  "fields": {
+    "nombre": "SHALOM - Av. Gullman",
+    "ubicacion": "Piura / Piura / 26 De Octubre / Av. Gullman",
+    "direccion": "A.a.h.h. Consuelo De Velasco 1 Etapa Sector B Mz Lt.18  26 De Octubre – Piura",
+    "referencia": "Cruce Av. Circunvalación Con Av. Gullman Al Costado De La Ferreteria los Reyes"
+  }
+},
+{
+  "model": "core.agenciatransporte",
+  "pk": 413,
+  "fields": {
+    "nombre": "SHALOM - Av. Luis Eguiguren",
+    "ubicacion": "Piura / Piura / Piura / Av. Luis Eguiguren",
+    "direccion": "Av. Málaga Mz. A Lt.20 Int. 105 Piura",
+    "referencia": "A Media Cuadra De Honda Del Peru S.a. En El Cruce De Av. Luis Eguiguren Con Sullana Norte"
+  }
+},
+{
+  "model": "core.agenciatransporte",
+  "pk": 414,
+  "fields": {
+    "nombre": "SHALOM - Av. Grau",
+    "ubicacion": "Piura / Piura / Piura / Av. Grau",
+    "direccion": "Av. Grau Manzana N, Lote 33 - Urbanización La Alborada.",
+    "referencia": "Grau Con Marcavelica"
+  }
+},
+{
+  "model": "core.agenciatransporte",
+  "pk": 415,
+  "fields": {
+    "nombre": "SHALOM - Calle Emaús",
+    "ubicacion": "Piura / Piura / 26 De Octubre / Calle Emaús",
+    "direccion": "Calle Tres N° 102, Sublote N° 1d Mz. Y - Zona Industrial Ii, Distrito 26 De Octubre",
+    "referencia": "Ref. erencia: Al Costado De Senati"
+  }
+},
+{
+  "model": "core.agenciatransporte",
+  "pk": 416,
+  "fields": {
+    "nombre": "SHALOM - Aahh Santa Rosa Piura",
+    "ubicacion": "Piura / Piura / 26 De Octubre / Aahh Santa Rosa Piura",
+    "direccion": "Urb. Santa Rosa Mz. D Lt. 7, Sect. 7, 26 De Octubre - Piura.",
+    "referencia": "Av. Raul Mata La Cruz Con Circunvalación Al Frente De Repuestos Frank|"
+  }
+},
+{
+  "model": "core.agenciatransporte",
+  "pk": 417,
+  "fields": {
+    "nombre": "SHALOM - Av Raul Mata La Cruz- Dos Grifos",
+    "ubicacion": "Piura / Piura / Piura / Av Raul Mata La Cruz- Dos Grifos",
+    "direccion": "Av. Raúl Mata La Cruz Lt. 11 Mz. C Urb. Los Jardines - Corpiura, - Piura - Piura - Piura",
+    "referencia": "A Una Cdra. De Los 2 Grifos En Toda La Av. Raúl Mata La Cruz"
+  }
+},
+{
+  "model": "core.agenciatransporte",
+  "pk": 418,
+  "fields": {
+    "nombre": "SHALOM - Parque Industrial Co Piura Futura",
+    "ubicacion": "Piura / Piura / 26 De Octubre / Parque Industrial Co Piura Futura",
+    "direccion": "Urb. Parque Industrial Piura Futura Mz. G, Lt. 1a. 26 De Octubre - Piura,",
+    "referencia": "Ref. Al Frente Del Grifo Petro Perú"
+  }
+},
+{
+  "model": "core.agenciatransporte",
+  "pk": 419,
+  "fields": {
+    "nombre": "SHALOM - Tambo Grande",
+    "ubicacion": "Piura / Piura / Tambo Grande / Tambo Grande",
+    "direccion": "Av. Arámbulo Santín N° 100, Mz. D Lt. E Aa. Hh. Andrés Rázuri",
+    "referencia": "Ref. A Dos Cuadras Del Estadio Deportivo"
+  }
+},
+{
+  "model": "core.agenciatransporte",
+  "pk": 420,
+  "fields": {
+    "nombre": "SHALOM - Alto Puno",
+    "ubicacion": "Puno / Puno / Puno / Alto Puno",
+    "direccion": "Urb. San Pedro-alto Puno, Av La Cultura N° 160, Puno - Puno - Puno",
+    "referencia": "A Tres Cdras. De La Av. Que Va A Juliaca / A Dos Cdras. Del Grifo Bronco"
+  }
+},
+{
+  "model": "core.agenciatransporte",
+  "pk": 421,
+  "fields": {
+    "nombre": "SHALOM - Ayabaca",
+    "ubicacion": "Piura / Ayabaca / Ayabaca / Ayabaca",
+    "direccion": "Calle Bolognesi N° 136",
+    "referencia": "A 2 Cuadras De La Plaza De Armas De Ayabaca"
+  }
+},
+{
+  "model": "core.agenciatransporte",
+  "pk": 422,
+  "fields": {
+    "nombre": "SHALOM - Av Costanera",
+    "ubicacion": "Puno / Puno / Puno / Av Costanera",
+    "direccion": "Av. Costanera N° 211 Con Jr. Los Incas - Puno",
+    "referencia": "Sin referencia"
+  }
+},
+{
+  "model": "core.agenciatransporte",
+  "pk": 423,
+  "fields": {
+    "nombre": "SHALOM - Av 4 De Noviembre Co",
+    "ubicacion": "Puno / Puno / Puno / Av 4 De Noviembre Co",
+    "direccion": "Av. 4 De Noviembre N° 474-b Y 486-b Barrio Santa Rosa, Puno - Puno – Puno",
+    "referencia": "A Una Cdra. De Sunafil"
+  }
+},
+{
+  "model": "core.agenciatransporte",
+  "pk": 424,
+  "fields": {
+    "nombre": "SHALOM - Salcedo",
+    "ubicacion": "Puno / Puno / Puno / Salcedo",
+    "direccion": "Urb. Aziruni Tepro I Etapa Mz. 18 Lt. 52 Jr Los Rosales – Salcedo Puno",
+    "referencia": "A Una Cdra. De La Av. Estudiante / A Dos Cdras. De Senati Puno"
+  }
+},
+{
+  "model": "core.agenciatransporte",
+  "pk": 425,
+  "fields": {
+    "nombre": "SHALOM - Calle Lima",
+    "ubicacion": "Moquegua / Mariscal Nieto / Moquegua / Calle Lima",
+    "direccion": "Calle Lima 190 - Mariscal Nieto - Moquegua",
+    "referencia": "A Dos Cuadras Del Parque Los Héroes/alameda"
+  }
+},
+{
+  "model": "core.agenciatransporte",
+  "pk": 426,
+  "fields": {
+    "nombre": "SHALOM - Quebrada Las Lechuzas Co",
+    "ubicacion": "Moquegua / Mariscal Nieto / Moquegua / Quebrada Las Lechuzas Co",
+    "direccion": "Sector Quebrada Las Lechuzas Moquegua Calle N°1 Mz H Lt. 04, Moquegua - Mariscal Nieto - Moquegua",
+    "referencia": "Quebrada De Lechuzas"
+  }
+},
+{
+  "model": "core.agenciatransporte",
+  "pk": 427,
+  "fields": {
+    "nombre": "SHALOM - San Antonio",
+    "ubicacion": "Moquegua / Mariscal Nieto / Moquegua / San Antonio",
+    "direccion": "Av. Santa Fortunata Mz. N5 Lt. 10 Asoc. Villa Moquegua San Antonio.",
+    "referencia": "A Una Cuadra De La Casa De La Mujer"
+  }
+},
+{
+  "model": "core.agenciatransporte",
+  "pk": 428,
+  "fields": {
+    "nombre": "SHALOM - Ilo Pacocha",
+    "ubicacion": "Moquegua / Ilo / Pacocha / Ilo Pacocha",
+    "direccion": "Agrupación De Familias Pueblo Nuevo M.z E2 Lt. Com2a Sect. Ii – Ilo - Moquegua",
+    "referencia": "Al Costado Del Banco Bcp"
+  }
+},
+{
+  "model": "core.agenciatransporte",
+  "pk": 429,
+  "fields": {
+    "nombre": "SHALOM - Chen Chen",
+    "ubicacion": "Moquegua / Mariscal Nieto / Moquegua / Chen Chen",
+    "direccion": "Mz. C Lt. 24 – Asociación César Vizcarra – Centro Poblado Chen Chen , Moquegua –mariscal Nieto – Moquegua",
+    "referencia": "Al Costado Del Ovalo Chen Chen"
+  }
+},
+{
+  "model": "core.agenciatransporte",
+  "pk": 430,
+  "fields": {
+    "nombre": "SHALOM - Ilo Puerto",
+    "ubicacion": "Moquegua / Ilo / Ilo / Ilo Puerto",
+    "direccion": "Jr. Callao Prolongación Mz. N, Lt. 19 - A,",
+    "referencia": "Ref. A Media Cdra. De La Cooperativa Cuajone"
+  }
+},
+{
+  "model": "core.agenciatransporte",
+  "pk": 431,
+  "fields": {
+    "nombre": "SHALOM - Ilo Co Pampa Inalambrica",
+    "ubicacion": "Moquegua / Ilo / Ilo / Ilo Co Pampa Inalambrica",
+    "direccion": "Urb. Ciudad Del Pescador, Mz. J Lt. 18-19,",
+    "referencia": "Ref. A Dos Cuadras Del Poder Judicial"
+  }
+},
+{
+  "model": "core.agenciatransporte",
+  "pk": 432,
+  "fields": {
+    "nombre": "SHALOM - Paimas",
+    "ubicacion": "Piura / Ayabaca / Paimas / Paimas",
+    "direccion": "Av. Sullana S/n",
+    "referencia": "Frente Al Complejo Educativo Juan Velasco Alvarado"
+  }
+},
+{
+  "model": "core.agenciatransporte",
+  "pk": 433,
+  "fields": {
+    "nombre": "SHALOM - Sullana Co Zona Industrial",
+    "ubicacion": "Piura / Sullana / Sullana / Sullana Co Zona Industrial",
+    "direccion": "Ctra. Sullana Nº S/n Mz. K, Lt. 06 - Zona Industrial Municipal,",
+    "referencia": "Ref. Al Costado Del Hotel Coco Suite"
+  }
+},
+{
+  "model": "core.agenciatransporte",
+  "pk": 434,
+  "fields": {
+    "nombre": "SHALOM - Sullana Santa Rosa",
+    "ubicacion": "Piura / Sullana / Sullana / Sullana Santa Rosa",
+    "direccion": "Carretera Panamericana Norte Nº 790 Sullana",
+    "referencia": "Frente Al Colegio Chiquititos"
+  }
+},
+{
+  "model": "core.agenciatransporte",
+  "pk": 435,
+  "fields": {
+    "nombre": "SHALOM - Bellavista Sullana",
+    "ubicacion": "Piura / Sullana / Bellavista / Bellavista Sullana",
+    "direccion": "Calle Moquegua 381, Bellavista",
+    "referencia": "Rest. Parrilladas Chavelos"
+  }
+},
+{
+  "model": "core.agenciatransporte",
+  "pk": 436,
+  "fields": {
+    "nombre": "SHALOM - Las Lomas",
+    "ubicacion": "Piura / Piura / Las Lomas / Las Lomas",
+    "direccion": "Jr. Miguel Grau Mz. H Lt. 7, Las Lomas - Piura",
+    "referencia": "Al Costado De Caja Huancayo Y Al Costado De Comisaria Las Lomas"
+  }
+},
+{
+  "model": "core.agenciatransporte",
+  "pk": 437,
+  "fields": {
+    "nombre": "SHALOM - Paita",
+    "ubicacion": "Piura / Paita / Paita / Paita",
+    "direccion": "Mz. H Lt. 14 Urb. Sol Y Mar - Paita,",
+    "referencia": "Ref. Al Costado De La Empresa San Miguel"
+  }
+},
+{
+  "model": "core.agenciatransporte",
+  "pk": 438,
+  "fields": {
+    "nombre": "SHALOM - Ignacio Escudero",
+    "ubicacion": "Piura / Sullana / Ignacio Escudero / Ignacio Escudero",
+    "direccion": "Av. Panamericana Calle 26 Lote 3, Ignacio Escudero - Sullana - Piura",
+    "referencia": "Frente A La Institución Educativa Ignacio Escudero"
+  }
+},
+{
+  "model": "core.agenciatransporte",
+  "pk": 439,
+  "fields": {
+    "nombre": "SHALOM - Ilave",
+    "ubicacion": "Puno / El Collao / Ilave / Ilave",
+    "direccion": "Jr. Bolognesi Nro. 866 Barrio Cruzani, El Collao - Puno",
+    "referencia": "A Una Cuadra Del Coliseo Y Del Cementerio De Ilave"
+  }
+},
+{
+  "model": "core.agenciatransporte",
+  "pk": 440,
+  "fields": {
+    "nombre": "SHALOM - Talara Alta 9 De Octubre",
+    "ubicacion": "Piura / Talara / Parinas / Talara Alta 9 De Octubre",
+    "direccion": "Mz. N-10 Aa.hh 9 De Octubre talara Alta, pariñas - Talara - Piura",
+    "referencia": "A 1 Cdra. Antes De Amecfa"
+  }
+},
+{
+  "model": "core.agenciatransporte",
+  "pk": 441,
+  "fields": {
+    "nombre": "SHALOM - Talara Co Asoc California",
+    "ubicacion": "Piura / Talara / Parinas / Talara Co Asoc California",
+    "direccion": "Asociación California C - 03 Frente A Carretera Negritos, Talara - Pariñas,",
+    "referencia": "Ref. Al Costado Del Restaurante Mi Torete"
+  }
+},
+{
+  "model": "core.agenciatransporte",
+  "pk": 442,
+  "fields": {
+    "nombre": "SHALOM - Talara Baja Parque 22",
+    "ubicacion": "Piura / Talara / Parinas / Talara Baja Parque 22",
+    "direccion": "Parque 22 – 03 Lateral. Talara Baja, Pariñas - Talara - Piura.",
+    "referencia": "Frente A Minsa"
+  }
+},
+{
+  "model": "core.agenciatransporte",
+  "pk": 443,
+  "fields": {
+    "nombre": "SHALOM - El Alto",
+    "ubicacion": "Piura / Talara / El Alto / El Alto",
+    "direccion": "Av. Bolognesi O-37 Centro El Alto,",
+    "referencia": "Ref. A Espaldas De La Municipalidad De El Alto"
+  }
+},
+{
+  "model": "core.agenciatransporte",
+  "pk": 444,
+  "fields": {
+    "nombre": "SHALOM - Los Organos",
+    "ubicacion": "Piura / Talara / Los Organos / Los Organos",
+    "direccion": "Av. Panamericana Norte P-29 - Urb. Cercado Zona Urbana",
+    "referencia": "Al Frente De Grifo De Troncos O Grifo San Pedro"
+  }
+},
+{
+  "model": "core.agenciatransporte",
+  "pk": 445,
+  "fields": {
+    "nombre": "SHALOM - Máncora",
+    "ubicacion": "Piura / Talara / Mancora / Máncora",
+    "direccion": "Av. Grau Nro. 432 Máncora - Talara - Piura",
+    "referencia": "Frente Al Paradero De Autos De Los Órganos En Toda La Panamericana Norte."
+  }
+},
+{
+  "model": "core.agenciatransporte",
+  "pk": 446,
+  "fields": {
+    "nombre": "SHALOM - Tacna Ciudad Nueva",
+    "ubicacion": "Tacna / Tacna / Ciudad Nueva / Tacna Ciudad Nueva",
+    "direccion": "Ciudad Nueva Mz 46 Lt 12 Comité 10 Ciudad Nueva - Tacna",
+    "referencia": "A Una Cdra. De La Plaza José Olaya De Ciudad Nueva"
+  }
+},
+{
+  "model": "core.agenciatransporte",
+  "pk": 447,
+  "fields": {
+    "nombre": "SHALOM - Tacna Co Av. Jorge Basadre",
+    "ubicacion": "Tacna / Tacna / Tacna / Tacna Co Av. Jorge Basadre",
+    "direccion": "Av. Jorge Basadre Grohmann Oeste N° 366 - Tacna",
+    "referencia": "Sin referencia"
+  }
+},
+{
+  "model": "core.agenciatransporte",
+  "pk": 448,
+  "fields": {
+    "nombre": "SHALOM - Av Vigil",
+    "ubicacion": "Tacna / Tacna / Tacna / Av Vigil",
+    "direccion": "Av. Vigil 1636,",
+    "referencia": "Ref. A Una Cdra. De La Plaza Grau"
+  }
+},
+{
+  "model": "core.agenciatransporte",
+  "pk": 449,
+  "fields": {
+    "nombre": "SHALOM - Av. Arias Araguez",
+    "ubicacion": "Tacna / Tacna / Tacna / Av. Arias Araguez",
+    "direccion": "Calle Arias Araguez N° 836  tacna",
+    "referencia": "A Una Cdra. Antes De Llegar Al Coliseo Perú"
+  }
+},
+{
+  "model": "core.agenciatransporte",
+  "pk": 450,
+  "fields": {
+    "nombre": "SHALOM - Av Ejercito",
+    "ubicacion": "Tacna / Tacna / Tacna / Av Ejercito",
+    "direccion": "Av. Litoral Nro. 306 – Para Chico (anterior Av. Ejército Prolongación 306 Tacna), Tacna - Tacna - Tacna",
+    "referencia": "Dentro Del Establecimiento Del Grifo Primax"
+  }
+},
+{
+  "model": "core.agenciatransporte",
+  "pk": 451,
+  "fields": {
+    "nombre": "SHALOM - Pocollay",
+    "ubicacion": "Tacna / Tacna / Tacna / Pocollay",
+    "direccion": "Pueblo Tradicional Pocollay Mz. T Lote 01 , Pocollay - Tacna - Tacna",
+    "referencia": "A Una Cdra. Del Centro De Salud Pocollay"
+  }
+},
+{
+  "model": "core.agenciatransporte",
+  "pk": 452,
+  "fields": {
+    "nombre": "SHALOM - Villa San Francisco",
+    "ubicacion": "Tacna / Tacna / Coronel Gregorio Albarracin Lanchipa / Villa San Francisco",
+    "direccion": "Asoc. Villa San Francisco Mz. 94 Lt. 22,",
+    "referencia": "Ref. Cerca A Caja Cusco"
+  }
+},
+{
+  "model": "core.agenciatransporte",
+  "pk": 453,
+  "fields": {
+    "nombre": "SHALOM - Av. Municipal",
+    "ubicacion": "Tacna / Tacna / Coronel Gregorio Albarracin Lanchipa / Av. Municipal",
+    "direccion": "Asociación Las vilcas  mz. E Lt. 16, Gregorio Albarracín Lanchipa - Tacna",
+    "referencia": "Frente Al Mercado Héroes Del Cenepa"
+  }
+},
+{
+  "model": "core.agenciatransporte",
+  "pk": 454,
+  "fields": {
+    "nombre": "SHALOM - Viñanis",
+    "ubicacion": "Tacna / Tacna / Coronel Gregorio Albarracin Lanchipa / Viñanis",
+    "direccion": "Promuvi Viñani, Amp. I Etapa, Mz. 574, Lt. 09 – Coronel Gregorio Albarracín Lanchipa – Tacna - Tacna",
+    "referencia": "A Media Cdra. Del Óvalo Los Molles"
+  }
+},
+{
+  "model": "core.agenciatransporte",
+  "pk": 455,
+  "fields": {
+    "nombre": "SHALOM - Ctra Iquitos Nauta",
+    "ubicacion": "Loreto / Maynas / Iquitos San Juan Bautista / Ctra Iquitos Nauta",
+    "direccion": "Carretera Iquitos Nauta, S/n Mz. K - Lt. 20, San Juan Bautista - Maynas - Loreto",
+    "referencia": "Al Costado De La Distribuidora Amazon Gas."
+  }
+},
+{
+  "model": "core.agenciatransporte",
+  "pk": 456,
+  "fields": {
+    "nombre": "SHALOM - Av Participacion Parcela",
+    "ubicacion": "Loreto / Maynas / Iquitos San Juan Bautista / Av Participacion Parcela",
+    "direccion": "Av. Participación Parcela 9-a San Juan Bautista - Maynas - Loreto",
+    "referencia": "Frente Al Lavadero Osito Y A Media Cdra. Del Parque 1 De Enero"
+  }
+},
+{
+  "model": "core.agenciatransporte",
+  "pk": 457,
+  "fields": {
+    "nombre": "SHALOM - Av Jose A. Quiñones",
+    "ubicacion": "Loreto / Maynas / Iquitos San Juan Bautista / Av Jose A. Quiñones",
+    "direccion": "Av. José Abelardo Quiñones # 2475 San Juan Bautista - Maynas - Loreto",
+    "referencia": "Frente A La Universidad Científica Del Perú (ucp)"
+  }
+},
+{
+  "model": "core.agenciatransporte",
+  "pk": 458,
+  "fields": {
+    "nombre": "SHALOM - Desaguadero",
+    "ubicacion": "Puno / Chucuito / Desaguadero / Desaguadero",
+    "direccion": "Av. 28 De Julio N° 564 - 566, Chucuito",
+    "referencia": "A 50 Mtrs. Del Banco De La Nacion"
+  }
+},
+{
+  "model": "core.agenciatransporte",
+  "pk": 459,
+  "fields": {
+    "nombre": "SHALOM - Iquitos Av Tupac Amaru",
+    "ubicacion": "Loreto / Maynas / Iquitos / Iquitos Av Tupac Amaru",
+    "direccion": "Av.  tupac Amaru Con - Calle Lourdes De León #479 iquitos Maynas - Loreto",
+    "referencia": "Frente A La Botica Thiagofama"
+  }
+},
+{
+  "model": "core.agenciatransporte",
+  "pk": 460,
+  "fields": {
+    "nombre": "SHALOM - Iquitos Jr Francisco Bolognesi",
+    "ubicacion": "Loreto / Maynas / Iquitos / Iquitos Jr Francisco Bolognesi",
+    "direccion": "Jr. Francisco Bolognesi Nro 203 - 215 Iquitos.",
+    "referencia": "Esquina Con Putumayo"
+  }
+},
+{
+  "model": "core.agenciatransporte",
+  "pk": 461,
+  "fields": {
+    "nombre": "SHALOM - Iquitos Co Jr. Pablo Rossell",
+    "ubicacion": "Loreto / Maynas / Iquitos / Iquitos Co Jr. Pablo Rossell",
+    "direccion": "Jr. Pablo Rossell 590 Con Nanay",
+    "referencia": "Cruce Con Av. Nanay Frente Al Instituto Cepro América Computer"
+  }
+},
+{
+  "model": "core.agenciatransporte",
+  "pk": 462,
+  "fields": {
+    "nombre": "SHALOM - Punchana",
+    "ubicacion": "Loreto / Maynas / Punchana / Punchana",
+    "direccion": "Calle Borja N°648 Punchana - Maynas - Loreto",
+    "referencia": "Al Costado De La Farmacia San Carlos Centro Médico"
+  }
+},
+{
+  "model": "core.agenciatransporte",
+  "pk": 463,
+  "fields": {
+    "nombre": "SHALOM - Corrales",
+    "ubicacion": "Tumbes / Tumbes / Corrales / Corrales",
+    "direccion": "Av. Huáscar Nº 311 Int. 01 Centro, Corrales - Tumbes",
+    "referencia": "A Espaldas De La Plaza De Armas"
+  }
+},
+{
+  "model": "core.agenciatransporte",
+  "pk": 464,
+  "fields": {
+    "nombre": "SHALOM - La Cruz Tumbes",
+    "ubicacion": "Tumbes / Tumbes / La Cruz / La Cruz Tumbes",
+    "direccion": "Jr. Piura 105 Caleta La Cruz, La Cruz - Tumbes",
+    "referencia": "Frente a ctr. panamericana Norte Y Al Frente De Motorepuestos Y Multiservicios Lujan"
+  }
+},
+{
+  "model": "core.agenciatransporte",
+  "pk": 465,
+  "fields": {
+    "nombre": "SHALOM - Zorritos",
+    "ubicacion": "Tumbes / Contralmirante Villa / Zorritos / Zorritos",
+    "direccion": "Av. 28 De Julio n° 205 Mz. 14 Lt. 04 Los Pinos Tumbes, contralmiraante Villar - Zorritos - Tumbes",
+    "referencia": "Sin referencia"
+  }
+},
+{
+  "model": "core.agenciatransporte",
+  "pk": 466,
+  "fields": {
+    "nombre": "SHALOM - Tumbes Puyango",
+    "ubicacion": "Tumbes / Tumbes / Tumbes / Tumbes Puyango",
+    "direccion": "Urb. Andrés Araujo Morán Mz. 28-a Lote 03 Calle Jacinto Seminario",
+    "referencia": "Al Costado Del Mercado Puyango"
+  }
+},
+{
+  "model": "core.agenciatransporte",
+  "pk": 467,
+  "fields": {
+    "nombre": "SHALOM - Pampa Grande Tumbes",
+    "ubicacion": "Tumbes / Tumbes / Tumbes / Pampa Grande Tumbes",
+    "direccion": "Mz. 0u Lt. 00a Aa.hh. Pampa Grande, Tumbes",
+    "referencia": "Frente a la Av. Universitaria, Y Al Frente A La iglesia Mormones Y Al Lado De Un Lavadero De Autos."
+  }
+},
+{
+  "model": "core.agenciatransporte",
+  "pk": 468,
+  "fields": {
+    "nombre": "SHALOM - Zarumilla",
+    "ubicacion": "Tumbes / Zarumilla / Zarumilla / Zarumilla",
+    "direccion": "Jiron Independencia 309 Zarumilla",
+    "referencia": "Atrás De La Plaza De Armas Y Frente Al Dorado Pasando 5 Casas"
+  }
+},
+{
+  "model": "core.agenciatransporte",
+  "pk": 469,
+  "fields": {
+    "nombre": "SHALOM - Tumbes - Av Arica",
+    "ubicacion": "Tumbes / Tumbes / Tumbes / Tumbes - Av Arica",
+    "direccion": "Av. Arica N° 227 - Tumbes.",
+    "referencia": "Sin referencia"
+  }
+},
+{
+  "model": "core.agenciatransporte",
+  "pk": 470,
+  "fields": {
+    "nombre": "SHALOM - Aguas Verdes",
+    "ubicacion": "Tumbes / Zarumilla / Aguas Verdes / Aguas Verdes",
+    "direccion": "Av Tumbes S/n Lote 09 Mz 17 , A.h Tomas Arizola Olaya , Sector Ii",
+    "referencia": "Ref. erencia : A Una Cuadra Del Parque Tomas Arizola."
+  }
+},
+{
+  "model": "core.agenciatransporte",
+  "pk": 471,
+  "fields": {
+    "nombre": "SHALOM  - Bayobar",
+    "ubicacion": "Lima / Lima / San Juan De Lurigancho / Bayovar",
+    "direccion": "Av. Fernando Wiesse Mz. E8. Lote 38b, Mariscal Cáceres Bayovar - San Juan De Lurigancho - Lima",
+    "referencia": "Auxiliar Próceres De La Independencia, Al Frente De La Universidad San Marcos – Agroindustrial"
+  }
+},
+{
+  "model": "core.agenciatransporte",
+  "pk": 473,
+  "fields": {
+    "nombre": "SHALOM - AV TUPAC AMARU KM. 19",
+    "ubicacion": "Lima / Lima / Carabayllo / Av Tupac Amaru Km. 19",
+    "direccion": "Mz. 1a - Lt. 8 Av. Tupac Amaru N° 10472, Carabayllo - Lima",
+    "referencia": "Al Costado Del Colegio Ciro Alegría"
+  }
+},
+{
+  "model": "core.agenciatransporte",
+  "pk": 474,
+  "fields": {
+    "nombre": "SHALOM - EL PROGRESO KM 22",
+    "ubicacion": "Lima / Lima / Carabayllo / El Progreso Km 22",
+    "direccion": "Av. Tupac Amaru 3493 – P.j. El Progreso (parte Baja) Mz. K Lt. 11b Zona Ii, carabayllo - Lima",
+    "referencia": "A Una Cdra. Del Cruce Con La Av. Manuel Prado"
+  }
+},
+{
+  "model": "core.agenciatransporte",
+  "pk": 475,
+  "fields": {
+    "nombre": "SHALOM - PRO",
+    "ubicacion": "Lima / Lima / Los Olivos / Pro",
+    "direccion": "Av. Los Próceres Mz. Pp2 Lt.21, Urb. Puertas De Pro - Los Olivos",
+    "referencia": ""
+  }
+},
+{
+  "model": "core.agenciatransporte",
+  "pk": 481,
+  "fields": {
+    "nombre": "SHALOM - AV. TUPAC AMARU KM. 23.5",
+    "ubicacion": "Lima / Lima / Carabayllo / Av. Tupac Amaru Km. 23.5",
+    "direccion": "Av. Túpac Amaru Km. 23.5 - Carabayllo",
+    "referencia": "Frente A La Iglesia De Mormones - A Una Cdra. Del Último Paradero Del Rápido"
+  }
+},
+{
+  "model": "core.agenciatransporte",
+  "pk": 483,
+  "fields": {
+    "nombre": "SHALOM - JR. HUARAZ - BREÑA",
+    "ubicacion": "Lima / Lima / Brena / Jr. Huaraz - Breña",
+    "direccion": "Jr. Huaraz 1633, Breña -lima",
+    "referencia": "En Medio Del Cruce De Jr. Gral Orbegoso Y Jr. Centenario Con Jr. Huaraz"
+  }
+},
+{
+  "model": "core.agenciatransporte",
+  "pk": 484,
+  "fields": {
+    "nombre": "SHALOM - AV SAENZ PEÑA",
+    "ubicacion": "Callao / Callao / Callao / Av Saenz Peña",
+    "direccion": "Av. Saenz Peña N° 414 - 416 - Callao - Callao",
+    "referencia": "Cruce Con Av. Marco Polo"
+  }
+},
+{
+  "model": "core.agenciatransporte",
+  "pk": 485,
+  "fields": {
+    "nombre": "SHALOM - AV 225 PDRO 2 CHINITAS",
+    "ubicacion": "Callao / Callao / Ventanilla / Av 225 Pdro 2 Chinitas",
+    "direccion": "Av. 225 Mz. H Sub Lt. T. 11 - Asoc Proy. Esp. Ciudad Pachacutec",
+    "referencia": "A 1 Cdra. Del Cruce Con Av. Los Proyectistas, Ventanilla - Lima - Lima"
+  }
+},
+{
+  "model": "core.agenciatransporte",
+  "pk": 486,
+  "fields": {
+    "nombre": "SHALOM - CIENEGUILLA KM. 14.5",
+    "ubicacion": "Lima / Lima / Cieneguilla / Cieneguilla Km. 14.5",
+    "direccion": "Av. Arterial Huarochiri d Mz. B Lt. 19, Asoc. De Viviendas Las Cumbres De Cieneguilla, Lima",
+    "referencia": "Al Costado De La Tienda Mass"
+  }
+},
+{
+  "model": "core.agenciatransporte",
+  "pk": 487,
+  "fields": {
+    "nombre": "SHALOM - PACHACUTEC AV 150",
+    "ubicacion": "Callao / Callao / Ventanilla / Pachacutec Av 150",
+    "direccion": "Av. 150 Izquierda Mz. W2 Lt. 01 Proyecto Piloto Nuevo pachacutec, Ventanilla - Callao - Callao",
+    "referencia": "A 1 Cdra. Del Cruce Av. Camino Del Inca"
+  }
+},
+{
+  "model": "core.agenciatransporte",
+  "pk": 491,
+  "fields": {
+    "nombre": "SHALOM - AV CIRCUNVALACIÓN CRUCE CON MARIATEGUI",
+    "ubicacion": "Junin / Huancayo / El Tambo / Av Circunvalación Cruce Con Mariategui",
+    "direccion": "Av. Circunvalación 480 T-1, El Tambo - Huancayo - Junin",
+    "referencia": "Esquina Con Prolongación Mariategui"
+  }
+},
+{
+  "model": "core.agenciatransporte",
+  "pk": 494,
+  "fields": {
+    "nombre": "SHALOM  - HUARAZ",
+    "ubicacion": "Ancash / Huaraz / Huaraz / Huaraz",
+    "direccion": "Av. 27 De Noviembre Cdra. 20 S/n - Villon BajO",
+    "referencia": "Al Costado Del Grifo Primax"
+  }
+},
+{
+  "model": "core.agenciatransporte",
+  "pk": 496,
+  "fields": {
+    "nombre": "SHALOM - SAN JUAN BAUTISTA",
+    "ubicacion": "Ayacucho / Huamanga / San Juan Bautista / San Juan Bautista",
+    "direccion": "Av. Venezuela N° 431 – Urb. Aprovisa, San Juan Bautista - Huamanga - Ayacucho",
+    "referencia": "Altura Del Hostal La Oriental, Cerca Al Seguro De Essalud"
+  }
+},
+{
+  "model": "core.agenciatransporte",
+  "pk": 498,
+  "fields": {
+    "nombre": "SHALOM - AGUAYTÍA",
+    "ubicacion": "Ucayali / Padre Abad / Aguaytia / Aguaytía",
+    "direccion": "U. Vecinal Barrio Unido Mz. 1 Lt. 2, Padre Abad - Ucayali",
+    "referencia": "Al Costado Del Terminal Terrestre De Aguaytia"
+  }
+},
+{
+  "model": "core.agenciatransporte",
+  "pk": 499,
+  "fields": {
+    "nombre": "SHALOM - SANTA",
+    "ubicacion": "Ancash / Santa / Santa / Santa",
+    "direccion": "Panamericana Norte Km 442 - B, Santa",
+    "referencia": "Al Lado De La Ferreteria La Llave"
+  }
+},
+{
+  "model": "core.agenciatransporte",
+  "pk": 504,
+  "fields": {
+    "nombre": "SHALOM - CHALLHUAHUACHO",
+    "ubicacion": "Apurimac / Cotabambas / Challhuahuacho / Challhuahuacho",
+    "direccion": "Barrio Wichaypampa Lt. 13 - 15 - 16, challhuahuacho - Cotabambas - Apurímac",
+    "referencia": "A Dos Cdras Del Terminal Terrestre De Challhuahuacho / A Espaldas Del Taller E&l"
+  }
+},
+{
+  "model": "core.agenciatransporte",
+  "pk": 507,
+  "fields": {
+    "nombre": "SHALOM - MOTUPE",
+    "ubicacion": "Lambayeque / Lambayeque / Motupe / Motupe",
+    "direccion": "Calle Los Pinos N°116 - Lotizacion La Primavera",
+    "referencia": "A Media Cuadra De La Panamericana Carretera Fernando Belaunde Terry"
+  }
+},
+{
+  "model": "core.agenciatransporte",
+  "pk": 508,
+  "fields": {
+    "nombre": "SHALOM - MALL LAMBRAMANI",
+    "ubicacion": "Arequipa / Arequipa / Arequipa / Mall Lambramani",
+    "direccion": "Av. Lambramani 325, Arequipa - Arequipa- Arequipa",
+    "referencia": "Dentro Del Mall Lambramani (sotano Piso -4)"
+  }
+},
+{
+  "model": "core.agenciatransporte",
+  "pk": 513,
+  "fields": {
+    "nombre": "SHALOM - TUMBES CO - PANAMERICANA NORTE KM 2360",
+    "ubicacion": "Tumbes / Tumbes / Tumbes / Tumbes Co - Panamericana Norte Km 2360",
+    "direccion": "Av. Panamericana Norte S/n Villa Primavera - Tumbes",
+    "referencia": "Pasando Senati Frente A Agripac"
+  }
+}
+]
